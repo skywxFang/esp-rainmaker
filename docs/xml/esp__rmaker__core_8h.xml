@@ -1,0 +1,2633 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="esp__rmaker__core_8h" kind="file" language="C++">
+    <compoundname>esp_rmaker_core.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <includes local="no">esp_event.h</includes>
+    <includedby refid="esp__rmaker__standard__params_8h" local="no">/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h</includedby>
+    <includedby refid="esp__rmaker__standard__devices_8h" local="no">/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_devices.h</includedby>
+    <includedby refid="esp__rmaker__standard__services_8h" local="no">/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stdint.h</label>
+      </node>
+      <node id="5">
+        <label>esp_err.h</label>
+      </node>
+      <node id="6">
+        <label>esp_event.h</label>
+      </node>
+      <node id="2">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h</label>
+        <link refid="esp_rmaker_core.h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="9">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_devices.h</label>
+        <link refid="esp__rmaker__standard__devices_8h_source"/>
+      </node>
+      <node id="8">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h</label>
+        <link refid="esp__rmaker__standard__params_8h_source"/>
+      </node>
+      <node id="10">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h</label>
+        <link refid="esp__rmaker__standard__services_8h_source"/>
+      </node>
+      <node id="7">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h</label>
+        <link refid="esp_rmaker_core.h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structesp__rmaker__node__info__t" prot="public">esp_rmaker_node_info_t</innerclass>
+    <innerclass refid="structesp__rmaker__config__t" prot="public">esp_rmaker_config_t</innerclass>
+    <innerclass refid="unionesp__rmaker__val__t" prot="public">esp_rmaker_val_t</innerclass>
+    <innerclass refid="structesp__rmaker__param__val__t" prot="public">esp_rmaker_param_val_t</innerclass>
+    <innerclass refid="structesp__rmaker__write__ctx__t" prot="public">esp_rmaker_write_ctx_t</innerclass>
+    <innerclass refid="structesp__rmaker__read__ctx__t" prot="public">esp_rmaker_read_ctx_t</innerclass>
+    <innerclass refid="structesp__rmaker__system__serv__config__t" prot="public">esp_rmaker_system_serv_config_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="esp__rmaker__core_8h_1ad2031c740c861110b3af436e65b9abfb" prot="public" static="no">
+        <name>ESP_RMAKER_CONFIG_VERSION</name>
+        <initializer>&quot;2020-03-20&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="25" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__core_8h_1a1b6e9363f5fa30e59f702a261703a73c" prot="public" static="no">
+        <name>ESP_RMAKER_MAX_ALERT_LEN</name>
+        <initializer>100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="28" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__core_8h_1a46a2e38accfe689e4a98d65b83a23cf6" prot="public" static="no">
+        <name>SYSTEM_SERV_FLAG_REBOOT</name>
+        <initializer>(1 &lt;&lt; 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System Service Reboot Flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="130" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__core_8h_1a76b2dd352ab9e265f55bcd61fc6d310b" prot="public" static="no">
+        <name>SYSTEM_SERV_FLAG_FACTORY_RESET</name>
+        <initializer>(1 &lt;&lt; 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System Service Factory Reset Flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="133" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__core_8h_1ac2231e91429178e7dae8e337ad198d9d" prot="public" static="no">
+        <name>SYSTEM_SERV_FLAG_WIFI_RESET</name>
+        <initializer>(1 &lt;&lt; 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System Service Wi-Fi Reset Flag </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="136" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__core_8h_1a95a902a1d2994da40f503a79f278ab67" prot="public" static="no">
+        <name>SYSTEM_SERV_FLAGS_ALL</name>
+        <initializer>(SYSTEM_SERV_FLAG_REBOOT | SYSTEM_SERV_FLAG_FACTORY_RESET | SYSTEM_SERV_FLAG_WIFI_RESET)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>System Service All Flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="139" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4" prot="public" static="no">
+        <name>esp_rmaker_event_t</name>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a8a940c7df0f87f9c05dc2dfd225d7e87" prot="public">
+          <name>RMAKER_EVENT_INIT_DONE</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker Core Initialisation Done </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a8727626b47377dc5f1b456e0f8f08e42" prot="public">
+          <name>RMAKER_EVENT_CLAIM_STARTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Self Claiming Started </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a8c9f15851b1f353b73a280099e5115ec" prot="public">
+          <name>RMAKER_EVENT_CLAIM_SUCCESSFUL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Self Claiming was Successful </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a6f928195d8e957c468a1ee2afb612c0a" prot="public">
+          <name>RMAKER_EVENT_CLAIM_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Self Claiming Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a26d9927b5ef5d7231bd003787469228a" prot="public">
+          <name>RMAKER_EVENT_USER_NODE_MAPPING_DONE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Node side communication for User-Node mapping done. Actual mapping state will be managed by the ESP RainMaker cloud based on the user side communication. Associated data is the NULL terminated user id. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a3cf54c62eb58c476c569fcef4699f896" prot="public">
+          <name>RMAKER_EVENT_LOCAL_CTRL_STARTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Local control started. Associated data is the NULL terminated Service Name </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a6de6f5e16b7bb47943986a2985eb5ede" prot="public">
+          <name>RMAKER_EVENT_USER_NODE_MAPPING_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1ab3318d8b772cfe8b09efd02dbc925aa4a50408e0b94efd405dd4bd9d4d0a32fcc" prot="public">
+          <name>RMAKER_EVENT_LOCAL_CTRL_STOPPED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Local control stopped. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Events </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="36" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="36" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cff" prot="public" static="no">
+        <name>esp_rmaker_val_type_t</name>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffaba911796f1c77ddd8f8a44ea813a277e" prot="public">
+          <name>RMAKER_VAL_TYPE_INVALID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Invalid </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffae58a886cc677f77c20e09c7e2778d701" prot="public">
+          <name>RMAKER_VAL_TYPE_BOOLEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Boolean </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffac1f87dd422f7232423281f659854e47e" prot="public">
+          <name>RMAKER_VAL_TYPE_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Integer. Mapped to a 32 bit signed integer </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffa86d97dafcff655f941ab3a5c5c648377" prot="public">
+          <name>RMAKER_VAL_TYPE_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Floating point number </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffae1e1aa835c7bfea11eb78da7665d1751" prot="public">
+          <name>RMAKER_VAL_TYPE_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>NULL terminated string </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffa6633269d69c357d8d6a102e43291d501" prot="public">
+          <name>RMAKER_VAL_TYPE_OBJECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>NULL terminated JSON Object string Eg. {&quot;name&quot;:&quot;value&quot;} </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a185402c0f8808408346ca4add5bb2cffacb66b4f8592c53cb430c11dad7e62a77" prot="public">
+          <name>RMAKER_VAL_TYPE_ARRAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>NULL terminated JSON Array string Eg. [1,2,3] </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Parameter Value type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="84" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="84" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__core_8h_1a02eb6a0aaac1492aff29c909a98b8d3f" prot="public" static="no">
+        <name>esp_param_property_flags_t</name>
+        <enumvalue id="esp__rmaker__core_8h_1a02eb6a0aaac1492aff29c909a98b8d3fa25078359f4c7911687312c5c867b25d1" prot="public">
+          <name>PROP_FLAG_WRITE</name>
+          <initializer>= (1 &lt;&lt; 0)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a02eb6a0aaac1492aff29c909a98b8d3fa7b70a7a16fd50d7da85ab876f6803305" prot="public">
+          <name>PROP_FLAG_READ</name>
+          <initializer>= (1 &lt;&lt; 1)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a02eb6a0aaac1492aff29c909a98b8d3faa9b6162d91c0c966c33d53d0f924ca22" prot="public">
+          <name>PROP_FLAG_TIME_SERIES</name>
+          <initializer>= (1 &lt;&lt; 2)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a02eb6a0aaac1492aff29c909a98b8d3fa5aa64753eb1353f2afa72bc72ec19d4b" prot="public">
+          <name>PROP_FLAG_PERSIST</name>
+          <initializer>= (1 &lt;&lt; 3)</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Param property flags </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="122" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52b" prot="public" static="no">
+        <name>esp_rmaker_req_src_t</name>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52ba65bf532aeafe95772451c43d939ee419" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request triggered in the init sequence i.e. when a value is found in persistent memory for parameters with PROP_FLAG_PERSIST. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52ba971301832034bafaa3ae76642eeb2089" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_CLOUD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request received from cloud </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52badc301f514a4da46fdf54ba2d50f5543a" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_SCHEDULE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request received when a schedule has triggered </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52ba73fb211c223551d26c706a3c3489da50" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_SCENE_ACTIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request received when a scene has been activated </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52ba09ac73d3bfbe56013e4035cbc82605a9" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_SCENE_DEACTIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request received when a scene has been deactivated </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52ba7aa148ec5fb62005eee7edaa21e69404" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_LOCAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Request received from a local controller </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__core_8h_1a2b28d4537a8657991af9e1de3121b52baf1ceb283426084d09c33e39c1c63dccf" prot="public">
+          <name>ESP_RMAKER_REQ_SRC_MAX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>This will always be the last value. Any value equal to or greater than this should be considered invalid. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parameter read/write request source </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="154" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="154" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1a2c3c8a83550e00ee9093d348ad86dc81" prot="public" static="no">
+        <type>size_t</type>
+        <definition>typedef size_t esp_rmaker_handle_t</definition>
+        <argsstring></argsstring>
+        <name>esp_rmaker_handle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generic ESP RainMaker handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="142" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1ab07abef83eea3807d2480d2c2b0f04dd" prot="public" static="no">
+        <type>esp_rmaker_handle_t</type>
+        <definition>typedef esp_rmaker_handle_t esp_rmaker_node_t</definition>
+        <argsstring></argsstring>
+        <name>esp_rmaker_node_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Node Handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="145" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1a879c5648a7db9d9cb0f3c2d550b49ec6" prot="public" static="no">
+        <type>esp_rmaker_handle_t</type>
+        <definition>typedef esp_rmaker_handle_t esp_rmaker_device_t</definition>
+        <argsstring></argsstring>
+        <name>esp_rmaker_device_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Device Handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="148" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1af421aaba761b3f4454cd70067751b763" prot="public" static="no">
+        <type>esp_rmaker_handle_t</type>
+        <definition>typedef esp_rmaker_handle_t esp_rmaker_param_t</definition>
+        <argsstring></argsstring>
+        <name>esp_rmaker_param_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Parameter Handle </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="151" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1a14af694a31a19416dd0e3c2ff108e805" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_device_write_cb_t) (const esp_rmaker_device_t *device, const esp_rmaker_param_t *param, const esp_rmaker_param_val_t val, void *priv_data, esp_rmaker_write_ctx_t *ctx)</definition>
+        <argsstring>)(const esp_rmaker_device_t *device, const esp_rmaker_param_t *param, const esp_rmaker_param_val_t val, void *priv_data, esp_rmaker_write_ctx_t *ctx)</argsstring>
+        <name>esp_rmaker_device_write_cb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for parameter value write requests.</para><para>The callback should call the esp_rmaker_param_update_and_report() API if the new value is to be set and reported back.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to <ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref>. Use appropriate elements as per the value type. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the private data paassed while creating the device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context associated with the request.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="227" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__core_8h_1ab5606a541b0827c4f33eee8f0fdab363" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_device_read_cb_t) (const esp_rmaker_device_t *device, const esp_rmaker_param_t *param, void *priv_data, esp_rmaker_read_ctx_t *ctx)</definition>
+        <argsstring>)(const esp_rmaker_device_t *device, const esp_rmaker_param_t *param, void *priv_data, esp_rmaker_read_ctx_t *ctx)</argsstring>
+        <name>esp_rmaker_device_read_cb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Callback for parameter value changes</para><para>The callback should call the esp_rmaker_param_update_and_report() API if the new value is to be set and reported back.</para><para><simplesect kind="note"><para>Currently, the read callback never gets invoked as the communication between clients (mobile phones, CLI, etc.) and node is asynchronous. So, the read request does not reach the node. This callback will however be used in future.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the private data passed while creating the device. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ctx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Context associated with the request.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="246" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a16ddba34c3e18f6fe038d6a2e12e71b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* esp_rmaker_device_cb_src_to_str</definition>
+        <argsstring>(esp_rmaker_req_src_t src)</argsstring>
+        <name>esp_rmaker_device_cb_src_to_str</name>
+        <param>
+          <type>esp_rmaker_req_src_t</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert device callback source to string</para><para>Device read/write callback can be via different sources. This is a helper API to give the source in string format for printing.</para><para>Example Usage: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>esp_err_t<sp/>write_cb(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data,<sp/><ref refid="structesp__rmaker__write__ctx__t" kindref="compound">esp_rmaker_write_ctx_t</ref><sp/>*ctx)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ctx)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ESP_LOGI(TAG,<sp/></highlight><highlight class="stringliteral">&quot;Received<sp/>write<sp/>request<sp/>via<sp/>:<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>esp_rmaker_device_cb_src_to_str(ctx-&gt;<ref refid="structesp__rmaker__write__ctx__t_1a15112e6c2ecb7da27d0fc25d8716b969" kindref="member">src</ref>));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+</programlisting></para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The src field as received in the callback context.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL terminated source string on success </para></simplesect>
+<simplesect kind="return"><para>NULL on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="269" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a649a949ea417c0213b15208a1481a543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_bool</definition>
+        <argsstring>(bool bval)</argsstring>
+        <name>esp_rmaker_bool</name>
+        <param>
+          <type>bool</type>
+          <declname>bval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise a Boolean value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">bval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialising value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="278" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a014a099ad1762010d48a35b1c597a2e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_int</definition>
+        <argsstring>(int ival)</argsstring>
+        <name>esp_rmaker_int</name>
+        <param>
+          <type>int</type>
+          <declname>ival</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise an Integer value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ival</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialising value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="287" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a2d523dd85be3023df4ccaf281c33bbb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_float</definition>
+        <argsstring>(float fval)</argsstring>
+        <name>esp_rmaker_float</name>
+        <param>
+          <type>float</type>
+          <declname>fval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise a Float value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialising value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="296" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1af88421d6dddb0a2eba37a3fccd584e4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_str</definition>
+        <argsstring>(const char *sval)</argsstring>
+        <name>esp_rmaker_str</name>
+        <param>
+          <type>const char *</type>
+          <declname>sval</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise a String value</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">sval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialising value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Value structure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="305" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a5fd79677bf15bf919f35bd2d78068b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_obj</definition>
+        <argsstring>(const char *val)</argsstring>
+        <name>esp_rmaker_obj</name>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise a json object value</para><para><simplesect kind="note"><para>the object will not be validated internally. it is the application&apos;s responsibility to ensure that the object is a valid json object. eg. esp_rmaker_obj(&quot;{\&quot;name":"value"}");</para></simplesect>
+param[in] val initialising value</para><para>return value structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="318" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ac2548269e09ed143e5e1c85ca5bc73dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+        <definition>esp_rmaker_param_val_t esp_rmaker_array</definition>
+        <argsstring>(const char *val)</argsstring>
+        <name>esp_rmaker_array</name>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise a json array value</para><para><simplesect kind="note"><para>the array will not be validated internally. it is the application&apos;s responsibility to ensure that the array is a valid json array. eg. esp_rmaker_array(&quot;[1,2,3]&quot;);</para></simplesect>
+param[in] val initialising value</para><para>return value structure </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="331" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a8d73414724cb29f722d362ca62bf5922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_node_t *</type>
+        <definition>esp_rmaker_node_t* esp_rmaker_node_init</definition>
+        <argsstring>(const esp_rmaker_config_t *config, const char *name, const char *type)</argsstring>
+        <name>esp_rmaker_node_init</name>
+        <param>
+          <type>const <ref refid="structesp__rmaker__config__t" kindref="compound">esp_rmaker_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize ESP RainMaker Node</para><para>This initializes the ESP RainMaker agent and creates the node. The model and firmware version for the node are set internally as per the project name and version. These can be overridden (but not recommended) using the esp_rmaker_node_add_fw_version() and esp_rmaker_node_add_model() APIs.</para><para><simplesect kind="note"><para>This should be the first call before using any other ESP RainMaker API.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration to be used by the ESP RainMaker. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the node. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the node.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Node handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="350" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1aa1206aae6ad0f43f208c0ffee7211992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_start</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_start</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Start ESP RainMaker Agent</para><para>This call starts the actual ESP RainMaker thread. This should preferably be called after a successful Wi-Fi connection in order to avoid unnecessary failures.</para><para><simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="360" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a5f28792a118e342a845a2820a880c9c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Stop ESP RainMaker Agent</para><para>This call stops the ESP RainMaker Agent instance started earlier by esp_rmaker_start().</para><para><simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="369" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1adf274ad981a1fa08644d3add602e6185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_deinit</definition>
+        <argsstring>(const esp_rmaker_node_t *node)</argsstring>
+        <name>esp_rmaker_node_deinit</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Deinitialize ESP RainMaker Node</para><para>This API deinitializes the ESP RainMaker agent and the node created using esp_rmaker_node_init().</para><para><simplesect kind="note"><para>This should be called after rainmaker has stopped.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node Handle returned by esp_rmaker_node_init().</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+ESP_OK on success. <simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="382" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1aa268ca1236153291e6fe88d081cff1b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const esp_rmaker_node_t *</type>
+        <definition>const esp_rmaker_node_t* esp_rmaker_get_node</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_get_node</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get a handle to the Node</para><para>This API returns handle to a node created using esp_rmaker_node_init().</para><para><simplesect kind="return"><para>Node handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="391" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1afd8469ba35e9dad8ce48f5792c3cfa6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* esp_rmaker_get_node_id</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_get_node_id</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Node Id</para><para>Returns pointer to the NULL terminated Node ID string.</para><para><simplesect kind="return"><para>Pointer to a NULL terminated Node ID string. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="399" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1aa4795651fe7cf777704922ac6a626ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__node__info__t" kindref="compound">esp_rmaker_node_info_t</ref> *</type>
+        <definition>esp_rmaker_node_info_t* esp_rmaker_node_get_info</definition>
+        <argsstring>(const esp_rmaker_node_t *node)</argsstring>
+        <name>esp_rmaker_node_get_info</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get Node Info</para><para>Returns pointer to the node info as configured during initialisation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to the node info on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="410" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a73ec7ca6a7f394883bdb216b5b644fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_add_attribute</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const char *attr_name, const char *val)</argsstring>
+        <name>esp_rmaker_node_add_attribute</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>attr_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add Node attribute</para><para>Adds a new attribute as the metadata for the node. For the sake of simplicity, only string values are allowed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attr_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the attribute. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value for the attribute.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="424" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a1f15ba8f8ac4bb5aff7779543a0e0ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_add_fw_version</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const char *fw_version)</argsstring>
+        <name>esp_rmaker_node_add_fw_version</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>fw_version</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add FW version for a node (Not recommended)</para><para>FW version is set internally to the project version. This API can be used to override that version.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">fw_version</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New firmware version.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="437" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a3d19da23e36e2beb060e1c4188c51d5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_add_model</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const char *model)</argsstring>
+        <name>esp_rmaker_node_add_model</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add model for a node</para><para>Model is set internally to the project name. This API can be used to override that name, now that a new field &quot;project&quot; has also been added internally to the node info.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New model string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="451" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a085575b40ca225e77093a514707da9b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_add_subtype</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const char *subtype)</argsstring>
+        <name>esp_rmaker_node_add_subtype</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>subtype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add subtype for a node</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">subtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Subtype string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="461" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a4d75415c392c27d66ba93c0da72981f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_device_create</definition>
+        <argsstring>(const char *dev_name, const char *type, void *priv_data)</argsstring>
+        <name>esp_rmaker_device_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>dev_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Device</para><para>This API will create a virtual &quot;Device&quot;. This could be something like a Switch, Lightbulb, etc.</para><para><simplesect kind="note"><para>The device created needs to be added to a node using esp_rmaker_node_add_device().</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dev_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique device name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional device type. Can be kept NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the device. This will be passed to callbacks. It should stay allocated throughout the lifetime of the device.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Device handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="479" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a2ae68357f9d4cd21f2da0eb12d6a6cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_service_create</definition>
+        <argsstring>(const char *serv_name, const char *type, void *priv_data)</argsstring>
+        <name>esp_rmaker_service_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Service</para><para>This API will create a &quot;Service&quot;. It is exactly same like a device in terms of structure and so, all APIs for device are also valid for a service. A service could be something like OTA, diagnostics, etc.</para><para><simplesect kind="note"><para>Name of a service should not clash with name of a device. </para></simplesect>
+<simplesect kind="note"><para>The service created needs to be added to a node using esp_rmaker_node_add_device().</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional service type. Can be kept NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This will be passed to callbacks. It should stay allocated throughout the lifetime of the device.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Device handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="499" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a601321dc136467ad5979591e684a5040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_delete</definition>
+        <argsstring>(const esp_rmaker_device_t *device)</argsstring>
+        <name>esp_rmaker_device_delete</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete a Device/Service</para><para>This API will delete a device created using esp_rmaker_device_create().</para><para><simplesect kind="note"><para>The device should first be removed from the node using esp_rmaker_node_remove_device() before deleting.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="513" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a3983e440359aa300b5b654c9316ee654" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_add_cb</definition>
+        <argsstring>(const esp_rmaker_device_t *device, esp_rmaker_device_write_cb_t write_cb, esp_rmaker_device_read_cb_t read_cb)</argsstring>
+        <name>esp_rmaker_device_add_cb</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_write_cb_t</type>
+          <declname>write_cb</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_read_cb_t</type>
+          <declname>read_cb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add callbacks for a device/service</para><para>Add read/write callbacks for a device that will be invoked as per requests received from the cloud (or other paths as may be added in future).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">write_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">read_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Read callback.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="528" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a494e74029fd366f8dccafa7340a5e2dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_add_device</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const esp_rmaker_device_t *device)</argsstring>
+        <name>esp_rmaker_node_add_device</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a device to a node</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="539" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ad20236f1e4ed7cf8f2135610f1c7a0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_remove_device</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const esp_rmaker_device_t *device)</argsstring>
+        <name>esp_rmaker_node_remove_device</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove a device from a node</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="550" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a58d5abd89b850e2077caf682f16f2d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_node_get_device_by_name</definition>
+        <argsstring>(const esp_rmaker_node_t *node, const char *device_name)</argsstring>
+        <name>esp_rmaker_node_get_device_by_name</name>
+        <param>
+          <type>const esp_rmaker_node_t *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>device_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get device by name</para><para>Get handle for a device based on the name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Node handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">device_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device name to search.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Device handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="562" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a91a1bf4dc1449e39ec1fbafcbd3ca654" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_add_attribute</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const char *attr_name, const char *val)</argsstring>
+        <name>esp_rmaker_device_add_attribute</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>attr_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a Device attribute</para><para><simplesect kind="note"><para>Device attributes are reported only once after a boot-up as part of the node configuration. Eg. Serial Number</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">attr_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the attribute. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of the attribute.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the attribute was added successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="577" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1aa5be407e4b0e7084635aba518de4e257" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_add_subtype</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const char *subtype)</argsstring>
+        <name>esp_rmaker_device_add_subtype</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>subtype</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a Device subtype</para><para>This can be something like esp.subtype.rgb-light for a device of type esp.device.lightbulb. This would primarily be used by the phone apps to render different icons for the same device type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">subtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String describing the sub type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the subtype was added successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="590" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a4596a0a0f20b5fe7e3e5ce42ba2ff2be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_add_model</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const char *model)</argsstring>
+        <name>esp_rmaker_device_add_model</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a Device model</para><para>This would primarily be used by the phone apps to render different icons for the same device type.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String describing the model.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the model was added successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="602" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a4d40184d64c98f482fe00322d8d3ab11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* esp_rmaker_device_get_name</definition>
+        <argsstring>(const esp_rmaker_device_t *device)</argsstring>
+        <name>esp_rmaker_device_get_name</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get device name from handle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL terminated device name string on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="611" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a41160ca482fc25bbf71240ce41bd1565" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* esp_rmaker_device_get_type</definition>
+        <argsstring>(const esp_rmaker_device_t *device)</argsstring>
+        <name>esp_rmaker_device_get_type</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get device type from handle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL terminated device type string on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure, or if the type wasn&apos;t provided while creating the device. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="620" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ab27f3bdc40b2fe07f1ee94ed06facd65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_add_param</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const esp_rmaker_param_t *param)</argsstring>
+        <name>esp_rmaker_device_add_param</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a parameter to a device/service</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="631" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a0640177146253644c91567b65664644c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_device_get_param_by_type</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const char *param_type)</argsstring>
+        <name>esp_rmaker_device_get_param_by_type</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameter by type</para><para>Get handle for a parameter based on the type.</para><para><simplesect kind="note"><para>If there are multiple parameters with the same type, this will return the first one. The API esp_rmaker_device_get_param_by_name() can be used to get a specific parameter, because the parameter names in a device are unique.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter type to search.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="648" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a447cb16fc7f0b4bd62c521b2d64e0f77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_device_get_param_by_name</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const char *param_name)</argsstring>
+        <name>esp_rmaker_device_get_param_by_name</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameter by name</para><para>Get handle for a parameter based on the name.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter name to search.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="660" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a80d279e2cc755b7987ac416ded455a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_device_assign_primary_param</definition>
+        <argsstring>(const esp_rmaker_device_t *device, const esp_rmaker_param_t *param)</argsstring>
+        <name>esp_rmaker_device_assign_primary_param</name>
+        <param>
+          <type>const esp_rmaker_device_t *</type>
+          <declname>device</declname>
+        </param>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign a primary parameter</para><para>Assign a parameter (already added using esp_rmaker_device_add_param()) as a primary parameter, which can be used by clients (phone apps specifically) to give prominence to it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">device</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the parameter was assigned as the primary successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="673" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a50728871838e7abad00886f90f9f7d5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_param_create</definition>
+        <argsstring>(const char *param_name, const char *type, esp_rmaker_param_val_t val, uint8_t properties)</argsstring>
+        <name>esp_rmaker_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>properties</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a Parameter</para><para>Parameter can be something like Temperature, Outlet state, Lightbulb brightness, etc.</para><para>Any changes should be reported using the esp_rmaker_param_update_and_report() API. Any remote changes will be reported to the application via the device callback, if registered.</para><para><simplesect kind="note"><para>The parameter created needs to be added to a device using esp_rmaker_device_add_param(). Parameter name should be unique in a given device.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter. a* </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional parameter type. Can be kept NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of the parameter. This also specifies the type that will be assigned to this parameter. You can use esp_rmaker_bool(), esp_rmaker_int(), esp_rmaker_float() or esp_rmaker_str() functions as the argument here. Eg, esp_rmaker_bool(true). </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">properties</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Properties of the parameter, which will be a logical OR of flags in esp_param_property_flags_t.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="697" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a8251010644f86be105cb4c3cbcaf3dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_add_ui_type</definition>
+        <argsstring>(const esp_rmaker_param_t *param, const char *ui_type)</argsstring>
+        <name>esp_rmaker_param_add_ui_type</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>ui_type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a UI Type to a parameter</para><para>This will be used by the Phone apps (or other clients) to render appropriate UI for the given parameter. Please refer the RainMaker documetation for supported UI Types.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ui_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String describing the UI Type.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="712" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a61c2c467fd90a4ea67ff99b0aa9dc75f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_add_bounds</definition>
+        <argsstring>(const esp_rmaker_param_t *param, esp_rmaker_param_val_t min, esp_rmaker_param_val_t max, esp_rmaker_param_val_t step)</argsstring>
+        <name>esp_rmaker_param_add_bounds</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>min</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>max</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add bounds for an integer/float parameter</para><para>This can be used to add bounds (min/max values) for a given integer parameter. Eg. brightness will have bounds as 0 and 100 if it is a percentage. Eg. esp_rmaker_param_add_bounds(brightness_param, esp_rmaker_int(0), esp_rmaker_int(100), esp_rmaker_int(5));</para><para><simplesect kind="note"><para>The RainMaker core does not check the bounds. It is upto the application to handle it.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">min</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum allowed value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">max</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum allowed value. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">step</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum stepping (set to 0 if no specific value is desired).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. return error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="731" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a6ac43e462f417007f6cb2bb513dc5c30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_add_valid_str_list</definition>
+        <argsstring>(const esp_rmaker_param_t *param, const char *strs[], uint8_t count)</argsstring>
+        <name>esp_rmaker_param_add_valid_str_list</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>strs</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add a list of valid strings for a string parameter</para><para>This can be used to add a list of valid strings for a given string parameter.</para><para>Eg. static const char *valid_strs[] = {&quot;None&quot;,&quot;Yes&quot;,&quot;No&quot;,&quot;Can&apos;t Say&quot;}; esp_rmaker_param_add_valid_str_list(param, valid_strs, 4);</para><para><simplesect kind="note"><para>The RainMaker core does not check the values. It is upto the application to handle it.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">strs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an array of strings. Note that this memory should stay allocated throughout the lifetime of this parameter. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of strings in the above array.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. return error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="753" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a777cdda6d0e49454402dbad8c7d06345" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_add_array_max_count</definition>
+        <argsstring>(const esp_rmaker_param_t *param, int count)</argsstring>
+        <name>esp_rmaker_param_add_array_max_count</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Add max count for an array parameter</para><para>This can be used to put a limit on the maximum number of elements in an array.</para><para><simplesect kind="note"><para>The RainMaker core does not check the values. It is upto the application to handle it.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Max number of elements allowed in the array.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. return error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="767" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ac33de4033994c5c850f4ce6548eb5723" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_update</definition>
+        <argsstring>(const esp_rmaker_param_t *param, esp_rmaker_param_val_t val)</argsstring>
+        <name>esp_rmaker_param_update</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="791" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a053f8cbb3a75232c52a3eef8bd2e3f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_update_and_report</definition>
+        <argsstring>(const esp_rmaker_param_t *param, esp_rmaker_param_val_t val)</argsstring>
+        <name>esp_rmaker_param_update_and_report</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update and report a parameter</para><para>Calling this API will update the parameter and report it to ESP RainMaker cloud. This should be used whenever there is any local change.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value of the parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the parameter was updated successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="804" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a59f8c209881fd1193700c6bec6aa1cee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_param_update_and_notify</definition>
+        <argsstring>(const esp_rmaker_param_t *param, esp_rmaker_param_val_t val)</argsstring>
+        <name>esp_rmaker_param_update_and_notify</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref></type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Update and notify a parameter</para><para>Calling this API will update the parameter and report it to ESP RainMaker cloud similar to esp_rmaker_param_update_and_report(). However, additionally, it will also trigger a notification on the phone apps (if enabled).</para><para><simplesect kind="note"><para>This should be used only when some local change requires explicit notification even when the phone app is in background, not otherwise. Eg. Alarm got triggered, temperature exceeded some threshold, etc.</para></simplesect>
+Alternatively, the esp_rmaker_raise_alert() API can also be used to trigger notification on the phone apps with pre-formatted text.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New value of the parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the parameter was updated successfully. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="825" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a59ce1ea24a7aa83ec9ce174899ed0758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_raise_alert</definition>
+        <argsstring>(const char *alert_str)</argsstring>
+        <name>esp_rmaker_raise_alert</name>
+        <param>
+          <type>const char *</type>
+          <declname>alert_str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trigger an alert on the phone app</para><para>This API will trigger a notification alert on the phone apps (if enabled) using the formatted text provided. Note that this does not send a notification directly to the phone, but reports the alert to the ESP RainMaker cloud which then uses the Notification framework to send notifications to the phone apps. The value does not get stored anywhere, nor is it linked to any node parameters.</para><para><simplesect kind="note"><para>This should be used only if some event requires explicitly alerting the user even when the phone app is in background, not otherwise. Eg. &quot;Motion Detected&quot;, &quot;Fire alarm triggered&quot;</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">alert_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL terminated pre-formatted alert string. Maximum length can be ESP_RMAKER_MAX_ALERT_LEN, excluding NULL character.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="844" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ab343779de9ae16c8c4368553c396bc25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* esp_rmaker_param_get_name</definition>
+        <argsstring>(const esp_rmaker_param_t *param)</argsstring>
+        <name>esp_rmaker_param_get_name</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameter name from handle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL terminated parameter name string on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="853" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a592b195f9d6dbba49567606424da5c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char* esp_rmaker_param_get_type</definition>
+        <argsstring>(const esp_rmaker_param_t *param)</argsstring>
+        <name>esp_rmaker_param_get_type</name>
+        <param>
+          <type>const esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameter type from handle</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>NULL terminated parameter type string on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure, or if the type wasn&apos;t provided while creating the parameter. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="862" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a4b4b3c5b782074f5f353a2c2156172e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref> *</type>
+        <definition>esp_rmaker_param_val_t* esp_rmaker_param_get_val</definition>
+        <argsstring>(esp_rmaker_param_t *param)</argsstring>
+        <name>esp_rmaker_param_get_val</name>
+        <param>
+          <type>esp_rmaker_param_t *</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get parameter value</para><para>This gives the parameter value that is stored in the RainMaker core.</para><para><simplesect kind="note"><para>This does not call any explicit functions to read value from hardware/driver.</para></simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter handle</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pointer to parameter value on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="875" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a1580da68f062044277f07627fd6bb3ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_report_node_details</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_report_node_details</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report the node details to the cloud</para><para>This API reports node details i.e. the node configuration and values of all the parameters to the ESP RainMaker cloud. Eg. If a new device is created (with some parameters and attributes), then this API should be called after that to send the node details to the cloud again and the changes to be reflected in the clients (like phone apps).</para><para><simplesect kind="note"><para>Please use this API only if you need to create or delete devices after esp_rmaker_start() has already been called, for use cases like bridges or hubs.</para></simplesect>
+<simplesect kind="return"><para>ESP_OK if the node details are successfully queued to be published. </para></simplesect>
+<simplesect kind="return"><para>error in case of failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="889" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a2b946479c43fe4b3ffaa5a4b829716be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_timezone_service_enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_timezone_service_enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable Timezone Service</para><para>This enables the ESP RainMaker standard timezone service which can be used to set timezone, either in POSIX or location string format. Please refer the specifications for additional details.</para><para><simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="900" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a3909b42f80d15c019529bf6798f92e3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_system_service_enable</definition>
+        <argsstring>(esp_rmaker_system_serv_config_t *config)</argsstring>
+        <name>esp_rmaker_system_service_enable</name>
+        <param>
+          <type><ref refid="structesp__rmaker__system__serv__config__t" kindref="compound">esp_rmaker_system_serv_config_t</ref> *</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable System Service</para><para>This enables the ESP RainMaker standard system service which can be used for operations like reboot, factory reset and Wi-Fi reset.</para><para>Please refer the specifications for additional details.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration for the system service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="914" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a2362bdf277a4199e26f7a40ca10a11c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool esp_rmaker_local_ctrl_service_started</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_local_ctrl_service_started</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if local_ctrl service has started</para><para><simplesect kind="return"><para>true if service has started </para></simplesect>
+<simplesect kind="return"><para>false if the service has not started </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="922" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1ad5489f71d000c15a39748acb9e62c2cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_enable_default</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_ota_enable_default</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable Default RainMaker OTA Firmware Upgrade</para><para>This enables the default recommended RainMaker OTA Firmware Upgrade, which is &quot;Using the Topics&quot;, which allows performing OTA from Dashboard. This OTA can be triggered by Admin Users only. On Public RainMaker deployment, for nodes using &quot;Self Claiming&quot;, since there is no associated admin user, the Primary user will automatically become the admin and can perform OTA from dashboard.</para><para><simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="937" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a776ac0454535aaaf15e0801dd3dbac8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_test_cmd_resp</definition>
+        <argsstring>(const void *cmd, size_t cmd_len, void *priv_data)</argsstring>
+        <name>esp_rmaker_test_cmd_resp</name>
+        <param>
+          <type>const void *</type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>cmd_len</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="951" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a673da06eabd39ea45f58fae54364c71d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_node_auth_sign_msg</definition>
+        <argsstring>(const void *challenge, size_t inlen, void **response, size_t *outlen)</argsstring>
+        <name>esp_rmaker_node_auth_sign_msg</name>
+        <param>
+          <type>const void *</type>
+          <declname>challenge</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>inlen</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>response</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>outlen</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>This API signs the challenge with RainMaker private key.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">challenge</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the data to be signed </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">inlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the challenge </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the signature. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">outlen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the signature</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. response is dynamically allocated, free the response on success. </para></simplesect>
+<simplesect kind="return"><para>Apt error on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="963" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a6b527adf4dcd22ca39c5cdb81aebaae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_local_ctrl_enable</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_local_ctrl_enable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="973" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__core_8h_1a80a4984c6d7246c160689025868fa3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_local_ctrl_disable</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_local_ctrl_disable</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="984" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2020<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>PTE<sp/>LTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_event.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_CONFIG_VERSION<sp/><sp/><sp/><sp/>&quot;2020-03-20&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Maximum<sp/>length<sp/>of<sp/>the<sp/>alert<sp/>message<sp/>that<sp/>can<sp/>be<sp/>passed<sp/>to<sp/>esp_rmaker_raise_alert()<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_MAX_ALERT_LEN<sp/><sp/><sp/><sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">ESP_EVENT_DECLARE_BASE(RMAKER_EVENT);</highlight></codeline>
+<codeline lineno="36"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_INIT_DONE<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_CLAIM_STARTED,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_CLAIM_SUCCESSFUL,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_CLAIM_FAILED,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_USER_NODE_MAPPING_DONE,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_LOCAL_CTRL_STARTED,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>User<sp/>reset<sp/>request<sp/>successfully<sp/>sent<sp/>to<sp/>ESP<sp/>RainMaker<sp/>Cloud<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_USER_NODE_MAPPING_RESET,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_EVENT_LOCAL_CTRL_STOPPED</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/>esp_rmaker_event_t;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="structesp__rmaker__node__info__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61" refid="structesp__rmaker__node__info__t_1aa91bb43385c60757b025cb1f456554e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__node__info__t_1aa91bb43385c60757b025cb1f456554e8" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="63" refid="structesp__rmaker__node__info__t_1a5373e803d006b5aff5d66fc34249f031" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__node__info__t_1a5373e803d006b5aff5d66fc34249f031" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="65" refid="structesp__rmaker__node__info__t_1a4921c01e1e66627e6957ac74002d5926" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__node__info__t_1a4921c01e1e66627e6957ac74002d5926" kindref="member">fw_version</ref>;</highlight></codeline>
+<codeline lineno="67" refid="structesp__rmaker__node__info__t_1a0a63556298f4a8f686c54c09228dc7cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__node__info__t_1a0a63556298f4a8f686c54c09228dc7cb" kindref="member">model</ref>;</highlight></codeline>
+<codeline lineno="69" refid="structesp__rmaker__node__info__t_1a4cbc64e4da2893804171e3b8f536119e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__node__info__t_1a4cbc64e4da2893804171e3b8f536119e" kindref="member">subtype</ref>;</highlight></codeline>
+<codeline lineno="71" refid="structesp__rmaker__node__info__t_1a423ef8c530e760431e6a882c5885e04b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="structesp__rmaker__node__info__t_1a423ef8c530e760431e6a882c5885e04b" kindref="member">secure_boot_digest</ref>;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__node__info__t" kindref="compound">esp_rmaker_node_info_t</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="structesp__rmaker__config__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80" refid="structesp__rmaker__config__t_1a47f1d63e2d2f0b190c93837be01bec76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__config__t_1a47f1d63e2d2f0b190c93837be01bec76" kindref="member">enable_time_sync</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__config__t" kindref="compound">esp_rmaker_config_t</ref>;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_INVALID<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_BOOLEAN,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_INTEGER,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_FLOAT,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_STRING,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_OBJECT,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_VAL_TYPE_ARRAY,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}<sp/>esp_rmaker_val_type_t;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="unionesp__rmaker__val__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104" refid="unionesp__rmaker__val__t_1a43198cc6098fc4abca598ea9de5716f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="unionesp__rmaker__val__t_1a43198cc6098fc4abca598ea9de5716f9" kindref="member">b</ref>;</highlight></codeline>
+<codeline lineno="106" refid="unionesp__rmaker__val__t_1a11ee3090e45f5d2fbeff6ae4a1bd2da1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="unionesp__rmaker__val__t_1a11ee3090e45f5d2fbeff6ae4a1bd2da1" kindref="member">i</ref>;</highlight></codeline>
+<codeline lineno="108" refid="unionesp__rmaker__val__t_1a7b0c5a3b876ac746c10dc3af5f63a0ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="unionesp__rmaker__val__t_1a7b0c5a3b876ac746c10dc3af5f63a0ed" kindref="member">f</ref>;</highlight></codeline>
+<codeline lineno="110" refid="unionesp__rmaker__val__t_1ac4363b4ab0b272a2cc28524896ce9d6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="unionesp__rmaker__val__t_1ac4363b4ab0b272a2cc28524896ce9d6b" kindref="member">s</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}<sp/><ref refid="unionesp__rmaker__val__t" kindref="compound">esp_rmaker_val_t</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="structesp__rmaker__param__val__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116" refid="structesp__rmaker__param__val__t_1a328189bdfb41dcf4211e57e04d54d6a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_val_type_t<sp/><ref refid="structesp__rmaker__param__val__t_1a328189bdfb41dcf4211e57e04d54d6a9" kindref="member">type</ref>;</highlight></codeline>
+<codeline lineno="118" refid="structesp__rmaker__param__val__t_1aaf4b841864cb721d1eba0ac7c7f0b810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="unionesp__rmaker__val__t" kindref="compound">esp_rmaker_val_t</ref><sp/><ref refid="structesp__rmaker__param__val__t_1aaf4b841864cb721d1eba0ac7c7f0b810" kindref="member">val</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref>;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>PROP_FLAG_WRITE<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>0),</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>PROP_FLAG_READ<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>1),</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>PROP_FLAG_TIME_SERIES<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>2),</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>PROP_FLAG_PERSIST<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/>3)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}<sp/>esp_param_property_flags_t;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="preprocessor">#define<sp/>SYSTEM_SERV_FLAG_REBOOT<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="preprocessor">#define<sp/>SYSTEM_SERV_FLAG_FACTORY_RESET<sp/><sp/>(1<sp/>&lt;&lt;<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="preprocessor">#define<sp/>SYSTEM_SERV_FLAG_WIFI_RESET<sp/><sp/><sp/><sp/><sp/>(1<sp/>&lt;&lt;<sp/>2)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="preprocessor">#define<sp/>SYSTEM_SERV_FLAGS_ALL<sp/><sp/><sp/>(SYSTEM_SERV_FLAG_REBOOT<sp/>|<sp/>SYSTEM_SERV_FLAG_FACTORY_RESET<sp/>|<sp/>SYSTEM_SERV_FLAG_WIFI_RESET)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>esp_rmaker_handle_t;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_rmaker_handle_t<sp/>esp_rmaker_node_t;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_rmaker_handle_t<sp/>esp_rmaker_device_t;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_rmaker_handle_t<sp/>esp_rmaker_param_t;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_INIT,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_CLOUD,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_SCHEDULE,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_SCENE_ACTIVATE,</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_SCENE_DEACTIVATE,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_LOCAL,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>ESP_RMAKER_REQ_SRC_MAX,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}<sp/>esp_rmaker_req_src_t;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="structesp__rmaker__write__ctx__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="178" refid="structesp__rmaker__write__ctx__t_1a15112e6c2ecb7da27d0fc25d8716b969" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_req_src_t<sp/><ref refid="structesp__rmaker__write__ctx__t_1a15112e6c2ecb7da27d0fc25d8716b969" kindref="member">src</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__write__ctx__t" kindref="compound">esp_rmaker_write_ctx_t</ref>;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="structesp__rmaker__read__ctx__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184" refid="structesp__rmaker__read__ctx__t_1aebbf694ce3d9d7ebaef1770b333ea6a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_req_src_t<sp/><ref refid="structesp__rmaker__read__ctx__t_1aebbf694ce3d9d7ebaef1770b333ea6a4" kindref="member">src</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__read__ctx__t" kindref="compound">esp_rmaker_read_ctx_t</ref>;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="structesp__rmaker__system__serv__config__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="193" refid="structesp__rmaker__system__serv__config__t_1a0bde0330ad942ecc38f434dd788eeacd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="structesp__rmaker__system__serv__config__t_1a0bde0330ad942ecc38f434dd788eeacd" kindref="member">flags</ref>;</highlight></codeline>
+<codeline lineno="199" refid="structesp__rmaker__system__serv__config__t_1ae3433f756ecf39faae48953ddd090cc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="structesp__rmaker__system__serv__config__t_1ae3433f756ecf39faae48953ddd090cc4" kindref="member">reboot_seconds</ref>;</highlight></codeline>
+<codeline lineno="205" refid="structesp__rmaker__system__serv__config__t_1ae8450fa18102f88f71cac07dfe6388b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="structesp__rmaker__system__serv__config__t_1ae8450fa18102f88f71cac07dfe6388b2" kindref="member">reset_seconds</ref>;</highlight></codeline>
+<codeline lineno="210" refid="structesp__rmaker__system__serv__config__t_1a1e2b848c681f4dc8e3b55b9e94575cd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>int8_t<sp/><ref refid="structesp__rmaker__system__serv__config__t_1a1e2b848c681f4dc8e3b55b9e94575cd3" kindref="member">reset_reboot_seconds</ref>;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__system__serv__config__t" kindref="compound">esp_rmaker_system_serv_config_t</ref>;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_device_write_cb_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data,<sp/><ref refid="structesp__rmaker__write__ctx__t" kindref="compound">esp_rmaker_write_ctx_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_device_read_cb_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data,<sp/><ref refid="structesp__rmaker__read__ctx__t" kindref="compound">esp_rmaker_read_ctx_t</ref><sp/>*ctx);</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_device_cb_src_to_str(esp_rmaker_req_src_t<sp/>src);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_bool(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>bval);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_int(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ival);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_float(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>fval);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_str(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*sval);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_obj(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>esp_rmaker_array(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal">esp_rmaker_node_t<sp/>*esp_rmaker_node_init(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__config__t" kindref="compound">esp_rmaker_config_t</ref><sp/>*config,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="360"><highlight class="normal">esp_err_t<sp/>esp_rmaker_start(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal">esp_err_t<sp/>esp_rmaker_stop(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_deinit(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*esp_rmaker_get_node(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_get_node_id(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><ref refid="structesp__rmaker__node__info__t" kindref="compound">esp_rmaker_node_info_t</ref><sp/>*esp_rmaker_node_get_info(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node);</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_add_attribute(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*attr_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="437"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_add_fw_version(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*fw_version);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"></highlight></codeline>
+<codeline lineno="451"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_add_model(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*model);</highlight></codeline>
+<codeline lineno="452"><highlight class="normal"></highlight></codeline>
+<codeline lineno="461"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_add_subtype(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*subtype);</highlight></codeline>
+<codeline lineno="462"><highlight class="normal"></highlight></codeline>
+<codeline lineno="479"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_device_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*dev_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="480"><highlight class="normal"></highlight></codeline>
+<codeline lineno="499"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_service_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="513"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_delete(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device);</highlight></codeline>
+<codeline lineno="514"><highlight class="normal"></highlight></codeline>
+<codeline lineno="528"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_add_cb(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/>esp_rmaker_device_write_cb_t<sp/>write_cb,<sp/>esp_rmaker_device_read_cb_t<sp/>read_cb);</highlight></codeline>
+<codeline lineno="529"><highlight class="normal"></highlight></codeline>
+<codeline lineno="539"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_add_device(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device);</highlight></codeline>
+<codeline lineno="540"><highlight class="normal"></highlight></codeline>
+<codeline lineno="550"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_remove_device(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device);</highlight></codeline>
+<codeline lineno="551"><highlight class="normal"></highlight></codeline>
+<codeline lineno="562"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_node_get_device_by_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_node_t<sp/>*node,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*device_name);</highlight></codeline>
+<codeline lineno="563"><highlight class="normal"></highlight></codeline>
+<codeline lineno="577"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_add_attribute(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*attr_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="578"><highlight class="normal"></highlight></codeline>
+<codeline lineno="590"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_add_subtype(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*subtype);</highlight></codeline>
+<codeline lineno="591"><highlight class="normal"></highlight></codeline>
+<codeline lineno="602"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_add_model(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*model);</highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight></codeline>
+<codeline lineno="611"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_device_get_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device);</highlight></codeline>
+<codeline lineno="612"><highlight class="normal"></highlight></codeline>
+<codeline lineno="620"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_device_get_type(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device);</highlight></codeline>
+<codeline lineno="621"><highlight class="normal"></highlight></codeline>
+<codeline lineno="631"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_add_param(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param);</highlight></codeline>
+<codeline lineno="632"><highlight class="normal"></highlight></codeline>
+<codeline lineno="633"><highlight class="normal"></highlight></codeline>
+<codeline lineno="648"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_device_get_param_by_type(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_type);</highlight></codeline>
+<codeline lineno="649"><highlight class="normal"></highlight></codeline>
+<codeline lineno="660"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_device_get_param_by_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="661"><highlight class="normal"></highlight></codeline>
+<codeline lineno="673"><highlight class="normal">esp_err_t<sp/>esp_rmaker_device_assign_primary_param(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_device_t<sp/>*device,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param);</highlight></codeline>
+<codeline lineno="674"><highlight class="normal"></highlight></codeline>
+<codeline lineno="697"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*type,</highlight></codeline>
+<codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val,<sp/>uint8_t<sp/>properties);</highlight></codeline>
+<codeline lineno="699"><highlight class="normal"></highlight></codeline>
+<codeline lineno="712"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_add_ui_type(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ui_type);</highlight></codeline>
+<codeline lineno="713"><highlight class="normal"></highlight></codeline>
+<codeline lineno="731"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_add_bounds(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,</highlight></codeline>
+<codeline lineno="732"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>min,<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>max,<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>step);</highlight></codeline>
+<codeline lineno="733"><highlight class="normal"></highlight></codeline>
+<codeline lineno="753"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_add_valid_str_list(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*strs[],<sp/>uint8_t<sp/>count);</highlight></codeline>
+<codeline lineno="754"><highlight class="normal"></highlight></codeline>
+<codeline lineno="767"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_add_array_max_count(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>count);</highlight></codeline>
+<codeline lineno="768"><highlight class="normal"></highlight></codeline>
+<codeline lineno="769"><highlight class="normal"></highlight></codeline>
+<codeline lineno="770"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Update<sp/>a<sp/>parameter</highlight></codeline>
+<codeline lineno="771"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="772"><highlight class="comment"><sp/>*<sp/>This<sp/>will<sp/>just<sp/>update<sp/>the<sp/>value<sp/>of<sp/>a<sp/>parameter<sp/>with<sp/>esp<sp/>rainmaker<sp/>core,<sp/>without<sp/>actually<sp/>reporting</highlight></codeline>
+<codeline lineno="773"><highlight class="comment"><sp/>*<sp/>it.<sp/>This<sp/>can<sp/>be<sp/>used<sp/>when<sp/>multiple<sp/>parameters<sp/>need<sp/>to<sp/>be<sp/>reported<sp/>together.</highlight></codeline>
+<codeline lineno="774"><highlight class="comment"><sp/>*<sp/>Eg.<sp/>If<sp/>x<sp/>parameters<sp/>are<sp/>to<sp/>be<sp/>reported,<sp/>this<sp/>API<sp/>can<sp/>be<sp/>used<sp/>for<sp/>the<sp/>first<sp/>x<sp/>-1<sp/>parameters</highlight></codeline>
+<codeline lineno="775"><highlight class="comment"><sp/>*<sp/>and<sp/>the<sp/>last<sp/>one<sp/>can<sp/>be<sp/>updated<sp/>using<sp/>esp_rmaker_param_update_and_report().</highlight></codeline>
+<codeline lineno="776"><highlight class="comment"><sp/>*<sp/>This<sp/>will<sp/>report<sp/>all<sp/>parameters<sp/>which<sp/>were<sp/>updated<sp/>prior<sp/>to<sp/>this<sp/>call.</highlight></codeline>
+<codeline lineno="777"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="778"><highlight class="comment"><sp/>*<sp/>Sample:</highlight></codeline>
+<codeline lineno="779"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="780"><highlight class="comment"><sp/>*<sp/>esp_rmaker_param_update(param1,<sp/>esp_rmaker_float(10.2));</highlight></codeline>
+<codeline lineno="781"><highlight class="comment"><sp/>*<sp/>esp_rmaker_param_update(param2,<sp/>esp_rmaker_int(55));</highlight></codeline>
+<codeline lineno="782"><highlight class="comment"><sp/>*<sp/>esp_rmaker_param_update(param3,<sp/>esp_rmaker_int(95));</highlight></codeline>
+<codeline lineno="783"><highlight class="comment"><sp/>*<sp/>esp_rmaker_param_update_and_report(param1,<sp/>esp_rmaker_bool(true));</highlight></codeline>
+<codeline lineno="784"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="785"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>param<sp/>Parameter<sp/>handle.</highlight></codeline>
+<codeline lineno="786"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>val<sp/>New<sp/>value<sp/>of<sp/>the<sp/>parameter.</highlight></codeline>
+<codeline lineno="787"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="788"><highlight class="comment"><sp/>*<sp/>@return<sp/>ESP_OK<sp/>if<sp/>the<sp/>parameter<sp/>was<sp/>updated<sp/>successfully.</highlight></codeline>
+<codeline lineno="789"><highlight class="comment"><sp/>*<sp/>@return<sp/>error<sp/>in<sp/>case<sp/>of<sp/>failure.</highlight></codeline>
+<codeline lineno="790"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="791"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_update(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val);</highlight></codeline>
+<codeline lineno="792"><highlight class="normal"></highlight></codeline>
+<codeline lineno="804"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_update_and_report(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val);</highlight></codeline>
+<codeline lineno="805"><highlight class="normal"></highlight></codeline>
+<codeline lineno="825"><highlight class="normal">esp_err_t<sp/>esp_rmaker_param_update_and_notify(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param,<sp/><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>val);</highlight></codeline>
+<codeline lineno="826"><highlight class="normal"></highlight></codeline>
+<codeline lineno="844"><highlight class="normal">esp_err_t<sp/>esp_rmaker_raise_alert(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*alert_str);</highlight></codeline>
+<codeline lineno="845"><highlight class="normal"></highlight></codeline>
+<codeline lineno="853"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_param_get_name(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param);</highlight></codeline>
+<codeline lineno="854"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_rmaker_param_get_type(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>esp_rmaker_param_t<sp/>*param);</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"></highlight></codeline>
+<codeline lineno="875"><highlight class="normal"><ref refid="structesp__rmaker__param__val__t" kindref="compound">esp_rmaker_param_val_t</ref><sp/>*esp_rmaker_param_get_val(esp_rmaker_param_t<sp/>*param);</highlight></codeline>
+<codeline lineno="876"><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal">esp_err_t<sp/>esp_rmaker_report_node_details(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"></highlight></codeline>
+<codeline lineno="900"><highlight class="normal">esp_err_t<sp/>esp_rmaker_timezone_service_enable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="901"><highlight class="normal"></highlight></codeline>
+<codeline lineno="914"><highlight class="normal">esp_err_t<sp/>esp_rmaker_system_service_enable(<ref refid="structesp__rmaker__system__serv__config__t" kindref="compound">esp_rmaker_system_serv_config_t</ref><sp/>*config);</highlight></codeline>
+<codeline lineno="915"><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>esp_rmaker_local_ctrl_service_started(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"></highlight></codeline>
+<codeline lineno="937"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_enable_default(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="938"><highlight class="normal"></highlight></codeline>
+<codeline lineno="939"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="940"><highlight class="comment"><sp/>*<sp/>Send<sp/>a<sp/>command<sp/>to<sp/>self<sp/>(TESTING<sp/>only)</highlight></codeline>
+<codeline lineno="941"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="942"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>to<sp/>be<sp/>passed<sp/>as<sp/>an<sp/>argument<sp/>to<sp/>esp_rmaker_cmd_resp_test_send().</highlight></codeline>
+<codeline lineno="943"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="944"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>cmd<sp/>The<sp/>TLV<sp/>encoded<sp/>command<sp/>data.</highlight></codeline>
+<codeline lineno="945"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>cmd_len<sp/>Length<sp/>of<sp/>the<sp/>command<sp/>data.</highlight></codeline>
+<codeline lineno="946"><highlight class="comment"><sp/>*<sp/>@param[in]<sp/>priv_data<sp/>Private<sp/>data<sp/>passed<sp/>to<sp/>esp_rmaker_cmd_resp_test_send().</highlight></codeline>
+<codeline lineno="947"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="948"><highlight class="comment"><sp/>*<sp/>@return<sp/>ESP_OK<sp/>on<sp/>success</highlight></codeline>
+<codeline lineno="949"><highlight class="comment"><sp/>*<sp/>@return<sp/>error<sp/>on<sp/>failure</highlight></codeline>
+<codeline lineno="950"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="951"><highlight class="normal">esp_err_t<sp/>esp_rmaker_test_cmd_resp(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*cmd,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>cmd_len,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="952"><highlight class="normal"></highlight></codeline>
+<codeline lineno="963"><highlight class="normal">esp_err_t<sp/>esp_rmaker_node_auth_sign_msg(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*challenge,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>inlen,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>**response,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*outlen);</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="965"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Enable<sp/>Local<sp/>Control<sp/>Service.</highlight></codeline>
+<codeline lineno="966"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="967"><highlight class="comment"><sp/>*<sp/>This<sp/>enables<sp/>local<sp/>control<sp/>service,<sp/>which<sp/>allows<sp/>users<sp/>to</highlight></codeline>
+<codeline lineno="968"><highlight class="comment"><sp/>*<sp/>control<sp/>their<sp/>device<sp/>without<sp/>internet<sp/>connection.</highlight></codeline>
+<codeline lineno="969"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="970"><highlight class="comment"><sp/>*<sp/>@return<sp/>ESP_OK<sp/>on<sp/>success</highlight></codeline>
+<codeline lineno="971"><highlight class="comment"><sp/>*<sp/>@return<sp/>error<sp/>on<sp/>failure</highlight></codeline>
+<codeline lineno="972"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="973"><highlight class="normal">esp_err_t<sp/>esp_rmaker_local_ctrl_enable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="974"><highlight class="normal"></highlight></codeline>
+<codeline lineno="975"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="976"><highlight class="comment"><sp/>*<sp/>@brief<sp/>Disable<sp/>Local<sp/>Control<sp/>Service.</highlight></codeline>
+<codeline lineno="977"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="978"><highlight class="comment"><sp/>*<sp/>This<sp/>will<sp/>free<sp/>the<sp/>memory<sp/>used<sp/>by<sp/>local<sp/>control<sp/>service<sp/>and<sp/>remove</highlight></codeline>
+<codeline lineno="979"><highlight class="comment"><sp/>*<sp/>local<sp/>control<sp/>service<sp/>from<sp/>the<sp/>node.</highlight></codeline>
+<codeline lineno="980"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="981"><highlight class="comment"><sp/>*<sp/>@return<sp/>ESP_OK<sp/>on<sp/>success</highlight></codeline>
+<codeline lineno="982"><highlight class="comment"><sp/>*<sp/>@return<sp/>error<sp/>on<sp/>failure</highlight></codeline>
+<codeline lineno="983"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="984"><highlight class="normal">esp_err_t<sp/>esp_rmaker_local_ctrl_disable(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="985"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="986"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="987"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_config_t</compoundname>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__config__t_1a47f1d63e2d2f0b190c93837be01bec76" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool esp_rmaker_config_t::enable_time_sync</definition>
+        <argsstring></argsstring>
+        <name>enable_time_sync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable Time Sync Setting this true will enable SNTP and fetch the current time before attempting to connect to the ESP RainMaker service </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="80" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>ESP RainMaker Configuration </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="75" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="75" bodyend="81"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__config__t_1a47f1d63e2d2f0b190c93837be01bec76" prot="public" virt="non-virtual"><scope>esp_rmaker_config_t</scope><name>enable_time_sync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

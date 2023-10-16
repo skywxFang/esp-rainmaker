@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RainMaker Common &mdash; ESP RainMaker Programming Guide  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Python API Reference" href="../python-api-reference/index.html" />
+    <link rel="prev" title="RainMaker Console" href="rainmaker_console.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ESP RainMaker Programming Guide
+              <img src="../_static/esp-rainmaker-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html">RainMaker Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html">RainMaker Standard Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_mqtt.html">RainMaker MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html">RainMaker OTA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_console.html">RainMaker Console</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RainMaker Common</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#utilities">Utilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header-file">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#structures">Structures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macros">Macros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type-definitions">Type Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#factory-storage">Factory Storage</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#work-queue">Work Queue</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Type Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#common-events">Common Events</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enumerations">Enumerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python-api-reference/index.html">Python API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ESP RainMaker Programming Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C API Reference</a></li>
+      <li class="breadcrumb-item active">RainMaker Common</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/c-api-reference/rainmaker_common.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rainmaker-common">
+<h1>RainMaker Common<a class="headerlink" href="#rainmaker-common" title="Permalink to this headline"></a></h1>
+<section id="utilities">
+<h2>Utilities<a class="headerlink" href="#utilities" title="Permalink to this headline"></a></h2>
+<section id="header-file">
+<h3>Header File<a class="headerlink" href="#header-file" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/rmaker_common/include/esp_rmaker_utils.h">rmaker_common/include/esp_rmaker_utils.h</a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417esp_rmaker_reboot6int8_t">
+<span id="_CPPv317esp_rmaker_reboot6int8_t"></span><span id="_CPPv217esp_rmaker_reboot6int8_t"></span><span id="esp_rmaker_reboot__int8_t"></span><span class="target" id="esp__rmaker__utils_8h_1a80da4dfce9c5a82fee2bba8328e7660a"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_reboot</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">seconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417esp_rmaker_reboot6int8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reboot the device after a delay</p>
+<p>This API just starts a reboot timer and returns immediately. The actual reboot is trigerred asynchronously in the timer callback. This is useful if you want to reboot after a delay, to allow other tasks to finish their operations (Eg. MQTT publish to indicate OTA success). The RMAKER_EVENT_REBOOT event is triggered when the reboot timer is started.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>seconds</strong> – <strong>[in]</strong> Time in seconds after which the device should reboot.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421esp_rmaker_wifi_reset6int8_t6int8_t">
+<span id="_CPPv321esp_rmaker_wifi_reset6int8_t6int8_t"></span><span id="_CPPv221esp_rmaker_wifi_reset6int8_t6int8_t"></span><span id="esp_rmaker_wifi_reset__int8_t.int8_t"></span><span class="target" id="esp__rmaker__utils_8h_1adca5a782ea9892fd91544f51a1f9b53c"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_wifi_reset</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reset_seconds</span></span>, <span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reboot_seconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421esp_rmaker_wifi_reset6int8_t6int8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reset Wi-Fi credentials and (optionally) reboot</p>
+<p>This will reset just the Wi-Fi credentials and (optionally) trigger a reboot. This is useful when you want to keep all the entries in NVS memory intact, but just change the Wi-Fi credentials. The RMAKER_EVENT_WIFI_RESET event is triggered when this API is called. The actual reset will happen after a delay if reset_seconds is not zero.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This reset and reboot operations will happen asynchronously depending on the values passed to the API.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reset_seconds</strong> – <strong>[in]</strong> Time in seconds after which the reset should get triggered. This will help other modules take some actions before the device actually resets. If set to zero, the operation would be performed immediately. </p></li>
+<li><p><strong>reboot_seconds</strong> – <strong>[in]</strong> Time in seconds after which the device should reboot. If set to negative value, the device will not reboot at all.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424esp_rmaker_factory_reset6int8_t6int8_t">
+<span id="_CPPv324esp_rmaker_factory_reset6int8_t6int8_t"></span><span id="_CPPv224esp_rmaker_factory_reset6int8_t6int8_t"></span><span id="esp_rmaker_factory_reset__int8_t.int8_t"></span><span class="target" id="esp__rmaker__utils_8h_1a7dce82cf21b32f019d70b6bec61da3c2"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_reset</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reset_seconds</span></span>, <span class="n"><span class="pre">int8_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">reboot_seconds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424esp_rmaker_factory_reset6int8_t6int8_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reset to factory defaults and reboot</p>
+<p>This will clear entire NVS partition and (optionally) trigger a reboot. The RMAKER_EVENT_FACTORY_RESET event is triggered when this API is called. The actual reset will happen after a delay if reset_seconds is not zero.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This reset and reboot operations will happen asynchronously depending on the values passed to the API.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reset_seconds</strong> – <strong>[in]</strong> Time in seconds after which the reset should get triggered. This will help other modules take some actions before the device actually resets. If set to zero, the operation would be performed immediately. </p></li>
+<li><p><strong>reboot_seconds</strong> – <strong>[in]</strong> Time in seconds after which the device should reboot. If set to negative value, the device will not reboot at all.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv425esp_rmaker_time_sync_initP24esp_rmaker_time_config_t">
+<span id="_CPPv325esp_rmaker_time_sync_initP24esp_rmaker_time_config_t"></span><span id="_CPPv225esp_rmaker_time_sync_initP24esp_rmaker_time_config_t"></span><span id="esp_rmaker_time_sync_init__esp_rmaker_time_config_tP"></span><span class="target" id="esp__rmaker__utils_8h_1a8a1d409b5aea00cae53d32a9e3c2295e"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_sync_init</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv424esp_rmaker_time_config_t" title="esp_rmaker_time_config_t"><span class="n"><span class="pre">esp_rmaker_time_config_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv425esp_rmaker_time_sync_initP24esp_rmaker_time_config_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialize time synchronization</p>
+<p>This API initializes SNTP for time synchronization.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>config</strong> – <strong>[in]</strong> Configuration to be used for SNTP time synchronization. The default configuration is used if NULL is passed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421esp_rmaker_time_checkv">
+<span id="_CPPv321esp_rmaker_time_checkv"></span><span id="_CPPv221esp_rmaker_time_checkv"></span><span id="esp_rmaker_time_check__void"></span><span class="target" id="esp__rmaker__utils_8h_1aa67517e023311c6aa2efe98b9ef29dd4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_check</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421esp_rmaker_time_checkv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Check if current time is updated</p>
+<p>This API checks if the current system time is updated against the reference time of 1-Jan-2019.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>true if time is updated </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>false if time is not updated </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429esp_rmaker_time_wait_for_sync8uint32_t">
+<span id="_CPPv329esp_rmaker_time_wait_for_sync8uint32_t"></span><span id="_CPPv229esp_rmaker_time_wait_for_sync8uint32_t"></span><span id="esp_rmaker_time_wait_for_sync__uint32_t"></span><span class="target" id="esp__rmaker__utils_8h_1a2bcb72a5d28f01ff252fa12807b813f6"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_wait_for_sync</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">uint32_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ticks_to_wait</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429esp_rmaker_time_wait_for_sync8uint32_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wait for time synchronization</p>
+<p>This API waits for the system time to be updated against the reference time of 1-Jan-2019. This is a blocking call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ticks_to_wait</strong> – <strong>[in]</strong> Number of ticks to wait for time synchronization. Accepted values: 0 to portMAX_DELAY.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_time_set_timezone_posixPKc">
+<span id="_CPPv334esp_rmaker_time_set_timezone_posixPKc"></span><span id="_CPPv234esp_rmaker_time_set_timezone_posixPKc"></span><span id="esp_rmaker_time_set_timezone_posix__cCP"></span><span class="target" id="esp__rmaker__utils_8h_1a19718e769f5a584e1e1f90bca3fa4ac0"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_set_timezone_posix</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tz_posix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_time_set_timezone_posixPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set POSIX timezone</p>
+<p>Set the timezone (TZ environment variable) as per the POSIX format specified in the <a class="reference external" href="https://www.gnu.org/software/libc/manual/html_node/TZ-Variable.html">GNU libc documentation</a>. Eg. For China: “CST-8” For US Pacific Time (including daylight saving information): “PST8PDT,M3.2.0,M11.1.0”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tz_posix</strong> – <strong>[in]</strong> NULL terminated TZ POSIX string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428esp_rmaker_time_set_timezonePKc">
+<span id="_CPPv328esp_rmaker_time_set_timezonePKc"></span><span id="_CPPv228esp_rmaker_time_set_timezonePKc"></span><span id="esp_rmaker_time_set_timezone__cCP"></span><span class="target" id="esp__rmaker__utils_8h_1a6abcdba8d2b4d9730c05e9f7b9901bb9"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_set_timezone</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">tz</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428esp_rmaker_time_set_timezonePKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set timezone location string</p>
+<p>Set the timezone as a user friendly location string. Check <a class="reference external" href="https://rainmaker.espressif.com/docs/time-service.html">here</a> for a list of valid values.</p>
+<p>Eg. For China: “Asia/Shanghai” For US Pacific Time: “America/Los_Angeles”</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting timezone using this API internally also sets the POSIX timezone string.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>tz</strong> – <strong>[in]</strong> NULL terminated Timezone location string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_time_get_timezone_posixv">
+<span id="_CPPv334esp_rmaker_time_get_timezone_posixv"></span><span id="_CPPv234esp_rmaker_time_get_timezone_posixv"></span><span id="esp_rmaker_time_get_timezone_posix__void"></span><span class="target" id="esp__rmaker__utils_8h_1aadc04b92d97ba00b5d714c8007852efe"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_get_timezone_posix</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_time_get_timezone_posixv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the current POSIX timezone</p>
+<p>This fetches the current timezone in POSIX format, read from NVS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Pointer to a NULL terminated POSIX timezone string on success. Freeing this is the responsibility of the caller. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NULL on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428esp_rmaker_time_get_timezonev">
+<span id="_CPPv328esp_rmaker_time_get_timezonev"></span><span id="_CPPv228esp_rmaker_time_get_timezonev"></span><span id="esp_rmaker_time_get_timezone__void"></span><span class="target" id="esp__rmaker__utils_8h_1a47575b413248f50ab9f2a4fccfdaa7f7"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_get_timezone</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428esp_rmaker_time_get_timezonev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the current timezone</p>
+<p>This fetches the current timezone in POSIX format, read from NVS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Pointer to a NULL terminated timezone string on success. Freeing this is the responsibility of the caller. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>NULL on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429esp_rmaker_get_local_time_strPc6size_t">
+<span id="_CPPv329esp_rmaker_get_local_time_strPc6size_t"></span><span id="_CPPv229esp_rmaker_get_local_time_strPc6size_t"></span><span id="esp_rmaker_get_local_time_str__cP.s"></span><span class="target" id="esp__rmaker__utils_8h_1a5503680a394dbddfbc67a698c034a2dc"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_get_local_time_str</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">buf</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buf_len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429esp_rmaker_get_local_time_strPc6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get printable local time string</p>
+<p>Get a printable local time string, with information of timezone and Daylight Saving. Eg. “Tue Sep  1 09:04:38 2020 -0400[EDT], DST: Yes” “Tue Sep  1 21:04:04 2020 +0800[CST], DST: No”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buf</strong> – <strong>[out]</strong> Pointer to a pre-allocated buffer into which the time string will be populated. </p></li>
+<li><p><strong>buf_len</strong> – <strong>[in]</strong> Length of the above buffer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="structures">
+<h3>Structures<a class="headerlink" href="#structures" title="Permalink to this headline"></a></h3>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv422esp_rmaker_time_config">
+<span id="_CPPv322esp_rmaker_time_config"></span><span id="_CPPv222esp_rmaker_time_config"></span><span id="esp_rmaker_time_config"></span><span class="target" id="structesp__rmaker__time__config"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_config</span></span></span><a class="headerlink" href="#_CPPv422esp_rmaker_time_config" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N22esp_rmaker_time_config16sntp_server_nameE">
+<span id="_CPPv3N22esp_rmaker_time_config16sntp_server_nameE"></span><span id="_CPPv2N22esp_rmaker_time_config16sntp_server_nameE"></span><span id="esp_rmaker_time_config::sntp_server_name__cP"></span><span class="target" id="structesp__rmaker__time__config_1a4ff53b20931dc566b393020098860467"></span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">sntp_server_name</span></span></span><a class="headerlink" href="#_CPPv4N22esp_rmaker_time_config16sntp_server_nameE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>If not specified, then ‘CONFIG_ESP_RMAKER_SNTP_SERVER_NAME’ is used as the SNTP server. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N22esp_rmaker_time_config12sync_time_cbE">
+<span id="_CPPv3N22esp_rmaker_time_config12sync_time_cbE"></span><span id="_CPPv2N22esp_rmaker_time_config12sync_time_cbE"></span><span id="esp_rmaker_time_config::sync_time_cb__sntp_sync_time_cb_t"></span><span class="target" id="structesp__rmaker__time__config_1a944cd07119272db29b5e5b81a0950e32"></span><span class="n"><span class="pre">sntp_sync_time_cb_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sync_time_cb</span></span></span><a class="headerlink" href="#_CPPv4N22esp_rmaker_time_config12sync_time_cbE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Optional callback to invoke, whenever time is synchronised. This will be called periodically as per the SNTP polling interval (which is 60min by default). If kept NULL, the default callback will be invoked, which will just print the current local time. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+<section id="macros">
+<h3>Macros<a class="headerlink" href="#macros" title="Permalink to this headline"></a></h3>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MEM_ALLOC_EXTRAM">
+<span class="target" id="esp__rmaker__utils_8h_1a9470b7be8aef65ff2a544e7b0586388d"></span><span class="sig-name descname"><span class="n"><span class="pre">MEM_ALLOC_EXTRAM</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.MEM_ALLOC_EXTRAM" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MEM_CALLOC_EXTRAM">
+<span class="target" id="esp__rmaker__utils_8h_1acc9c752b2a54bddae23e6e1559e4a984"></span><span class="sig-name descname"><span class="n"><span class="pre">MEM_CALLOC_EXTRAM</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">num</span></span>, <span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.MEM_CALLOC_EXTRAM" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.MEM_REALLOC_EXTRAM">
+<span class="target" id="esp__rmaker__utils_8h_1a339fe190c0327a2b0beb310fe6e4025b"></span><span class="sig-name descname"><span class="n"><span class="pre">MEM_REALLOC_EXTRAM</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ptr</span></span>, <span class="n"><span class="pre">size</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.MEM_REALLOC_EXTRAM" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+<section id="type-definitions">
+<h3>Type Definitions<a class="headerlink" href="#type-definitions" title="Permalink to this headline"></a></h3>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv424esp_rmaker_time_config_t">
+<span id="_CPPv324esp_rmaker_time_config_t"></span><span id="_CPPv224esp_rmaker_time_config_t"></span><span id="esp_rmaker_time_config_t"></span><span class="target" id="esp__rmaker__utils_8h_1acf67d196ca85bd759d0b03d7c593d4e4"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv422esp_rmaker_time_config" title="esp_rmaker_time_config"><span class="n"><span class="pre">esp_rmaker_time_config</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_config_t</span></span></span><a class="headerlink" href="#_CPPv424esp_rmaker_time_config_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+<section id="factory-storage">
+<h2>Factory Storage<a class="headerlink" href="#factory-storage" title="Permalink to this headline"></a></h2>
+<section id="id1">
+<h3>Header File<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/rmaker_common/include/esp_rmaker_factory.h">rmaker_common/include/esp_rmaker_factory.h</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Functions<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv423esp_rmaker_factory_initv">
+<span id="_CPPv323esp_rmaker_factory_initv"></span><span id="_CPPv223esp_rmaker_factory_initv"></span><span id="esp_rmaker_factory_init__void"></span><span class="target" id="esp__rmaker__factory_8h_1a7e3c7e355d2d6ae7a3cd50061d7f9b96"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_init</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv423esp_rmaker_factory_initv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialize Factory NVS</p>
+<p>This initializes the Factory NVS partition which will store data that should not be cleared even after a reset to factory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422esp_rmaker_factory_getPKc">
+<span id="_CPPv322esp_rmaker_factory_getPKc"></span><span id="_CPPv222esp_rmaker_factory_getPKc"></span><span id="esp_rmaker_factory_get__cCP"></span><span class="target" id="esp__rmaker__factory_8h_1a89db1997906078b3bd345738229389ba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422esp_rmaker_factory_getPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get value from factory NVS</p>
+<p>This will search for the specified key in the Factory NVS partition, allocate the required memory to hold it, copy the value and return the pointer to it. It is responsibility of the caller to free the memory when the value is no more required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – <strong>[in]</strong> The key of the value to be read from factory NVS.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pointer to the value on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427esp_rmaker_factory_get_sizePKc">
+<span id="_CPPv327esp_rmaker_factory_get_sizePKc"></span><span id="_CPPv227esp_rmaker_factory_get_sizePKc"></span><span id="esp_rmaker_factory_get_size__cCP"></span><span class="target" id="esp__rmaker__factory_8h_1a67541a6cf7e8a9a759d8cd46f6d8a031"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_get_size</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427esp_rmaker_factory_get_sizePKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get size of value from factory NVS</p>
+<p>This will search for the specified key in the Factory NVS partition, and return the size of the value associated with the key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>key</strong> – <strong>[in]</strong> The key of the value to be read from factory NVS.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>size of the value on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>0 on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422esp_rmaker_factory_setPKcPv6size_t">
+<span id="_CPPv322esp_rmaker_factory_setPKcPv6size_t"></span><span id="_CPPv222esp_rmaker_factory_setPKcPv6size_t"></span><span id="esp_rmaker_factory_set__cCP.voidP.s"></span><span class="target" id="esp__rmaker__factory_8h_1a0fdb818235b6e26aa0e8af57326c7d41"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_set</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">key</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">value</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">len</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422esp_rmaker_factory_setPKcPv6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set a value in factory NVS</p>
+<p>This will write the value for the specified key into factory NVS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – <strong>[in]</strong> The key for the value to be set in factory NVS. </p></li>
+<li><p><strong>data</strong> – <strong>[in]</strong> Pointer to the value. </p></li>
+<li><p><strong>len</strong> – <strong>[in]</strong> Length of the value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error on failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="work-queue">
+<h2>Work Queue<a class="headerlink" href="#work-queue" title="Permalink to this headline"></a></h2>
+<section id="id3">
+<h3>Header File<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/rmaker_common/include/esp_rmaker_work_queue.h">rmaker_common/include/esp_rmaker_work_queue.h</a></p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Functions<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426esp_rmaker_work_queue_initv">
+<span id="_CPPv326esp_rmaker_work_queue_initv"></span><span id="_CPPv226esp_rmaker_work_queue_initv"></span><span id="esp_rmaker_work_queue_init__void"></span><span class="target" id="esp__rmaker__work__queue_8h_1abb9d76bec32af14328e09bbbe46de133"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_queue_init</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426esp_rmaker_work_queue_initv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initializes the Work Queue</p>
+<p>This initializes the work queue, which is basically a mechanism to run tasks in the context of a dedicated thread. You can start queueing tasks after this, but they will get executed only after calling esp_rmaker_work_queue_start().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error in case of failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428esp_rmaker_work_queue_deinitv">
+<span id="_CPPv328esp_rmaker_work_queue_deinitv"></span><span id="_CPPv228esp_rmaker_work_queue_deinitv"></span><span id="esp_rmaker_work_queue_deinit__void"></span><span class="target" id="esp__rmaker__work__queue_8h_1aad037e5365c98ec4db3b48a40f14b661"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_queue_deinit</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428esp_rmaker_work_queue_deinitv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>De-initialize the Work Queue</p>
+<p>This de-initializes the work queue. Note that the work queue needs to be stopped using esp_rmaker_work_queue_stop() before calling this.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error in case of failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427esp_rmaker_work_queue_startv">
+<span id="_CPPv327esp_rmaker_work_queue_startv"></span><span id="_CPPv227esp_rmaker_work_queue_startv"></span><span id="esp_rmaker_work_queue_start__void"></span><span class="target" id="esp__rmaker__work__queue_8h_1a76834dd7a67568e36d79ab62cddea7cf"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_queue_start</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427esp_rmaker_work_queue_startv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Start the Work Queue</p>
+<p>This starts the Work Queue thread which then starts executing the tasks queued.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error in case of failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426esp_rmaker_work_queue_stopv">
+<span id="_CPPv326esp_rmaker_work_queue_stopv"></span><span id="_CPPv226esp_rmaker_work_queue_stopv"></span><span id="esp_rmaker_work_queue_stop__void"></span><span class="target" id="esp__rmaker__work__queue_8h_1a7b2f17607497b7093e07da311bb4d693"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_queue_stop</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">void</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426esp_rmaker_work_queue_stopv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Stop the Work Queue</p>
+<p>This stops a running Work Queue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>error in case of failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430esp_rmaker_work_queue_add_task20esp_rmaker_work_fn_tPv">
+<span id="_CPPv330esp_rmaker_work_queue_add_task20esp_rmaker_work_fn_tPv"></span><span id="_CPPv230esp_rmaker_work_queue_add_task20esp_rmaker_work_fn_tPv"></span><span id="esp_rmaker_work_queue_add_task__esp_rmaker_work_fn_t.voidP"></span><span class="target" id="esp__rmaker__work__queue_8h_1a06582e75710f3872f14b6a1cfa7699a4"></span><span class="n"><span class="pre">esp_err_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_queue_add_task</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv420esp_rmaker_work_fn_t" title="esp_rmaker_work_fn_t"><span class="n"><span class="pre">esp_rmaker_work_fn_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">work_fn</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430esp_rmaker_work_queue_add_task20esp_rmaker_work_fn_tPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Queue execution of a function in the Work Queue’s context</p>
+<p>This API queues a work function for execution in the Work Queue Task’s context.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>work_fn</strong> – <strong>[in]</strong> The Work function to be queued. </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> Private data to be passed to the work function.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ESP_OK on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>error in case of failure. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id5">
+<h3>Type Definitions<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv420esp_rmaker_work_fn_t">
+<span id="_CPPv320esp_rmaker_work_fn_t"></span><span id="_CPPv220esp_rmaker_work_fn_t"></span><span id="esp_rmaker_work_fn_t"></span><span class="target" id="esp__rmaker__work__queue_8h_1a2d00a2096dc640ca9387f9e819035339"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_work_fn_t</span></span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">priv_data</span></span><span class="p"><span class="pre">)</span></span><a class="headerlink" href="#_CPPv420esp_rmaker_work_fn_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Prototype for ESP RainMaker Work Queue Function</p>
+<dl class="field-list simple">
+<dt class="field-odd">Param priv_data</dt>
+<dd class="field-odd"><p><strong>[in]</strong> The private data associated with the work function. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="common-events">
+<h2>Common Events<a class="headerlink" href="#common-events" title="Permalink to this headline"></a></h2>
+<section id="id6">
+<h3>Header File<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/rmaker_common/include/esp_rmaker_common_events.h">rmaker_common/include/esp_rmaker_common_events.h</a></p></li>
+</ul>
+</section>
+<section id="id7">
+<h3>Functions<a class="headerlink" href="#id7" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422ESP_EVENT_DECLARE_BASE19RMAKER_COMMON_EVENT">
+<span id="_CPPv322ESP_EVENT_DECLARE_BASE19RMAKER_COMMON_EVENT"></span><span id="_CPPv222ESP_EVENT_DECLARE_BASE19RMAKER_COMMON_EVENT"></span><span id="ESP_EVENT_DECLARE_BASE__RMAKER_COMMON_EVENT"></span><span class="target" id="esp__rmaker__common__events_8h_1aa3f5f0311ac78dca55278b5f573766ce"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_EVENT_DECLARE_BASE</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">RMAKER_COMMON_EVENT</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422ESP_EVENT_DECLARE_BASE19RMAKER_COMMON_EVENT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>ESP RainMaker Common Event Base </p>
+</dd></dl>
+
+</section>
+<section id="enumerations">
+<h3>Enumerations<a class="headerlink" href="#enumerations" title="Permalink to this headline"></a></h3>
+<dl class="cpp enum">
+<dt class="sig sig-object cpp" id="_CPPv425esp_rmaker_common_event_t">
+<span id="_CPPv325esp_rmaker_common_event_t"></span><span id="_CPPv225esp_rmaker_common_event_t"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21c"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_common_event_t</span></span></span><a class="headerlink" href="#_CPPv425esp_rmaker_common_event_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t19RMAKER_EVENT_REBOOTE">
+<span id="_CPPv3N25esp_rmaker_common_event_t19RMAKER_EVENT_REBOOTE"></span><span id="_CPPv2N25esp_rmaker_common_event_t19RMAKER_EVENT_REBOOTE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca269a5863806d3ec2953839108a8d547a"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_EVENT_REBOOT</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t19RMAKER_EVENT_REBOOTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Node reboot has been triggered. The associated event data is the time in seconds (type: uint8_t) after which the node will reboot. Note that this time may not be accurate as the events are received asynchronously. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t23RMAKER_EVENT_WIFI_RESETE">
+<span id="_CPPv3N25esp_rmaker_common_event_t23RMAKER_EVENT_WIFI_RESETE"></span><span id="_CPPv2N25esp_rmaker_common_event_t23RMAKER_EVENT_WIFI_RESETE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca0a4048901daf8fdd588c30cd6a1f46b2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_EVENT_WIFI_RESET</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t23RMAKER_EVENT_WIFI_RESETE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wi-Fi credentials reset. Triggered after calling esp_rmaker_wifi_reset() </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t26RMAKER_EVENT_FACTORY_RESETE">
+<span id="_CPPv3N25esp_rmaker_common_event_t26RMAKER_EVENT_FACTORY_RESETE"></span><span id="_CPPv2N25esp_rmaker_common_event_t26RMAKER_EVENT_FACTORY_RESETE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21cabc5f4a04aec8bc9e47cf4f2eb5b134e2"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_EVENT_FACTORY_RESET</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t26RMAKER_EVENT_FACTORY_RESETE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Node reset to factory defaults. Triggered after calling esp_rmaker_factory_reset() </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_CONNECTEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_CONNECTEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_CONNECTEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca0c8210a9f2bb591368218f7a41eff3bf"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_MQTT_EVENT_CONNECTED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_CONNECTEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Connected to MQTT Broker </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t30RMAKER_MQTT_EVENT_DISCONNECTEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t30RMAKER_MQTT_EVENT_DISCONNECTEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t30RMAKER_MQTT_EVENT_DISCONNECTEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca68451d8c57f68a1bf996de90ff36b58f"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_MQTT_EVENT_DISCONNECTED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t30RMAKER_MQTT_EVENT_DISCONNECTEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disconnected from MQTT Broker </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_PUBLISHEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_PUBLISHEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_PUBLISHEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca401b20fefed6fdc0746db0e978d8d087"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_MQTT_EVENT_PUBLISHED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t27RMAKER_MQTT_EVENT_PUBLISHEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MQTT message published successfully. Event data will contain the message ID (integer) of published message. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t29RMAKER_EVENT_TZ_POSIX_CHANGEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t29RMAKER_EVENT_TZ_POSIX_CHANGEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t29RMAKER_EVENT_TZ_POSIX_CHANGEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21cae5ad26c79169fabf0bf6798ad6cc15ef"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_EVENT_TZ_POSIX_CHANGED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t29RMAKER_EVENT_TZ_POSIX_CHANGEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>POSIX Timezone Changed. Associated data would be NULL terminated POSIX Timezone Eg. “PST8PDT,M3.2.0,M11.1.0” </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t23RMAKER_EVENT_TZ_CHANGEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t23RMAKER_EVENT_TZ_CHANGEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t23RMAKER_EVENT_TZ_CHANGEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21cac3e3b4a1f3243d283832a1d9798855fa"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_EVENT_TZ_CHANGED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t23RMAKER_EVENT_TZ_CHANGEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Timezone Changed. Associated data would be NULL terminated Timezone. Eg. “America/Los_Angeles” Note that whenever this event is received, the RMAKER_EVENT_TZ_POSIX_CHANGED event will also be received, but not necessarily vice versa. </p>
+</dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N25esp_rmaker_common_event_t29RMAKER_MQTT_EVENT_MSG_DELETEDE">
+<span id="_CPPv3N25esp_rmaker_common_event_t29RMAKER_MQTT_EVENT_MSG_DELETEDE"></span><span id="_CPPv2N25esp_rmaker_common_event_t29RMAKER_MQTT_EVENT_MSG_DELETEDE"></span><span class="target" id="esp__rmaker__common__events_8h_1ae943f6466d73c4062354abc75418c21ca2f46ed3a1ca2b143e43fe771e9fbb2f3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RMAKER_MQTT_EVENT_MSG_DELETED</span></span></span><a class="headerlink" href="#_CPPv4N25esp_rmaker_common_event_t29RMAKER_MQTT_EVENT_MSG_DELETEDE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>MQTT message deleted from the outbox if the message couldn’t have been sent and acknowledged. Event data will contain the message ID (integer) of deleted message. Valid only if CONFIG_MQTT_REPORT_DELETED_MESSAGES is enabled. </p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rainmaker_console.html" class="btn btn-neutral float-left" title="RainMaker Console" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../python-api-reference/index.html" class="btn btn-neutral float-right" title="Python API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Espressif Systems (Shanghai) CO., LTD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

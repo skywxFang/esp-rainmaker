@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="unionesp__rmaker__val__t" kind="union" language="C++" prot="public">
+    <compoundname>esp_rmaker_val_t</compoundname>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionesp__rmaker__val__t_1a43198cc6098fc4abca598ea9de5716f9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool esp_rmaker_val_t::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Boolean </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="104" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionesp__rmaker__val__t_1a11ee3090e45f5d2fbeff6ae4a1bd2da1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int esp_rmaker_val_t::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Integer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="106" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionesp__rmaker__val__t_1a7b0c5a3b876ac746c10dc3af5f63a0ed" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float esp_rmaker_val_t::f</definition>
+        <argsstring></argsstring>
+        <name>f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Float </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="108" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionesp__rmaker__val__t_1ac4363b4ab0b272a2cc28524896ce9d6b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_val_t::s</definition>
+        <argsstring></argsstring>
+        <name>s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>NULL terminated string </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="110" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>ESP RainMaker Value </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="102" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="102" bodyend="111"/>
+    <listofallmembers>
+      <member refid="unionesp__rmaker__val__t_1a43198cc6098fc4abca598ea9de5716f9" prot="public" virt="non-virtual"><scope>esp_rmaker_val_t</scope><name>b</name></member>
+      <member refid="unionesp__rmaker__val__t_1a7b0c5a3b876ac746c10dc3af5f63a0ed" prot="public" virt="non-virtual"><scope>esp_rmaker_val_t</scope><name>f</name></member>
+      <member refid="unionesp__rmaker__val__t_1a11ee3090e45f5d2fbeff6ae4a1bd2da1" prot="public" virt="non-virtual"><scope>esp_rmaker_val_t</scope><name>i</name></member>
+      <member refid="unionesp__rmaker__val__t_1ac4363b4ab0b272a2cc28524896ce9d6b" prot="public" virt="non-virtual"><scope>esp_rmaker_val_t</scope><name>s</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

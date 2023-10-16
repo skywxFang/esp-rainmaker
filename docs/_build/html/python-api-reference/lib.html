@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library &mdash; ESP RainMaker Programming Guide  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Commands" href="cmd.html" />
+    <link rel="prev" title="Python API Reference" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ESP RainMaker Programming Guide
+              <img src="../_static/esp-rainmaker-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../c-api-reference/index.html">C API Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-rmaker_lib.user">User</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-rmaker_lib.session">Session</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-rmaker_lib.node">Node</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cmd.html">Commands</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ESP RainMaker Programming Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Python API Reference</a></li>
+      <li class="breadcrumb-item active">Library</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/python-api-reference/lib.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="library">
+<h1>Library<a class="headerlink" href="#library" title="Permalink to this headline"></a></h1>
+<section id="module-rmaker_lib.user">
+<span id="user"></span><h2>User<a class="headerlink" href="#module-rmaker_lib.user" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="rmaker_lib.user.User">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rmaker_lib.user.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">username</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User" title="Permalink to this definition"></a></dt>
+<dd><p>User class used to instantiate instances of user to perform various
+user signup/login operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>username</strong> (<em>str</em>) – Name of User</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.user.User.forgot_password">
+<span class="sig-name descname"><span class="pre">forgot_password</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verification_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User.forgot_password" title="Permalink to this definition"></a></dt>
+<dd><p>Forgot password request to reset the password.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>password</strong> (<em>str</em>) – Password of user, defaults to <cite>None</cite></p></li>
+<li><p><strong>verification_code</strong> (<em>int</em>) – Verification code received during
+forgot password request, defaults to <cite>None</cite></p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+during password reset</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue during forgot password</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.user.User.handle_otp_based_login">
+<span class="sig-name descname"><span class="pre">handle_otp_based_login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">login_session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User.handle_otp_based_login" title="Permalink to this definition"></a></dt>
+<dd><p>OTP based login for ESP RainMaker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>login_session</strong> (<em>str</em>) – Session param received in first login request</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+during login</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue during login or
+JSON format issue in HTTP response</p></li>
+<li><p><strong>AuthenticationError</strong> – If login failed with the given parameters</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rmaker_lib.session.Session" title="rmaker_lib.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">rmaker_lib.session.Session</span></code></a> on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.user.User.login">
+<span class="sig-name descname"><span class="pre">login</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User.login" title="Permalink to this definition"></a></dt>
+<dd><p>User login to the ESP Rainmaker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>password</strong> (<em>str</em>) – Password of user, defaults to <cite>None</cite></p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+during login</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue during login or
+JSON format issue in HTTP response</p></li>
+<li><p><strong>AuthenticationError</strong> – If login failed with the given parameters</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#rmaker_lib.session.Session" title="rmaker_lib.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">rmaker_lib.session.Session</span></code></a> on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.user.User.signup">
+<span class="sig-name descname"><span class="pre">signup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User.signup" title="Permalink to this definition"></a></dt>
+<dd><p>Sign up of new User for ESP Rainmaker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>code</strong> (<em>int</em>) – Verification code received in signup request for user</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+during signup</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue during signup</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.user.User.signup_request">
+<span class="sig-name descname"><span class="pre">signup_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">password</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.user.User.signup_request" title="Permalink to this definition"></a></dt>
+<dd><p>Sign up request of new User for ESP Rainmaker.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>password</strong> (<em>str</em>) – Password to set for new user</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+during signup request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue during signup request</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-rmaker_lib.session">
+<span id="session"></span><h2>Session<a class="headerlink" href="#module-rmaker_lib.session" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="rmaker_lib.session.Session">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rmaker_lib.session.</span></span><span class="sig-name descname"><span class="pre">Session</span></span><a class="headerlink" href="#rmaker_lib.session.Session" title="Permalink to this definition"></a></dt>
+<dd><p>Session class for logged in user.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.session.Session.get_mqtt_host">
+<span class="sig-name descname"><span class="pre">get_mqtt_host</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.session.Session.get_mqtt_host" title="Permalink to this definition"></a></dt>
+<dd><p>Get the MQTT Host endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+while getting MQTT Host endpoint</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting MQTT host
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MQTT Host on Success, None on Failure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.session.Session.get_nodes">
+<span class="sig-name descname"><span class="pre">get_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.session.Session.get_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Get list of all nodes associated with the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue
+while getting nodes associated with user</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting nodes</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Nodes associated with user on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.session.Session.get_user_details">
+<span class="sig-name descname"><span class="pre">get_user_details</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.session.Session.get_user_details" title="Permalink to this definition"></a></dt>
+<dd><p>Get details of current logged-in user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting user details
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.session.Session.logout">
+<span class="sig-name descname"><span class="pre">logout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.session.Session.logout" title="Permalink to this definition"></a></dt>
+<dd><p>Logout current logged-in user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while logging out
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-rmaker_lib.node">
+<span id="node"></span><h2>Node<a class="headerlink" href="#module-rmaker_lib.node" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">rmaker_lib.node.</span></span><span class="sig-name descname"><span class="pre">Node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodeid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node" title="Permalink to this definition"></a></dt>
+<dd><p>Node class used to instantiate instances of node to perform various
+node operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodeid</strong> (<em>str</em>) – Node Id of node</p></li>
+<li><p><strong>session</strong> (<em>object</em>) – <a class="reference internal" href="#rmaker_lib.session.Session" title="rmaker_lib.session.Session"><code class="xref py py-class docutils literal notranslate"><span class="pre">rmaker_lib.session.Session</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.add_user_for_sharing">
+<span class="sig-name descname"><span class="pre">add_user_for_sharing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.add_user_for_sharing" title="Permalink to this definition"></a></dt>
+<dd><p>Perform sharing operations -</p>
+<ol class="arabic simple">
+<li><p>Request to add user for sharing nodes</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – 1. To add nodes - 
+Data containing <cite>user_name</cite> and <cite>nodes</cite> as keys</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while performing sharing operation
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.add_user_node_mapping">
+<span class="sig-name descname"><span class="pre">add_user_node_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secret_key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.add_user_node_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>Add user node mapping.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>secret_key</strong> (<em>str</em>) – The randomly generated secret key that will be
+used for User-Node mapping</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+adding user node mapping</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while
+adding user node mapping or
+JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Request Id on Success, None on Failure</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_mapping_status">
+<span class="sig-name descname"><span class="pre">get_mapping_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_mapping_status" title="Permalink to this definition"></a></dt>
+<dd><p>Check status of user node mapping request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>requestId</strong> (<em>str</em>) – Request Id</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+getting user node mapping status</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting
+user node mapping status or JSON format issue
+in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Request Status on Success, None on Failure</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_node_config">
+<span class="sig-name descname"><span class="pre">get_node_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_node_config" title="Permalink to this definition"></a></dt>
+<dd><p>Get node configuration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+getting node configuration</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting node config</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Configuration of node on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_node_params">
+<span class="sig-name descname"><span class="pre">get_node_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_node_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+getting node params</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting node params
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Node Parameters on Success, None on Failure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_node_status">
+<span class="sig-name descname"><span class="pre">get_node_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_node_status" title="Permalink to this definition"></a></dt>
+<dd><p>Get online/offline status of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+getting node status</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting node status</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Status of node on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_nodeid">
+<span class="sig-name descname"><span class="pre">get_nodeid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_nodeid" title="Permalink to this definition"></a></dt>
+<dd><p>Get nodeid of device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Node Id of node on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_shared_nodes_request">
+<span class="sig-name descname"><span class="pre">get_shared_nodes_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_shared_nodes_request" title="Permalink to this definition"></a></dt>
+<dd><p>Get request sent to share nodes with user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>params</strong> (<em>dict</em>) – Query parameters containing <cite>request_id</cite>
+and <cite>primary_user</cite> as keys</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting sharing request
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.get_sharing_details_of_nodes">
+<span class="sig-name descname"><span class="pre">get_sharing_details_of_nodes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.get_sharing_details_of_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Get sharing details of nodes associated with user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while getting shared nodes
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.remove_shared_nodes_request">
+<span class="sig-name descname"><span class="pre">remove_shared_nodes_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.remove_shared_nodes_request" title="Permalink to this definition"></a></dt>
+<dd><p>Remove/Cancel request sent to share nodes with user</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>req_id</strong> – Id of sharing request</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while removing sharing request
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.remove_user_from_shared_nodes">
+<span class="sig-name descname"><span class="pre">remove_user_from_shared_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.remove_user_from_shared_nodes" title="Permalink to this definition"></a></dt>
+<dd><p>Remove user from shared nodes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Data containing <cite>user_name</cite>
+and <cite>nodes</cite> as keys</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while removing shared nodes
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.remove_user_node_mapping">
+<span class="sig-name descname"><span class="pre">remove_user_node_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.remove_user_node_mapping" title="Permalink to this definition"></a></dt>
+<dd><p>Remove user node mapping request.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+removing user node mapping</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while
+removing user node mapping or
+JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Request Id on Success, None on Failure</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str | None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.request_op">
+<span class="sig-name descname"><span class="pre">request_op</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.request_op" title="Permalink to this definition"></a></dt>
+<dd><p>Perform sharing operations -</p>
+<ol class="arabic simple">
+<li><p>Accept or decline sharing request</p></li>
+</ol>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – 1. Data containing <cite>request_id</cite> and
+<cite>accept</cite> as keys</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>SSLError</strong> – If there is an SSL issue</p></li>
+<li><p><strong>HTTPError</strong> – If the HTTP response is an HTTPError</p></li>
+<li><p><strong>NetworkError</strong> – If there is a network connection issue</p></li>
+<li><p><strong>Timeout</strong> – If there is a timeout issue</p></li>
+<li><p><strong>RequestException</strong> – If there is an issue during
+the HTTP request</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while performing request operation
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>HTTP response on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="rmaker_lib.node.Node.set_node_params">
+<span class="sig-name descname"><span class="pre">set_node_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rmaker_lib.node.Node.set_node_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set parameters of the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>dict</em>) – Parameters to be set for the node</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>NetworkError</strong> – If there is a network connection issue while
+setting node params</p></li>
+<li><p><strong>Exception</strong> – If there is an HTTP issue while setting node params
+or JSON format issue in HTTP response</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True on Success</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Python API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cmd.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Espressif Systems (Shanghai) CO., LTD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

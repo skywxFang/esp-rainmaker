@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_6366644cde5023965c0a7e0e949f6d28" kind="dir">
+    <compoundname>/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include</compoundname>
+    <innerfile refid="esp__rmaker__cmd__resp_8h">esp_rmaker_cmd_resp.h</innerfile>
+    <innerfile refid="esp__rmaker__common__events_8h">esp_rmaker_common_events.h</innerfile>
+    <innerfile refid="esp__rmaker__factory_8h">esp_rmaker_factory.h</innerfile>
+    <innerfile refid="esp__rmaker__mqtt__glue_8h">esp_rmaker_mqtt_glue.h</innerfile>
+    <innerfile refid="esp__rmaker__utils_8h">esp_rmaker_utils.h</innerfile>
+    <innerfile refid="esp__rmaker__work__queue_8h">esp_rmaker_work_queue.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/"/>
+  </compounddef>
+</doxygen>

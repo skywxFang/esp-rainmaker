@@ -1,0 +1,23 @@
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_utils.h:42: warning: Compound esp_rmaker_time_config is not documented.
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_cmd_resp.h:61: warning: Compound esp_rmaker_cmd_ctx_t is not documented.
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h:119: warning: Compound esp_rmaker_ota_diag_priv_t is not documented.
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h:379: warning: Found unknown command `\retur'
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h:692: warning: unable to resolve reference to `esp_param_property_flags_t' for \ref command
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_mqtt.h:26: warning: argument 'config' of command @param is not found in the argument list of esp_rmaker_mqtt_init(esp_rmaker_mqtt_conn_params_t *conn_params)
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_mqtt.h:33: warning: The following parameters of esp_rmaker_mqtt_init(esp_rmaker_mqtt_conn_params_t *conn_params) are not documented:
+  parameter 'conn_params'
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_mqtt.h:71: warning: The following parameters of esp_rmaker_mqtt_publish(const char *topic, void *data, size_t data_len, uint8_t qos, int *msg_id) are not documented:
+  parameter 'msg_id'
+/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h:71: warning: The following parameters of esp_rmaker_name_param_create(const char *param_name, const char *val) are not documented:
+  parameter 'val'
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_cmd_resp.h:149: warning: expected whitespace after [ command
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_cmd_resp.h:117: warning: Found unknown command `\paramp'
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_cmd_resp.h:122: warning: The following parameters of esp_rmaker_cmd_register(uint16_t cmd, uint8_t access, esp_rmaker_cmd_handler_t handler, bool free_on_return, void *priv) are not documented:
+  parameter 'priv'
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_factory.h:59: warning: argument 'data' of command @param is not found in the argument list of esp_rmaker_factory_set(const char *key, void *value, size_t len)
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_factory.h:70: warning: The following parameters of esp_rmaker_factory_set(const char *key, void *value, size_t len) are not documented:
+  parameter 'value'
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h:70: warning: unable to resolve reference to `esp_rmaker_mqtt_get_conn_params' for \ref command
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_utils.h:58: warning: unable to resolve reference to `RMAKER_EVENT_REBOOT' for \ref command
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_utils.h:72: warning: unable to resolve reference to `RMAKER_EVENT_WIFI_RESET' for \ref command
+/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_utils.h:93: warning: unable to resolve reference to `RMAKER_EVENT_FACTORY_RESET' for \ref command

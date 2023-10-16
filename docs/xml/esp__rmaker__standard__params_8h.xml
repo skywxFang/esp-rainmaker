@@ -1,0 +1,1165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="esp__rmaker__standard__params_8h" kind="file" language="C++">
+    <compoundname>esp_rmaker_standard_params.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+    <incdepgraph>
+      <node id="36">
+        <label>stdbool.h</label>
+      </node>
+      <node id="35">
+        <label>stdint.h</label>
+      </node>
+      <node id="34">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h</label>
+        <link refid="esp_rmaker_standard_params.h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>esp_err.h</label>
+      </node>
+      <node id="39">
+        <label>esp_event.h</label>
+      </node>
+      <node id="38">
+        <label>esp_rmaker_core.h</label>
+        <link refid="esp__rmaker__core_8h_source"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a8b2c9b3cc012cbcee871e19b11a45a46" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_NAME_PARAM</name>
+        <initializer>&quot;Name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="32" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a09be56fae9c433e2c1508a89b5747e03" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_POWER_NAME</name>
+        <initializer>&quot;Power&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="33" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a5fbab00da1c92cf997f5f122db2ce3bb" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_BRIGHTNESS_NAME</name>
+        <initializer>&quot;Brightness&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="34" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a8371242830a56d2a2054fbd50232bfee" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_HUE_NAME</name>
+        <initializer>&quot;Hue&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="35" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1ae1cc1969511361b6ae4b1b9a24b3dc5e" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_SATURATION_NAME</name>
+        <initializer>&quot;Saturation&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="36" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a14e58c171239277cffe893d7b2b30a0b" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_INTENSITY_NAME</name>
+        <initializer>&quot;Intensity&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="37" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a8f4f5ce200dfcd5e69c5f6039ab2c4f6" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_CCT_NAME</name>
+        <initializer>&quot;CCT&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="38" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a055e25b62ad2a2d936756a3f7ca70c60" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_DIRECTION_NAME</name>
+        <initializer>&quot;Direction&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="39" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a2e5a17fe924c0269414bdb0b80cda20d" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_SPEED_NAME</name>
+        <initializer>&quot;Speed&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="40" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a8058b1931300bda9892eae796f406212" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_TEMPERATURE_NAME</name>
+        <initializer>&quot;Temperature&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="41" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a4bb73e3beddefba8f66827aa3693de19" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_OTA_STATUS_NAME</name>
+        <initializer>&quot;Status&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="42" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1aae0252851949c35586c8ed949b9c6600" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_OTA_INFO_NAME</name>
+        <initializer>&quot;Info&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="43" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1ab92c5721a3fa816c41336c3b9a683647" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_OTA_URL_NAME</name>
+        <initializer>&quot;URL&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="44" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a138a54601c2f0d2eece7203dac9ee3ac" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_TIMEZONE_NAME</name>
+        <initializer>&quot;TZ&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="45" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1adca13478c67bbbdd6423b6c1371bcd92" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_TIMEZONE_POSIX_NAME</name>
+        <initializer>&quot;TZ-POSIX&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="46" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a8da3b4494d12a1c61cafe1bc36af3f75" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_SCHEDULE_NAME</name>
+        <initializer>&quot;Schedules&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="47" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a14cad4b4d8ecd128c9d0861e0ca1625b" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_SCENES_NAME</name>
+        <initializer>&quot;Scenes&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="48" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a51934f8cc098ced76feea86efd385a85" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_REBOOT_NAME</name>
+        <initializer>&quot;Reboot&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="49" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a7dd32e0cc946c514fcd0fc1f292cb787" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_FACTORY_RESET_NAME</name>
+        <initializer>&quot;Factory-Reset&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="50" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a79b8dffe5252da4ce49ae0e1b2aa7d8f" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_WIFI_RESET_NAME</name>
+        <initializer>&quot;Wi-Fi-Reset&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="51" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a98549970dd3c6bb59ae8c174a6725d57" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_LOCAL_CONTROL_POP</name>
+        <initializer>&quot;POP&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="52" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__standard__params_8h_1a16593284e0e73f1e13818a0378f96ba0" prot="public" static="no">
+        <name>ESP_RMAKER_DEF_LOCAL_CONTROL_TYPE</name>
+        <initializer>&quot;Type&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="53" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1af17672b04ffda21ebb6e455ca97f63bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_name_param_create</definition>
+        <argsstring>(const char *param_name, const char *val)</argsstring>
+        <name>esp_rmaker_name_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard name param</para><para>This will create the standard name parameter. This should be added to all devices for which you want a user customisable name. The value should be same as the device name.</para><para>All standard device creation APIs will add this internally. No application registered callback will be called for this parameter, and changes will be managed internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a199cc115a478deba5affe3248a44f200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_power_param_create</definition>
+        <argsstring>(const char *param_name, bool val)</argsstring>
+        <name>esp_rmaker_power_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Power param</para><para>This will create the standard power parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a8fc150404d0df5f13ca42138e19a8431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_brightness_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_brightness_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Brightness param</para><para>This will create the standard brightness parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="97" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a373958b8d815c7a5d6eb0f8b36b3254b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_hue_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_hue_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Hue param</para><para>This will create the standard hue parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1ab0d5f87a3521c08d8a4ec64f533c8b67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_saturation_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_saturation_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Saturation param</para><para>This will create the standard saturation parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a80ca48765cd811c8b3da03ede1ca8d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_intensity_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_intensity_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Intensity param</para><para>This will create the standard intensity parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a9c55302032b88b21eef6376c6eea5170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_cct_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_cct_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard CCT param</para><para>This will create the standard cct parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1acfa5a2d3b965790e6ee6d79d0ac137ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_direction_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_direction_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Direction param</para><para>This will create the standard direction parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1abc096c384235292d52c50ac36e884df3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_speed_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_speed_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Speed param</para><para>This will create the standard speed parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a63a9d63fea04928e66d13e28806d1f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_temperature_param_create</definition>
+        <argsstring>(const char *param_name, float val)</argsstring>
+        <name>esp_rmaker_temperature_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Temperature param</para><para>This will create the standard temperature parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="188" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a3ab1d746a641b0a1e995e50d6b907b36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_ota_status_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_ota_status_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard OTA Status param</para><para>This will create the standard ota status parameter. Default value is set internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="201" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1abfbb1ffdde1ffa291b84c5650ce97dc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_ota_info_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_ota_info_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard OTA Info param</para><para>This will create the standard ota info parameter. Default value is set internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a115bf2643fe6a1ef22c5f5819feff5b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_ota_url_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_ota_url_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard OTA URL param</para><para>This will create the standard ota url parameter. Default value is set internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="227" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a16ec80734acd64dc7cb5b8253e08aeec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_timezone_param_create</definition>
+        <argsstring>(const char *param_name, const char *val)</argsstring>
+        <name>esp_rmaker_timezone_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Timezone param</para><para>This will create the standard timezone parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter (Eg. &quot;Asia/Shanghai&quot;). Can be kept NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="240" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1af71e7178bdd56bd271047310f4fa865b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_timezone_posix_param_create</definition>
+        <argsstring>(const char *param_name, const char *val)</argsstring>
+        <name>esp_rmaker_timezone_posix_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard POSIX Timezone param</para><para>This will create the standard posix timezone parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter (Eg. &quot;CST-8&quot;). Can be kept NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="253" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1ad7a6ba8012421a7db9a15857a226d4b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_schedules_param_create</definition>
+        <argsstring>(const char *param_name, int max_schedules)</argsstring>
+        <name>esp_rmaker_schedules_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_schedules</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Schedules param</para><para>This will create the standard schedules parameter. Default value is set internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">max_schedules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of schedules allowed</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="267" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1ab2b06193ca5fa8e7d72d9b600a80b21f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_scenes_param_create</definition>
+        <argsstring>(const char *param_name, int max_scenes)</argsstring>
+        <name>esp_rmaker_scenes_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_scenes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Scenes param</para><para>This will create the standard scenes parameter. Default value is set internally.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">max_scenes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of scenes allowed</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="281" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a6d8eff1de9fbbd7291878d3f64b920fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_reboot_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_reboot_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Reboot param</para><para>This will create the standard reboot parameter. Set value to true (via write param) for the action to trigger.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="294" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a38be673a351957bd82f8f6afa450311a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_factory_reset_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_factory_reset_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Factory Reset param</para><para>This will create the standard factory reset parameter. Set value to true (via write param) for the action to trigger.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="307" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a9490c7bebc0cc73569a2507441065b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_wifi_reset_param_create</definition>
+        <argsstring>(const char *param_name)</argsstring>
+        <name>esp_rmaker_wifi_reset_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Wi-Fi Reset param</para><para>This will create the standard Wi-Fi Reset parameter. Set value to true (via write param) for the action to trigger.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="320" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1af4018298a451fd22d340c446c71c41ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_local_control_pop_param_create</definition>
+        <argsstring>(const char *param_name, const char *val)</argsstring>
+        <name>esp_rmaker_local_control_pop_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Local Control POP param</para><para>This will create the standard Local Control POP parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter (Eg. &quot;abcd1234&quot;). Can be kept NULL.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="333" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__params_8h_1a3d89dfb8f4c33b3394059cc41e27aff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_param_t *</type>
+        <definition>esp_rmaker_param_t* esp_rmaker_local_control_type_param_create</definition>
+        <argsstring>(const char *param_name, int val)</argsstring>
+        <name>esp_rmaker_local_control_type_param_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>param_name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create standard Local Control Type param</para><para>This will create the standard Local Control security type parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">param_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the parameter </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default Value of the parameter</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Parameter handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of failures. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h" line="346" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2020<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>PTE<sp/>LTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_rmaker_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Suggested<sp/>default<sp/>names<sp/>for<sp/>the<sp/>parameters.</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/>*<sp/>These<sp/>will<sp/>also<sp/>be<sp/>used<sp/>by<sp/>default<sp/>if<sp/>you<sp/>use<sp/>any<sp/>standard<sp/>device<sp/>helper<sp/>APIs.</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/>*<sp/>@note<sp/>These<sp/>names<sp/>are<sp/>not<sp/>mandatory.<sp/>You<sp/>can<sp/>use<sp/>the<sp/>ESP<sp/>RainMaker<sp/>Core<sp/>APIs</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/>*<sp/>to<sp/>create<sp/>your<sp/>own<sp/>parameters<sp/>with<sp/>custom<sp/>names,<sp/>if<sp/>required.</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_NAME_PARAM<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Name&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_POWER_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Power&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_BRIGHTNESS_NAME<sp/><sp/><sp/><sp/><sp/><sp/>&quot;Brightness&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_HUE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Hue&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_SATURATION_NAME<sp/><sp/><sp/><sp/><sp/><sp/>&quot;Saturation&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_INTENSITY_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Intensity&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_CCT_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;CCT&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_DIRECTION_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Direction&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_SPEED_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Speed&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_TEMPERATURE_NAME<sp/><sp/><sp/><sp/><sp/>&quot;Temperature&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_OTA_STATUS_NAME<sp/><sp/><sp/><sp/><sp/><sp/>&quot;Status&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_OTA_INFO_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Info&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_OTA_URL_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;URL&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_TIMEZONE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;TZ&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_TIMEZONE_POSIX_NAME<sp/><sp/>&quot;TZ-POSIX&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_SCHEDULE_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Schedules&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_SCENES_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Scenes&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_REBOOT_NAME<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Reboot&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_FACTORY_RESET_NAME<sp/><sp/><sp/>&quot;Factory-Reset&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_WIFI_RESET_NAME<sp/><sp/><sp/><sp/><sp/><sp/>&quot;Wi-Fi-Reset&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_LOCAL_CONTROL_POP<sp/><sp/><sp/><sp/>&quot;POP&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ESP_RMAKER_DEF_LOCAL_CONTROL_TYPE<sp/><sp/><sp/>&quot;Type&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_name_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_power_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_brightness_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_hue_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_saturation_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_intensity_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_cct_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_direction_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_speed_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_temperature_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_ota_status_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_ota_info_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_ota_url_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_timezone_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_timezone_posix_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_schedules_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_schedules);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_scenes_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_scenes);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_reboot_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_factory_reset_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_wifi_reset_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name);</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="333"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_local_control_pop_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*val);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="346"><highlight class="normal">esp_rmaker_param_t<sp/>*esp_rmaker_local_control_type_param_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*param_name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>val);</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_params.h"/>
+  </compounddef>
+</doxygen>

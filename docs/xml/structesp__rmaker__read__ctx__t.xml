@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__read__ctx__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_read_ctx_t</compoundname>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__read__ctx__t_1aebbf694ce3d9d7ebaef1770b333ea6a4" prot="public" static="no" mutable="no">
+        <type>esp_rmaker_req_src_t</type>
+        <definition>esp_rmaker_req_src_t esp_rmaker_read_ctx_t::src</definition>
+        <argsstring></argsstring>
+        <name>src</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Source of request </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="184" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Read request context </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="182" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="182" bodyend="185"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__read__ctx__t_1aebbf694ce3d9d7ebaef1770b333ea6a4" prot="public" virt="non-virtual"><scope>esp_rmaker_read_ctx_t</scope><name>src</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

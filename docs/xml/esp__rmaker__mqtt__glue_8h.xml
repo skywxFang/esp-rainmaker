@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="esp__rmaker__mqtt__glue_8h" kind="file" language="C++">
+    <compoundname>esp_rmaker_mqtt_glue.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <includes local="no">esp_event.h</includes>
+    <includedby refid="esp__rmaker__mqtt_8h" local="no">/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_mqtt.h</includedby>
+    <incdepgraph>
+      <node id="68">
+        <label>stdint.h</label>
+      </node>
+      <node id="69">
+        <label>esp_err.h</label>
+      </node>
+      <node id="67">
+        <label>/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h</label>
+        <link refid="esp_rmaker_mqtt_glue.h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>esp_event.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="72">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_mqtt.h</label>
+        <link refid="esp__rmaker__mqtt_8h_source"/>
+      </node>
+      <node id="71">
+        <label>/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h</label>
+        <link refid="esp_rmaker_mqtt_glue.h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structesp__rmaker__mqtt__conn__params__t" prot="public">esp_rmaker_mqtt_conn_params_t</innerclass>
+    <innerclass refid="structesp__rmaker__mqtt__config__t" prot="public">esp_rmaker_mqtt_config_t</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="esp__rmaker__mqtt__glue_8h_1a339627646a9889b0849be984129d43b1" prot="public" static="no">
+        <name>RMAKER_MQTT_QOS0</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="26" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="esp__rmaker__mqtt__glue_8h_1a305ded99ac7e2944cb930faab669000e" prot="public" static="no">
+        <name>RMAKER_MQTT_QOS1</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="27" column="9" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a3b5edc589578b7b1cade4f8742c36f38" prot="public" static="no">
+        <type><ref refid="structesp__rmaker__mqtt__conn__params__t" kindref="compound">esp_rmaker_mqtt_conn_params_t</ref> *(*</type>
+        <definition>typedef esp_rmaker_mqtt_conn_params_t*(* esp_rmaker_mqtt_get_conn_params_t) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>esp_rmaker_mqtt_get_conn_params_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Get Connection Parameters function prototype</para><para><simplesect kind="return"><para>Pointer to <ref refid="structesp__rmaker__mqtt__conn__params__t" kindref="compound">esp_rmaker_mqtt_conn_params_t</ref> on success. </para></simplesect>
+<simplesect kind="return"><para>NULL on failure. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="56" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1ac7934def83c5451ac83c6414c181649b" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* esp_rmaker_mqtt_subscribe_cb_t) (const char *topic, void *payload, size_t payload_len, void *priv_data)</definition>
+        <argsstring>)(const char *topic, void *payload, size_t payload_len, void *priv_data)</argsstring>
+        <name>esp_rmaker_mqtt_subscribe_cb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Subscribe callback prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topic on which the message was received </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">payload</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data received in the message </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">payload_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The private data passed during subscription </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="65" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a1f38b2d01c4038805dafd5887271f884" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_init_t) (esp_rmaker_mqtt_conn_params_t *conn_params)</definition>
+        <argsstring>)(esp_rmaker_mqtt_conn_params_t *conn_params)</argsstring>
+        <name>esp_rmaker_mqtt_init_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Init function prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">conn_params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT connection parameters. If NULL is passed, it should internally use the esp_rmaker_mqtt_get_conn_params call if registered.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="75" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a362ac1e4373bc55827d85d54ab50c5b7" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* esp_rmaker_mqtt_deinit_t) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>esp_rmaker_mqtt_deinit_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Deinit function prototype</para><para>Call this function after MQTT has disconnected. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="81" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a841337902b6c3a50491e9d80d7510336" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_connect_t) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>esp_rmaker_mqtt_connect_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Connect function prototype</para><para>Starts the connection attempts to the MQTT broker. This should ideally be called after successful network connection.</para><para><simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="91" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1af9551866cab644fccefb5d297f5a4cea" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_disconnect_t) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>esp_rmaker_mqtt_disconnect_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Disconnect function prototype</para><para>Disconnects from the MQTT broker.</para><para><simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="100" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a36374c79bb96a055aad2a19d5737e7bf" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_publish_t) (const char *topic, void *data, size_t data_len, uint8_t qos, int *msg_id)</definition>
+        <argsstring>)(const char *topic, void *data, size_t data_len, uint8_t qos, int *msg_id)</argsstring>
+        <name>esp_rmaker_mqtt_publish_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Publish Message function prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The MQTT topic on which the message should be published. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Data to be published. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">data_len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">qos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quality of service for the message. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">msg_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If a non NULL pointer is passed, the id of the published message will be returned in this.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="113" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1ad1624bc9fa30c706505f8926db207403" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_subscribe_t) (const char *topic, esp_rmaker_mqtt_subscribe_cb_t cb, uint8_t qos, void *priv_data)</definition>
+        <argsstring>)(const char *topic, esp_rmaker_mqtt_subscribe_cb_t cb, uint8_t qos, void *priv_data)</argsstring>
+        <name>esp_rmaker_mqtt_subscribe_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Subscribe function prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The topic to be subscribed to. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback to be invoked when a message is received on the given topic. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">qos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Quality of service for the subscription. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional private data to be passed to the callback.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="125" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__mqtt__glue_8h_1a1ddee2483c86f1e9672e34b0c8b21418" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_mqtt_unsubscribe_t) (const char *topic)</definition>
+        <argsstring>)(const char *topic)</argsstring>
+        <name>esp_rmaker_mqtt_unsubscribe_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Unsubscribe function prototype</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">topic</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Topic from which to unsubscribe.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="134" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="esp__rmaker__mqtt__glue_8h_1ae96b283d99761e6b478a978075ba3ce7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_mqtt_glue_setup</definition>
+        <argsstring>(esp_rmaker_mqtt_config_t *mqtt_config)</argsstring>
+        <name>esp_rmaker_mqtt_glue_setup</name>
+        <param>
+          <type><ref refid="structesp__rmaker__mqtt__config__t" kindref="compound">esp_rmaker_mqtt_config_t</ref> *</type>
+          <declname>mqtt_config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Setup MQTT Glue</para><para>This function initializes MQTT glue layer with all the default functions.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">mqtt_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an allocated MQTT configuration structure.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success. </para></simplesect>
+<simplesect kind="return"><para>error in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__mqtt__glue_8h_1a5be618b1dc48e6e52b2f59fb197277e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* esp_get_aws_ppi</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_get_aws_ppi</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="174" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2021<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>PTE<sp/>LTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_event.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMAKER_MQTT_QOS0<sp/><sp/><sp/><sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RMAKER_MQTT_QOS1<sp/><sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="structesp__rmaker__mqtt__conn__params__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="structesp__rmaker__mqtt__conn__params__t_1ab89bd1d575d99749f39e4b43455f2611" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1ab89bd1d575d99749f39e4b43455f2611" kindref="member">mqtt_host</ref>;</highlight></codeline>
+<codeline lineno="34" refid="structesp__rmaker__mqtt__conn__params__t_1ab378694271fffb1f23be5f154d2b8955" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1ab378694271fffb1f23be5f154d2b8955" kindref="member">client_id</ref>;</highlight></codeline>
+<codeline lineno="36" refid="structesp__rmaker__mqtt__conn__params__t_1ac6393d7a3fbcd4bba59a431ce5ea87ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1ac6393d7a3fbcd4bba59a431ce5ea87ac" kindref="member">client_cert</ref>;</highlight></codeline>
+<codeline lineno="38" refid="structesp__rmaker__mqtt__conn__params__t_1a2a46ce0ae5779a23c90c163ccc986064" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__mqtt__conn__params__t_1a2a46ce0ae5779a23c90c163ccc986064" kindref="member">client_cert_len</ref>;</highlight></codeline>
+<codeline lineno="40" refid="structesp__rmaker__mqtt__conn__params__t_1a69d995e3313bfcea2e4dd56971cbf78b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1a69d995e3313bfcea2e4dd56971cbf78b" kindref="member">client_key</ref>;</highlight></codeline>
+<codeline lineno="42" refid="structesp__rmaker__mqtt__conn__params__t_1a7a329cfa7fc19ca861c805b925200ac7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__mqtt__conn__params__t_1a7a329cfa7fc19ca861c805b925200ac7" kindref="member">client_key_len</ref>;</highlight></codeline>
+<codeline lineno="44" refid="structesp__rmaker__mqtt__conn__params__t_1a8458f97bf0f0e40ca6b633103c991612" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1a8458f97bf0f0e40ca6b633103c991612" kindref="member">server_cert</ref>;</highlight></codeline>
+<codeline lineno="46" refid="structesp__rmaker__mqtt__conn__params__t_1a4a70fbdc94727869d6e555bb59316366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__mqtt__conn__params__t_1a4a70fbdc94727869d6e555bb59316366" kindref="member">server_cert_len</ref>;</highlight></codeline>
+<codeline lineno="48" refid="structesp__rmaker__mqtt__conn__params__t_1aeb60a52d8ba164b1c9396d919a7947a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__mqtt__conn__params__t_1aeb60a52d8ba164b1c9396d919a7947a5" kindref="member">ds_data</ref>;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__mqtt__conn__params__t" kindref="compound">esp_rmaker_mqtt_conn_params_t</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__mqtt__conn__params__t" kindref="compound">esp_rmaker_mqtt_conn_params_t</ref><sp/>*(*esp_rmaker_mqtt_get_conn_params_t)(void);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*esp_rmaker_mqtt_subscribe_cb_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*payload,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>payload_len,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_init_t)(<ref refid="structesp__rmaker__mqtt__conn__params__t" kindref="compound">esp_rmaker_mqtt_conn_params_t</ref><sp/>*conn_params);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*esp_rmaker_mqtt_deinit_t)(void);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_connect_t)(void);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_disconnect_t)(void);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_publish_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>data_len,<sp/>uint8_t<sp/>qos,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>*msg_id);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_subscribe_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic,<sp/>esp_rmaker_mqtt_subscribe_cb_t<sp/>cb,<sp/>uint8_t<sp/>qos,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_mqtt_unsubscribe_t)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*topic);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="structesp__rmaker__mqtt__config__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="139" refid="structesp__rmaker__mqtt__config__t_1ad2fc17ce0d546a06e61706c0c502dece" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__mqtt__config__t_1ad2fc17ce0d546a06e61706c0c502dece" kindref="member">setup_done</ref>;</highlight></codeline>
+<codeline lineno="141" refid="structesp__rmaker__mqtt__config__t_1a552bda240909be5f2433e62ca953e3b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_get_conn_params_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a552bda240909be5f2433e62ca953e3b5" kindref="member">get_conn_params</ref>;</highlight></codeline>
+<codeline lineno="143" refid="structesp__rmaker__mqtt__config__t_1a9f611d9cff27c0597b37d5aeb5a48d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_init_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a9f611d9cff27c0597b37d5aeb5a48d48" kindref="member">init</ref>;</highlight></codeline>
+<codeline lineno="145" refid="structesp__rmaker__mqtt__config__t_1a1f8f9acfd0cf4b99d5ad5830cec8f9a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_deinit_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a1f8f9acfd0cf4b99d5ad5830cec8f9a2" kindref="member">deinit</ref>;</highlight></codeline>
+<codeline lineno="147" refid="structesp__rmaker__mqtt__config__t_1a064c8091aef0469c94aba20aacba400a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_connect_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a064c8091aef0469c94aba20aacba400a" kindref="member">connect</ref>;</highlight></codeline>
+<codeline lineno="149" refid="structesp__rmaker__mqtt__config__t_1a3f01a8e0798f37fee3b6e0b5701e86df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_disconnect_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a3f01a8e0798f37fee3b6e0b5701e86df" kindref="member">disconnect</ref>;</highlight></codeline>
+<codeline lineno="151" refid="structesp__rmaker__mqtt__config__t_1a0e1ecb7372b823bdf7edac6ec7da5864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_publish_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a0e1ecb7372b823bdf7edac6ec7da5864" kindref="member">publish</ref>;</highlight></codeline>
+<codeline lineno="153" refid="structesp__rmaker__mqtt__config__t_1a7d3806d8304cc6f2fd9f2f8fa3a94486" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_subscribe_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a7d3806d8304cc6f2fd9f2f8fa3a94486" kindref="member">subscribe</ref>;</highlight></codeline>
+<codeline lineno="155" refid="structesp__rmaker__mqtt__config__t_1a3ae61059cebc5d7627e70da18f5c85a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_mqtt_unsubscribe_t<sp/><ref refid="structesp__rmaker__mqtt__config__t_1a3ae61059cebc5d7627e70da18f5c85a3" kindref="member">unsubscribe</ref>;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__mqtt__config__t" kindref="compound">esp_rmaker_mqtt_config_t</ref>;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">esp_err_t<sp/>esp_rmaker_mqtt_glue_setup(<ref refid="structesp__rmaker__mqtt__config__t" kindref="compound">esp_rmaker_mqtt_config_t</ref><sp/>*mqtt_config);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>the<sp/>ESP<sp/>AWS<sp/>PPI<sp/>String</highlight></codeline>
+<codeline lineno="170"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="171"><highlight class="comment"><sp/>*<sp/>@return<sp/>pointer<sp/>to<sp/>a<sp/>NULL<sp/>terminated<sp/>PPI<sp/>string<sp/>on<sp/>success.</highlight></codeline>
+<codeline lineno="172"><highlight class="comment"><sp/>*<sp/>@return<sp/>NULL<sp/>in<sp/>case<sp/>of<sp/>any<sp/>error.</highlight></codeline>
+<codeline lineno="173"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*esp_get_aws_ppi(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h"/>
+  </compounddef>
+</doxygen>

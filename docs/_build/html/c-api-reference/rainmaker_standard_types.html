@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RainMaker Standard Types &mdash; ESP RainMaker Programming Guide  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RainMaker MQTT" href="rainmaker_mqtt.html" />
+    <link rel="prev" title="RainMaker Core" href="rainmaker_core.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ESP RainMaker Programming Guide
+              <img src="../_static/esp-rainmaker-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">C API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html">RainMaker Core</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">RainMaker Standard Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#standard-types">Standard Types</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#header-file">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macros">Macros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#standard-parameters">Standard Parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Macros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#standard-devices">Standard Devices</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#standard-services">Standard Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">Header File</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_mqtt.html">RainMaker MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html">RainMaker OTA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_console.html">RainMaker Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html">RainMaker Common</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python-api-reference/index.html">Python API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ESP RainMaker Programming Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">C API Reference</a></li>
+      <li class="breadcrumb-item active">RainMaker Standard Types</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/c-api-reference/rainmaker_standard_types.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rainmaker-standard-types">
+<h1>RainMaker Standard Types<a class="headerlink" href="#rainmaker-standard-types" title="Permalink to this headline"></a></h1>
+<section id="standard-types">
+<h2>Standard Types<a class="headerlink" href="#standard-types" title="Permalink to this headline"></a></h2>
+<section id="header-file">
+<h3>Header File<a class="headerlink" href="#header-file" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/esp_rainmaker/include/esp_rmaker_standard_types.h">esp_rainmaker/include/esp_rmaker_standard_types.h</a></p></li>
+</ul>
+</section>
+<section id="macros">
+<h3>Macros<a class="headerlink" href="#macros" title="Permalink to this headline"></a></h3>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_TOGGLE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9b35cb5281b60d5bd842dcb9e7298be2"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_TOGGLE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_TOGGLE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_SLIDER">
+<span class="target" id="esp__rmaker__standard__types_8h_1aaf8d473ed090d28474ff74483cd6f2b6"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_SLIDER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_SLIDER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_DROPDOWN">
+<span class="target" id="esp__rmaker__standard__types_8h_1a33e610f55e8b11197fa31f5e141c3016"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_DROPDOWN</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_DROPDOWN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_TEXT">
+<span class="target" id="esp__rmaker__standard__types_8h_1a62d0726a6100920666284a900e473709"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_TEXT</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_TEXT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_HUE_SLIDER">
+<span class="target" id="esp__rmaker__standard__types_8h_1a173893e85e441eb8ecfc0e6c9be370eb"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_HUE_SLIDER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_HUE_SLIDER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_HUE_CIRCLE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a7b1bba24900042115cac114fb227242d"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_HUE_CIRCLE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_HUE_CIRCLE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_PUSHBUTTON">
+<span class="target" id="esp__rmaker__standard__types_8h_1acb7c1dc900c3a82bd735903bd6dbaedc"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_PUSHBUTTON</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_PUSHBUTTON" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_TRIGGER">
+<span class="target" id="esp__rmaker__standard__types_8h_1aaf19ec42d0ede5bd5e85608e3c08cf17"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_TRIGGER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_TRIGGER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_UI_HIDDEN">
+<span class="target" id="esp__rmaker__standard__types_8h_1afb3e44c06e0f1cdee146707dc78c1d41"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_UI_HIDDEN</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_UI_HIDDEN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_NAME">
+<span class="target" id="esp__rmaker__standard__types_8h_1a1f2ea0b572328f7bcde3e15cbb51847f"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_POWER">
+<span class="target" id="esp__rmaker__standard__types_8h_1a45d113f538c81681d45a1c6eb50cc3c7"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_POWER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_POWER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_BRIGHTNESS">
+<span class="target" id="esp__rmaker__standard__types_8h_1adcbef59b09d6c09da22211f99d97a0da"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_BRIGHTNESS</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_BRIGHTNESS" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_HUE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a2aab79dc6e73068c7bcdc71fcd1c8ced"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_HUE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_HUE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_SATURATION">
+<span class="target" id="esp__rmaker__standard__types_8h_1a0a2721bad1f540fcb247901e2ddbe562"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_SATURATION</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_SATURATION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_INTENSITY">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9b57e75905934b3bcbd93e148700336a"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_INTENSITY</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_INTENSITY" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_CCT">
+<span class="target" id="esp__rmaker__standard__types_8h_1a68f152222448e02de4f50a078a5bb139"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_CCT</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_CCT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_SPEED">
+<span class="target" id="esp__rmaker__standard__types_8h_1ad68b50a7e7b10696319042942243e8ac"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_SPEED</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_SPEED" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_DIRECTION">
+<span class="target" id="esp__rmaker__standard__types_8h_1a7c0a3c8325d07c373222fc35a0883227"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_DIRECTION</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_DIRECTION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_TEMPERATURE">
+<span class="target" id="esp__rmaker__standard__types_8h_1aefa32739ecae56a6cced74c0374089e4"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_TEMPERATURE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_TEMPERATURE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_OTA_STATUS">
+<span class="target" id="esp__rmaker__standard__types_8h_1a4922acc5e95244910a7dd56ae2cf2929"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_OTA_STATUS</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_OTA_STATUS" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_OTA_INFO">
+<span class="target" id="esp__rmaker__standard__types_8h_1a60a2dbff95fdf344b8216f0028bfcb9b"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_OTA_INFO</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_OTA_INFO" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_OTA_URL">
+<span class="target" id="esp__rmaker__standard__types_8h_1ab0d9dc03562048ece7d78284953fb496"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_OTA_URL</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_OTA_URL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_TIMEZONE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a5b78a05e10c9470a2c9242efd7280779"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_TIMEZONE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_TIMEZONE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_TIMEZONE_POSIX">
+<span class="target" id="esp__rmaker__standard__types_8h_1a80adb60e7e96e350dfb95e4e992d2561"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_TIMEZONE_POSIX</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_TIMEZONE_POSIX" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_SCHEDULES">
+<span class="target" id="esp__rmaker__standard__types_8h_1ad79855b7317dfc878b35004798440d13"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_SCHEDULES</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_SCHEDULES" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_SCENES">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9c4c84cca1663c587d448e2e2624bb18"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_SCENES</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_SCENES" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_REBOOT">
+<span class="target" id="esp__rmaker__standard__types_8h_1afb91345a1dd560e580f717517aeb7d2c"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_REBOOT</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_REBOOT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_FACTORY_RESET">
+<span class="target" id="esp__rmaker__standard__types_8h_1ab7c3e5418d56210ab5e66e66b8c27058"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_FACTORY_RESET</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_FACTORY_RESET" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_WIFI_RESET">
+<span class="target" id="esp__rmaker__standard__types_8h_1aec6186257bc5ac8c5226e58067124ccc"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_WIFI_RESET</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_WIFI_RESET" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_LOCAL_CONTROL_POP">
+<span class="target" id="esp__rmaker__standard__types_8h_1a2dc7f3adec11c032bc413e721989dd70"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_LOCAL_CONTROL_POP</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_LOCAL_CONTROL_POP" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_LOCAL_CONTROL_TYPE">
+<span class="target" id="esp__rmaker__standard__types_8h_1ac1863fcbfd4101b05ca6092aae99c735"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_LOCAL_CONTROL_TYPE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_LOCAL_CONTROL_TYPE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_TOGGLE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a3fe976581ae1b2b0399694698d1322d1"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_TOGGLE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_TOGGLE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_RANGE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a3404d2052cace1b2c6b7d658bfbcf2db"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_RANGE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_RANGE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_MODE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a3afde3106f829471bc280cace85680dd"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_MODE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_MODE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_BLINDS_POSITION">
+<span class="target" id="esp__rmaker__standard__types_8h_1a754b176adab12f2d12f7018181d8e6a4"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_BLINDS_POSITION</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_BLINDS_POSITION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_GARAGE_POSITION">
+<span class="target" id="esp__rmaker__standard__types_8h_1a26ac7bafd4974f5b0b2e1f82cbedb1f6"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_GARAGE_POSITION</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_GARAGE_POSITION" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_LIGHT_MODE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9845b58c228cddbdeec8979edf0a98b2"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_LIGHT_MODE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_LIGHT_MODE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_PARAM_AC_MODE">
+<span class="target" id="esp__rmaker__standard__types_8h_1a16179186535920edbbd9746ddbc936a5"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_PARAM_AC_MODE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_PARAM_AC_MODE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_SWITCH">
+<span class="target" id="esp__rmaker__standard__types_8h_1a044feb4450416b6bae45095d117cee70"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_SWITCH</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_SWITCH" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_LIGHTBULB">
+<span class="target" id="esp__rmaker__standard__types_8h_1a27cdb7ee77b96d9cf6f866f957432268"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_LIGHTBULB</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_LIGHTBULB" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_FAN">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9d4d384e63f9a08d751c85941ed0a374"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_FAN</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_FAN" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_TEMP_SENSOR">
+<span class="target" id="esp__rmaker__standard__types_8h_1a4e130acf078cb28a2c58480371087ec1"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_TEMP_SENSOR</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_TEMP_SENSOR" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_LIGHT">
+<span class="target" id="esp__rmaker__standard__types_8h_1ab05afda20047e663f8f98cd2c946e21c"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_LIGHT</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_LIGHT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_OUTLET">
+<span class="target" id="esp__rmaker__standard__types_8h_1a534715506d4e83bde7ec897130dd3696"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_OUTLET</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_OUTLET" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_PLUG">
+<span class="target" id="esp__rmaker__standard__types_8h_1a3a4a6c7f428a8b6cd0d9185b32efa8b2"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_PLUG</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_PLUG" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_SOCKET">
+<span class="target" id="esp__rmaker__standard__types_8h_1a7a03089c2cbddbbebf60ba07bf7b087f"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_SOCKET</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_SOCKET" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_LOCK">
+<span class="target" id="esp__rmaker__standard__types_8h_1ad9591b4703952e1ff5a1d7f4338d2099"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_LOCK</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_LOCK" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_BLINDS_INTERNAL">
+<span class="target" id="esp__rmaker__standard__types_8h_1a2f53865d5b446a2ca19f6c31d114777d"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_BLINDS_INTERNAL</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_BLINDS_INTERNAL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_BLINDS_EXTERNAL">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9a71609ead9990cb73e79f1e6421f10b"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_BLINDS_EXTERNAL</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_BLINDS_EXTERNAL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_GARAGE_DOOR">
+<span class="target" id="esp__rmaker__standard__types_8h_1a9f3a9c39605aba969d7ec38f1f5273f7"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_GARAGE_DOOR</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_GARAGE_DOOR" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_GARAGE_LOCK">
+<span class="target" id="esp__rmaker__standard__types_8h_1a7bfd7c4a07ded6e767f2eaec2732031f"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_GARAGE_LOCK</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_GARAGE_LOCK" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_SPEAKER">
+<span class="target" id="esp__rmaker__standard__types_8h_1af9a9a55bf860df150ecc7b8af29425b9"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_SPEAKER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_SPEAKER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_AIR_CONDITIONER">
+<span class="target" id="esp__rmaker__standard__types_8h_1ada327862b724acdeb7c34c8b41f2539f"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_AIR_CONDITIONER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_AIR_CONDITIONER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_THERMOSTAT">
+<span class="target" id="esp__rmaker__standard__types_8h_1aa517ba5133c0ce9f0d68fd0ad0383d7b"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_THERMOSTAT</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_THERMOSTAT" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_TV">
+<span class="target" id="esp__rmaker__standard__types_8h_1ad03f07d385310d9f9c0ef0fa8d162793"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_TV</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_TV" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_WASHER">
+<span class="target" id="esp__rmaker__standard__types_8h_1a61f391fe42ba35de68733ccb2aea322a"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_WASHER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_WASHER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEVICE_OTHER">
+<span class="target" id="esp__rmaker__standard__types_8h_1ae87399edf52fd095a172f551f03fc371"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEVICE_OTHER</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEVICE_OTHER" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_OTA">
+<span class="target" id="esp__rmaker__standard__types_8h_1a6b06ae0043695f795bcfb089bc29c067"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_OTA</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_OTA" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_TIME">
+<span class="target" id="esp__rmaker__standard__types_8h_1a63adc96241ca3ffca5fb54067403644d"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_TIME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_TIME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_SCHEDULE">
+<span class="target" id="esp__rmaker__standard__types_8h_1ae9442f4f65bb12013a5f1a2a5c558590"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_SCHEDULE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_SCHEDULE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_SCENES">
+<span class="target" id="esp__rmaker__standard__types_8h_1ad015ef42e5a095eb4b54bab77d2a4abf"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_SCENES</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_SCENES" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_SYSTEM">
+<span class="target" id="esp__rmaker__standard__types_8h_1a48eeee9e66c5fcb3f7d7d4a08968c307"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_SYSTEM</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_SYSTEM" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_SERVICE_LOCAL_CONTROL">
+<span class="target" id="esp__rmaker__standard__types_8h_1a34b197638e2f2c10b35e3b48bdc3375a"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_SERVICE_LOCAL_CONTROL</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_SERVICE_LOCAL_CONTROL" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+<section id="standard-parameters">
+<h2>Standard Parameters<a class="headerlink" href="#standard-parameters" title="Permalink to this headline"></a></h2>
+<section id="id1">
+<h3>Header File<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/esp_rainmaker/include/esp_rmaker_standard_params.h">esp_rainmaker/include/esp_rmaker_standard_params.h</a></p></li>
+</ul>
+</section>
+<section id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428esp_rmaker_name_param_createPKcPKc">
+<span id="_CPPv328esp_rmaker_name_param_createPKcPKc"></span><span id="_CPPv228esp_rmaker_name_param_createPKcPKc"></span><span id="esp_rmaker_name_param_create__cCP.cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1af17672b04ffda21ebb6e455ca97f63bc"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_name_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428esp_rmaker_name_param_createPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard name param</p>
+<p>This will create the standard name parameter. This should be added to all devices for which you want a user customisable name. The value should be same as the device name.</p>
+<p>All standard device creation APIs will add this internally. No application registered callback will be called for this parameter, and changes will be managed internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429esp_rmaker_power_param_createPKcb">
+<span id="_CPPv329esp_rmaker_power_param_createPKcb"></span><span id="_CPPv229esp_rmaker_power_param_createPKcb"></span><span id="esp_rmaker_power_param_create__cCP.b"></span><span class="target" id="esp__rmaker__standard__params_8h_1a199cc115a478deba5affe3248a44f200"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_power_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429esp_rmaker_power_param_createPKcb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Power param</p>
+<p>This will create the standard power parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_brightness_param_createPKci">
+<span id="_CPPv334esp_rmaker_brightness_param_createPKci"></span><span id="_CPPv234esp_rmaker_brightness_param_createPKci"></span><span id="esp_rmaker_brightness_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1a8fc150404d0df5f13ca42138e19a8431"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_brightness_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_brightness_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Brightness param</p>
+<p>This will create the standard brightness parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427esp_rmaker_hue_param_createPKci">
+<span id="_CPPv327esp_rmaker_hue_param_createPKci"></span><span id="_CPPv227esp_rmaker_hue_param_createPKci"></span><span id="esp_rmaker_hue_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1a373958b8d815c7a5d6eb0f8b36b3254b"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_hue_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427esp_rmaker_hue_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Hue param</p>
+<p>This will create the standard hue parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_saturation_param_createPKci">
+<span id="_CPPv334esp_rmaker_saturation_param_createPKci"></span><span id="_CPPv234esp_rmaker_saturation_param_createPKci"></span><span id="esp_rmaker_saturation_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1ab0d5f87a3521c08d8a4ec64f533c8b67"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_saturation_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_saturation_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Saturation param</p>
+<p>This will create the standard saturation parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433esp_rmaker_intensity_param_createPKci">
+<span id="_CPPv333esp_rmaker_intensity_param_createPKci"></span><span id="_CPPv233esp_rmaker_intensity_param_createPKci"></span><span id="esp_rmaker_intensity_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1a80ca48765cd811c8b3da03ede1ca8d5d"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_intensity_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433esp_rmaker_intensity_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Intensity param</p>
+<p>This will create the standard intensity parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv427esp_rmaker_cct_param_createPKci">
+<span id="_CPPv327esp_rmaker_cct_param_createPKci"></span><span id="_CPPv227esp_rmaker_cct_param_createPKci"></span><span id="esp_rmaker_cct_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1a9c55302032b88b21eef6376c6eea5170"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_cct_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv427esp_rmaker_cct_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard CCT param</p>
+<p>This will create the standard cct parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433esp_rmaker_direction_param_createPKci">
+<span id="_CPPv333esp_rmaker_direction_param_createPKci"></span><span id="_CPPv233esp_rmaker_direction_param_createPKci"></span><span id="esp_rmaker_direction_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1acfa5a2d3b965790e6ee6d79d0ac137ca"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_direction_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433esp_rmaker_direction_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Direction param</p>
+<p>This will create the standard direction parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429esp_rmaker_speed_param_createPKci">
+<span id="_CPPv329esp_rmaker_speed_param_createPKci"></span><span id="_CPPv229esp_rmaker_speed_param_createPKci"></span><span id="esp_rmaker_speed_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1abc096c384235292d52c50ac36e884df3"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_speed_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429esp_rmaker_speed_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Speed param</p>
+<p>This will create the standard speed parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv435esp_rmaker_temperature_param_createPKcf">
+<span id="_CPPv335esp_rmaker_temperature_param_createPKcf"></span><span id="_CPPv235esp_rmaker_temperature_param_createPKcf"></span><span id="esp_rmaker_temperature_param_create__cCP.float"></span><span class="target" id="esp__rmaker__standard__params_8h_1a63a9d63fea04928e66d13e28806d1f8d"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_temperature_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv435esp_rmaker_temperature_param_createPKcf" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Temperature param</p>
+<p>This will create the standard temperature parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_ota_status_param_createPKc">
+<span id="_CPPv334esp_rmaker_ota_status_param_createPKc"></span><span id="_CPPv234esp_rmaker_ota_status_param_createPKc"></span><span id="esp_rmaker_ota_status_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a3ab1d746a641b0a1e995e50d6b907b36"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_ota_status_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_ota_status_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard OTA Status param</p>
+<p>This will create the standard ota status parameter. Default value is set internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432esp_rmaker_ota_info_param_createPKc">
+<span id="_CPPv332esp_rmaker_ota_info_param_createPKc"></span><span id="_CPPv232esp_rmaker_ota_info_param_createPKc"></span><span id="esp_rmaker_ota_info_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1abfbb1ffdde1ffa291b84c5650ce97dc4"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_ota_info_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432esp_rmaker_ota_info_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard OTA Info param</p>
+<p>This will create the standard ota info parameter. Default value is set internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431esp_rmaker_ota_url_param_createPKc">
+<span id="_CPPv331esp_rmaker_ota_url_param_createPKc"></span><span id="_CPPv231esp_rmaker_ota_url_param_createPKc"></span><span id="esp_rmaker_ota_url_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a115bf2643fe6a1ef22c5f5819feff5b8"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_ota_url_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431esp_rmaker_ota_url_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard OTA URL param</p>
+<p>This will create the standard ota url parameter. Default value is set internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432esp_rmaker_timezone_param_createPKcPKc">
+<span id="_CPPv332esp_rmaker_timezone_param_createPKcPKc"></span><span id="_CPPv232esp_rmaker_timezone_param_createPKcPKc"></span><span id="esp_rmaker_timezone_param_create__cCP.cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a16ec80734acd64dc7cb5b8253e08aeec"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_timezone_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432esp_rmaker_timezone_param_createPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Timezone param</p>
+<p>This will create the standard timezone parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter (Eg. “Asia/Shanghai”). Can be kept NULL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv438esp_rmaker_timezone_posix_param_createPKcPKc">
+<span id="_CPPv338esp_rmaker_timezone_posix_param_createPKcPKc"></span><span id="_CPPv238esp_rmaker_timezone_posix_param_createPKcPKc"></span><span id="esp_rmaker_timezone_posix_param_create__cCP.cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1af71e7178bdd56bd271047310f4fa865b"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_timezone_posix_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv438esp_rmaker_timezone_posix_param_createPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard POSIX Timezone param</p>
+<p>This will create the standard posix timezone parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter (Eg. “CST-8”). Can be kept NULL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv433esp_rmaker_schedules_param_createPKci">
+<span id="_CPPv333esp_rmaker_schedules_param_createPKci"></span><span id="_CPPv233esp_rmaker_schedules_param_createPKci"></span><span id="esp_rmaker_schedules_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1ad7a6ba8012421a7db9a15857a226d4b2"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_schedules_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_schedules</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv433esp_rmaker_schedules_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Schedules param</p>
+<p>This will create the standard schedules parameter. Default value is set internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>max_schedules</strong> – <strong>[in]</strong> Maximum number of schedules allowed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430esp_rmaker_scenes_param_createPKci">
+<span id="_CPPv330esp_rmaker_scenes_param_createPKci"></span><span id="_CPPv230esp_rmaker_scenes_param_createPKci"></span><span id="esp_rmaker_scenes_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1ab2b06193ca5fa8e7d72d9b600a80b21f"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_scenes_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_scenes</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430esp_rmaker_scenes_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Scenes param</p>
+<p>This will create the standard scenes parameter. Default value is set internally.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>max_scenes</strong> – <strong>[in]</strong> Maximum number of scenes allowed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430esp_rmaker_reboot_param_createPKc">
+<span id="_CPPv330esp_rmaker_reboot_param_createPKc"></span><span id="_CPPv230esp_rmaker_reboot_param_createPKc"></span><span id="esp_rmaker_reboot_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a6d8eff1de9fbbd7291878d3f64b920fd"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_reboot_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430esp_rmaker_reboot_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Reboot param</p>
+<p>This will create the standard reboot parameter. Set value to true (via write param) for the action to trigger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv437esp_rmaker_factory_reset_param_createPKc">
+<span id="_CPPv337esp_rmaker_factory_reset_param_createPKc"></span><span id="_CPPv237esp_rmaker_factory_reset_param_createPKc"></span><span id="esp_rmaker_factory_reset_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a38be673a351957bd82f8f6afa450311a"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_factory_reset_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv437esp_rmaker_factory_reset_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Factory Reset param</p>
+<p>This will create the standard factory reset parameter. Set value to true (via write param) for the action to trigger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_wifi_reset_param_createPKc">
+<span id="_CPPv334esp_rmaker_wifi_reset_param_createPKc"></span><span id="_CPPv234esp_rmaker_wifi_reset_param_createPKc"></span><span id="esp_rmaker_wifi_reset_param_create__cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1a9490c7bebc0cc73569a2507441065b66"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_wifi_reset_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_wifi_reset_param_createPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Wi-Fi Reset param</p>
+<p>This will create the standard Wi-Fi Reset parameter. Set value to true (via write param) for the action to trigger.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv441esp_rmaker_local_control_pop_param_createPKcPKc">
+<span id="_CPPv341esp_rmaker_local_control_pop_param_createPKcPKc"></span><span id="_CPPv241esp_rmaker_local_control_pop_param_createPKcPKc"></span><span id="esp_rmaker_local_control_pop_param_create__cCP.cCP"></span><span class="target" id="esp__rmaker__standard__params_8h_1af4018298a451fd22d340c446c71c41ec"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_local_control_pop_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv441esp_rmaker_local_control_pop_param_createPKcPKc" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Local Control POP param</p>
+<p>This will create the standard Local Control POP parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter (Eg. “abcd1234”). Can be kept NULL.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv442esp_rmaker_local_control_type_param_createPKci">
+<span id="_CPPv342esp_rmaker_local_control_type_param_createPKci"></span><span id="_CPPv242esp_rmaker_local_control_type_param_createPKci"></span><span id="esp_rmaker_local_control_type_param_create__cCP.i"></span><span class="target" id="esp__rmaker__standard__params_8h_1a3d89dfb8f4c33b3394059cc41e27aff6"></span><a class="reference internal" href="rainmaker_core.html#_CPPv418esp_rmaker_param_t" title="esp_rmaker_param_t"><span class="n"><span class="pre">esp_rmaker_param_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_local_control_type_param_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">param_name</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">val</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv442esp_rmaker_local_control_type_param_createPKci" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create standard Local Control Type param</p>
+<p>This will create the standard Local Control security type parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param_name</strong> – <strong>[in]</strong> Name of the parameter </p></li>
+<li><p><strong>val</strong> – <strong>[in]</strong> Default Value of the parameter</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Parameter handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h3>Macros<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_NAME_PARAM">
+<span class="target" id="esp__rmaker__standard__params_8h_1a8b2c9b3cc012cbcee871e19b11a45a46"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_NAME_PARAM</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_NAME_PARAM" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_POWER_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a09be56fae9c433e2c1508a89b5747e03"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_POWER_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_POWER_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_BRIGHTNESS_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a5fbab00da1c92cf997f5f122db2ce3bb"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_BRIGHTNESS_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_BRIGHTNESS_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_HUE_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a8371242830a56d2a2054fbd50232bfee"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_HUE_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_HUE_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_SATURATION_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1ae1cc1969511361b6ae4b1b9a24b3dc5e"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_SATURATION_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_SATURATION_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_INTENSITY_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a14e58c171239277cffe893d7b2b30a0b"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_INTENSITY_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_INTENSITY_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_CCT_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a8f4f5ce200dfcd5e69c5f6039ab2c4f6"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_CCT_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_CCT_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_DIRECTION_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a055e25b62ad2a2d936756a3f7ca70c60"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_DIRECTION_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_DIRECTION_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_SPEED_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a2e5a17fe924c0269414bdb0b80cda20d"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_SPEED_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_SPEED_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_TEMPERATURE_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a8058b1931300bda9892eae796f406212"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_TEMPERATURE_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_TEMPERATURE_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_OTA_STATUS_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a4bb73e3beddefba8f66827aa3693de19"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_OTA_STATUS_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_OTA_STATUS_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_OTA_INFO_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1aae0252851949c35586c8ed949b9c6600"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_OTA_INFO_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_OTA_INFO_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_OTA_URL_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1ab92c5721a3fa816c41336c3b9a683647"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_OTA_URL_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_OTA_URL_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_TIMEZONE_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a138a54601c2f0d2eece7203dac9ee3ac"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_TIMEZONE_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_TIMEZONE_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_TIMEZONE_POSIX_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1adca13478c67bbbdd6423b6c1371bcd92"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_TIMEZONE_POSIX_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_TIMEZONE_POSIX_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_SCHEDULE_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a8da3b4494d12a1c61cafe1bc36af3f75"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_SCHEDULE_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_SCHEDULE_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_SCENES_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a14cad4b4d8ecd128c9d0861e0ca1625b"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_SCENES_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_SCENES_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_REBOOT_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a51934f8cc098ced76feea86efd385a85"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_REBOOT_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_REBOOT_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_FACTORY_RESET_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a7dd32e0cc946c514fcd0fc1f292cb787"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_FACTORY_RESET_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_FACTORY_RESET_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_WIFI_RESET_NAME">
+<span class="target" id="esp__rmaker__standard__params_8h_1a79b8dffe5252da4ce49ae0e1b2aa7d8f"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_WIFI_RESET_NAME</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_WIFI_RESET_NAME" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_LOCAL_CONTROL_POP">
+<span class="target" id="esp__rmaker__standard__params_8h_1a98549970dd3c6bb59ae8c174a6725d57"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_LOCAL_CONTROL_POP</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_LOCAL_CONTROL_POP" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp macro">
+<dt class="sig sig-object cpp" id="c.ESP_RMAKER_DEF_LOCAL_CONTROL_TYPE">
+<span class="target" id="esp__rmaker__standard__params_8h_1a16593284e0e73f1e13818a0378f96ba0"></span><span class="sig-name descname"><span class="n"><span class="pre">ESP_RMAKER_DEF_LOCAL_CONTROL_TYPE</span></span></span><a class="headerlink" href="#c.ESP_RMAKER_DEF_LOCAL_CONTROL_TYPE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+<section id="standard-devices">
+<h2>Standard Devices<a class="headerlink" href="#standard-devices" title="Permalink to this headline"></a></h2>
+<section id="id3">
+<h3>Header File<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/esp_rainmaker/include/esp_rmaker_standard_devices.h">esp_rainmaker/include/esp_rmaker_standard_devices.h</a></p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Functions<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv431esp_rmaker_switch_device_createPKcPvb">
+<span id="_CPPv331esp_rmaker_switch_device_createPKcPvb"></span><span id="_CPPv231esp_rmaker_switch_device_createPKcPvb"></span><span id="esp_rmaker_switch_device_create__cCP.voidP.b"></span><span class="target" id="esp__rmaker__standard__devices_8h_1a50101171d54ee2ba726a1fb8bb773e82"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_switch_device_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dev_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">power</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv431esp_rmaker_switch_device_createPKcPvb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Switch device</p>
+<p>This creates a Switch device with the mandatory parameters and also assigns the primary parameter. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dev_name</strong> – <strong>[in]</strong> The unique device name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the device. This should stay allocated throughout the lifetime of the device #</p></li>
+<li><p><strong>power</strong> – <strong>[in]</strong> Default value of the mandatory parameter “power”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Device handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_lightbulb_device_createPKcPvb">
+<span id="_CPPv334esp_rmaker_lightbulb_device_createPKcPvb"></span><span id="_CPPv234esp_rmaker_lightbulb_device_createPKcPvb"></span><span id="esp_rmaker_lightbulb_device_create__cCP.voidP.b"></span><span class="target" id="esp__rmaker__standard__devices_8h_1a3bc15356ba42ed79a4c72b5b209c55a8"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_lightbulb_device_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dev_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">power</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_lightbulb_device_createPKcPvb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Lightbulb device</p>
+<p>This creates a Lightbulb device with the mandatory parameters and also assigns the primary parameter. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dev_name</strong> – <strong>[in]</strong> The unique device name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the device. This should stay allocated throughout the lifetime of the device </p></li>
+<li><p><strong>power</strong> – <strong>[in]</strong> Default value of the mandatory parameter “power”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Device handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv428esp_rmaker_fan_device_createPKcPvb">
+<span id="_CPPv328esp_rmaker_fan_device_createPKcPvb"></span><span id="_CPPv228esp_rmaker_fan_device_createPKcPvb"></span><span id="esp_rmaker_fan_device_create__cCP.voidP.b"></span><span class="target" id="esp__rmaker__standard__devices_8h_1ae66ffdebf4acb3fd8b7b79fccb7b2065"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_fan_device_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dev_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">power</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv428esp_rmaker_fan_device_createPKcPvb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Fan device</p>
+<p>This creates a Fan device with the mandatory parameters and also assigns the primary parameter. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dev_name</strong> – <strong>[in]</strong> The unique device name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the device. This should stay allocated throughout the lifetime of the device </p></li>
+<li><p><strong>power</strong> – <strong>[in]</strong> Default value of the mandatory parameter “power”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Device handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv436esp_rmaker_temp_sensor_device_createPKcPvf">
+<span id="_CPPv336esp_rmaker_temp_sensor_device_createPKcPvf"></span><span id="_CPPv236esp_rmaker_temp_sensor_device_createPKcPvf"></span><span id="esp_rmaker_temp_sensor_device_create__cCP.voidP.float"></span><span class="target" id="esp__rmaker__standard__devices_8h_1a0f80a6a3ed44462cec2703c0b58c4475"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_temp_sensor_device_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dev_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span>, <span class="kt"><span class="pre">float</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">temperature</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv436esp_rmaker_temp_sensor_device_createPKcPvf" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Temperature Sensor device</p>
+<p>This creates a Temperature Sensor device with the mandatory parameters and also assigns the primary parameter. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dev_name</strong> – <strong>[in]</strong> The unique device name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the device. This should stay allocated throughout the lifetime of the device </p></li>
+<li><p><strong>temperature</strong> – <strong>[in]</strong> Default value of the mandatory parameter “temperature”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Device handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of failures. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="standard-services">
+<h2>Standard Services<a class="headerlink" href="#standard-services" title="Permalink to this headline"></a></h2>
+<section id="id5">
+<h3>Header File<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/espressif/esp-rainmaker/blob/b485e40/components/esp_rainmaker/include/esp_rmaker_standard_services.h">esp_rainmaker/include/esp_rmaker_standard_services.h</a></p></li>
+</ul>
+</section>
+<section id="id6">
+<h3>Functions<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv429esp_rmaker_ota_service_createPKcPv">
+<span id="_CPPv329esp_rmaker_ota_service_createPKcPv"></span><span id="_CPPv229esp_rmaker_ota_service_createPKcPv"></span><span id="esp_rmaker_ota_service_create__cCP.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1ac3ea5c5cf82bb641df8706ac27ebfb81"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_ota_service_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv429esp_rmaker_ota_service_createPKcPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard OTA service</p>
+<p>This creates an OTA service with the mandatory parameters. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv430esp_rmaker_time_service_createPKcPKcPKcPv">
+<span id="_CPPv330esp_rmaker_time_service_createPKcPKcPKcPv"></span><span id="_CPPv230esp_rmaker_time_service_createPKcPKcPKcPv"></span><span id="esp_rmaker_time_service_create__cCP.cCP.cCP.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1aeb39cab17f3557be9a6effa9c5207691"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_time_service_create</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">timezone</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">timezone_posix</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv430esp_rmaker_time_service_createPKcPKcPKcPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard OTA service</p>
+<p>This creates an OTA service with the mandatory parameters. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>timezone</strong> – <strong>[in]</strong> Default value of timezone string (Eg. “Asia/Shanghai”). Can be kept NULL. </p></li>
+<li><p><strong>timezone_posix</strong> – <strong>[in]</strong> Default value of posix timezone string (Eg. “CST-8”). Can be kept NULL. </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv434esp_rmaker_create_schedule_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tiPv">
+<span id="_CPPv334esp_rmaker_create_schedule_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tiPv"></span><span id="_CPPv234esp_rmaker_create_schedule_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tiPv"></span><span id="esp_rmaker_create_schedule_service__cCP.esp_rmaker_device_write_cb_t.esp_rmaker_device_read_cb_t.i.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1a9e9bdd2bbaa50c0b4d39de4faa7fc3ee"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_create_schedule_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <a class="reference internal" href="rainmaker_core.html#_CPPv428esp_rmaker_device_write_cb_t" title="esp_rmaker_device_write_cb_t"><span class="n"><span class="pre">esp_rmaker_device_write_cb_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">write_cb</span></span>, <a class="reference internal" href="rainmaker_core.html#_CPPv427esp_rmaker_device_read_cb_t" title="esp_rmaker_device_read_cb_t"><span class="n"><span class="pre">esp_rmaker_device_read_cb_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">read_cb</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_schedules</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv434esp_rmaker_create_schedule_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tiPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Schedule service</p>
+<p>This creates a Schedule service with the mandatory parameters. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>write_cb</strong> – <strong>[in]</strong> Write callback. </p></li>
+<li><p><strong>read_cb</strong> – <strong>[in]</strong> Read callback. </p></li>
+<li><p><strong>max_schedules</strong> – <strong>[in]</strong> Maximum number of schedules supported. </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432esp_rmaker_create_scenes_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tibPv">
+<span id="_CPPv332esp_rmaker_create_scenes_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tibPv"></span><span id="_CPPv232esp_rmaker_create_scenes_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tibPv"></span><span id="esp_rmaker_create_scenes_service__cCP.esp_rmaker_device_write_cb_t.esp_rmaker_device_read_cb_t.i.b.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1a6ac1bbea33e853fcbe90734104c3a420"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_create_scenes_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <a class="reference internal" href="rainmaker_core.html#_CPPv428esp_rmaker_device_write_cb_t" title="esp_rmaker_device_write_cb_t"><span class="n"><span class="pre">esp_rmaker_device_write_cb_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">write_cb</span></span>, <a class="reference internal" href="rainmaker_core.html#_CPPv427esp_rmaker_device_read_cb_t" title="esp_rmaker_device_read_cb_t"><span class="n"><span class="pre">esp_rmaker_device_read_cb_t</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">read_cb</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">max_scenes</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">deactivation_support</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432esp_rmaker_create_scenes_servicePKc28esp_rmaker_device_write_cb_t27esp_rmaker_device_read_cb_tibPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Scenes service</p>
+<p>This creates a Scenes service with the mandatory parameters. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>write_cb</strong> – <strong>[in]</strong> Write callback. </p></li>
+<li><p><strong>read_cb</strong> – <strong>[in]</strong> Read callback. </p></li>
+<li><p><strong>max_scenes</strong> – <strong>[in]</strong> Maximum number of scenes supported. </p></li>
+<li><p><strong>deactivation_support</strong> – <strong>[in]</strong> Deactivation callback support. </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv432esp_rmaker_create_system_servicePKcPv">
+<span id="_CPPv332esp_rmaker_create_system_servicePKcPv"></span><span id="_CPPv232esp_rmaker_create_system_servicePKcPv"></span><span id="esp_rmaker_create_system_service__cCP.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1a6d32cec87198bb91115d3688ba6b3a8d"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_create_system_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv432esp_rmaker_create_system_servicePKcPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard System service</p>
+<p>This creates an empty System service. Appropriate parameters should be added by the caller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv439esp_rmaker_create_local_control_servicePKcPKciPv">
+<span id="_CPPv339esp_rmaker_create_local_control_servicePKcPKciPv"></span><span id="_CPPv239esp_rmaker_create_local_control_servicePKcPKciPv"></span><span id="esp_rmaker_create_local_control_service__cCP.cCP.i.voidP"></span><span class="target" id="esp__rmaker__standard__services_8h_1a6342ea410cce6c20d9dc299e75b88ea0"></span><a class="reference internal" href="rainmaker_core.html#_CPPv419esp_rmaker_device_t" title="esp_rmaker_device_t"><span class="n"><span class="pre">esp_rmaker_device_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">esp_rmaker_create_local_control_service</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">serv_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">pop</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sec_type</span></span>, <span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">priv_data</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv439esp_rmaker_create_local_control_servicePKcPKciPv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a standard Local Control service</p>
+<p>This creates a Local Control service with the mandatory parameters. The default parameter names will be used. Refer esp_rmaker_standard_params.h for default names.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serv_name</strong> – <strong>[in]</strong> The unique service name </p></li>
+<li><p><strong>pop</strong> – <strong>[in]</strong> Proof of possession </p></li>
+<li><p><strong>sec_type</strong> – <strong>[in]</strong> Security type </p></li>
+<li><p><strong>priv_data</strong> – <strong>[in]</strong> (Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>service_handle on success. </p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>NULL in case of any error. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="rainmaker_core.html" class="btn btn-neutral float-left" title="RainMaker Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rainmaker_mqtt.html" class="btn btn-neutral float-right" title="RainMaker MQTT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Espressif Systems (Shanghai) CO., LTD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

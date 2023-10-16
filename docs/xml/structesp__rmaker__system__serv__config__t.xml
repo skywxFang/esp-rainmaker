@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__system__serv__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_system_serv_config_t</compoundname>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__system__serv__config__t_1a0bde0330ad942ecc38f434dd788eeacd" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t esp_rmaker_system_serv_config_t::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Logical OR of system service flags (SYSTEM_SERV_FLAG_REBOOT, SYSTEM_SERV_FLAG_FACTORY_RESET, SYSTEM_SERV_FLAG_WIFI_RESET) as required or SYSTEM_SERV_FLAGS_ALL. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="193" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__system__serv__config__t_1ae3433f756ecf39faae48953ddd090cc4" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t esp_rmaker_system_serv_config_t::reboot_seconds</definition>
+        <argsstring></argsstring>
+        <name>reboot_seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time in seconds after which the device should reboot. Value of zero would trigger an immediate reboot if a write is received for the Reboot parameter. Recommended value: 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="199" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__system__serv__config__t_1ae8450fa18102f88f71cac07dfe6388b2" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t esp_rmaker_system_serv_config_t::reset_seconds</definition>
+        <argsstring></argsstring>
+        <name>reset_seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time in seconds after which the device should reset (Wi-Fi or factory). Value of zero would trigger an immediate action if a write is received for the Wi-Fi reset or Factory reset parameter. Recommended value: 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="205" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__system__serv__config__t_1a1e2b848c681f4dc8e3b55b9e94575cd3" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t esp_rmaker_system_serv_config_t::reset_reboot_seconds</definition>
+        <argsstring></argsstring>
+        <name>reset_reboot_seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Time in seconds after which the device should reboot after it has been reset. Value of zero would mean that there won&apos;t be any reboot after the reset. Recommended value: 2 </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="210" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>System service configuration </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="188" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="188" bodyend="211"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__system__serv__config__t_1a0bde0330ad942ecc38f434dd788eeacd" prot="public" virt="non-virtual"><scope>esp_rmaker_system_serv_config_t</scope><name>flags</name></member>
+      <member refid="structesp__rmaker__system__serv__config__t_1ae3433f756ecf39faae48953ddd090cc4" prot="public" virt="non-virtual"><scope>esp_rmaker_system_serv_config_t</scope><name>reboot_seconds</name></member>
+      <member refid="structesp__rmaker__system__serv__config__t_1a1e2b848c681f4dc8e3b55b9e94575cd3" prot="public" virt="non-virtual"><scope>esp_rmaker_system_serv_config_t</scope><name>reset_reboot_seconds</name></member>
+      <member refid="structesp__rmaker__system__serv__config__t_1ae8450fa18102f88f71cac07dfe6388b2" prot="public" virt="non-virtual"><scope>esp_rmaker_system_serv_config_t</scope><name>reset_seconds</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

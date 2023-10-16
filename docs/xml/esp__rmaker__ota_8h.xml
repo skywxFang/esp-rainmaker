@@ -1,0 +1,616 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="esp__rmaker__ota_8h" kind="file" language="C++">
+    <compoundname>esp_rmaker_ota.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <incdepgraph>
+      <node id="19">
+        <label>stdbool.h</label>
+      </node>
+      <node id="17">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h</label>
+        <link refid="esp_rmaker_ota.h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>stdint.h</label>
+      </node>
+      <node id="20">
+        <label>esp_err.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structesp__rmaker__ota__data__t" prot="public">esp_rmaker_ota_data_t</innerclass>
+    <innerclass refid="structesp__rmaker__ota__diag__priv__t" prot="public">esp_rmaker_ota_diag_priv_t</innerclass>
+    <innerclass refid="structesp__rmaker__ota__config__t" prot="public">esp_rmaker_ota_config_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3" prot="public" static="no">
+        <name>esp_rmaker_ota_event_t</name>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a387da6358f320ef58e3ce118da353445" prot="public">
+          <name>RMAKER_OTA_EVENT_INVALID</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3aaca02fc0158eedd6f48102eabfedb1aa" prot="public">
+          <name>RMAKER_OTA_EVENT_STARTING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA is Starting </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a98794bb83f3a50d4f54698c7d6dcbce9" prot="public">
+          <name>RMAKER_OTA_EVENT_IN_PROGRESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA has Started </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a71def6321092c58eb052217e54841e31" prot="public">
+          <name>RMAKER_OTA_EVENT_SUCCESSFUL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA Successful </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a0d5869d33d9b326998d67d575aaa3de8" prot="public">
+          <name>RMAKER_OTA_EVENT_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA Failed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a94da6a823862903aa6435cc721ac3d45" prot="public">
+          <name>RMAKER_OTA_EVENT_REJECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA Rejected </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3ae788ad78976f6542a399b975fa636620" prot="public">
+          <name>RMAKER_OTA_EVENT_DELAYED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>RainMaker OTA Delayed </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1ae0362db34a85cef96b90c8b9692ab1c3a78e24603a2473a62ebd294bef7512251" prot="public">
+          <name>RMAKER_OTA_EVENT_REQ_FOR_REBOOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Image has been flashed and active partition changed. Reboot is requested. Applicable only if Auto reboot is disabled </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>ESP RainMaker Events </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="22" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="22" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964a" prot="public" static="no">
+        <name>ota_status_t</name>
+        <enumvalue id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964aa8d697dceec540d2cbe5300bb69896634" prot="public">
+          <name>OTA_STATUS_IN_PROGRESS</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA is in Progress. This can be reported multiple times as the OTA progresses. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964aa23e293bcc679d3021e202ac255b71500" prot="public">
+          <name>OTA_STATUS_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Succeeded. This should be reported only once, at the end of OTA. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964aa3cf075ffd4b0f0cca91ffcd19e7ef28e" prot="public">
+          <name>OTA_STATUS_FAILED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Failed. This should be reported only once, at the end of OTA. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964aa618a2f8375a999dbb0921cfb7062fc47" prot="public">
+          <name>OTA_STATUS_DELAYED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA was delayed by the application </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a9496f03dc69c23faad84723c96b1964aae21a87caccc486de67435af24401b5c2" prot="public">
+          <name>OTA_STATUS_REJECTED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA rejected due to some reason (wrong project, version, etc.) </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OTA Status to be reported to ESP RainMaker Cloud </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="45" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="45" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__ota_8h_1a6ff23ea367a69264b50526ac0007ec39" prot="public" static="no">
+        <name>esp_rmaker_ota_type_t</name>
+        <enumvalue id="esp__rmaker__ota_8h_1a6ff23ea367a69264b50526ac0007ec39aadee5e8864e322b8e94b1f0f4af17aae" prot="public">
+          <name>OTA_USING_PARAMS</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA will be performed using services and parameters. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a6ff23ea367a69264b50526ac0007ec39ae459ec580f88501564a3eb124390fee9" prot="public">
+          <name>OTA_USING_TOPICS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA will be performed using pre-defined MQTT topics. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OTA Workflow type </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="59" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__ota_8h_1a5538572767355b36255b8e7e5ae1d264" prot="public" static="no">
+        <name>esp_rmaker_ota_diag_status_t</name>
+        <enumvalue id="esp__rmaker__ota_8h_1a5538572767355b36255b8e7e5ae1d264a0937f4c9dd4ebabc35386b072e1545b0" prot="public">
+          <name>OTA_DIAG_STATUS_FAIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Diagnostics Failed. Rollback the firmware. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a5538572767355b36255b8e7e5ae1d264afb9e2afa8ad9aec4b50aac1ff438fa91" prot="public">
+          <name>OTA_DIAG_STATUS_PENDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Diagnostics Pending. Additional validations will be done later. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a5538572767355b36255b8e7e5ae1d264aad005c19bbce1eb3e0d22969a0b30b0e" prot="public">
+          <name>OTA_DIAG_STATUS_SUCCESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA Diagnostics Succeeded. Firmware can be considered valid. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="103" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="103" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="enum" id="esp__rmaker__ota_8h_1a123cd0b44a81f97ce3507b6e576a6a5a" prot="public" static="no">
+        <name>esp_rmaker_ota_diag_state_t</name>
+        <enumvalue id="esp__rmaker__ota_8h_1a123cd0b44a81f97ce3507b6e576a6a5aa4f1cc558ad0eef4aaf82d7e5e085e810" prot="public">
+          <name>OTA_DIAG_STATE_INIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA State: Initialised. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="esp__rmaker__ota_8h_1a123cd0b44a81f97ce3507b6e576a6a5aaec11400986e5400a37c515fbf7ce709c" prot="public">
+          <name>OTA_DIAG_STATE_POST_MQTT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>OTA state: MQTT has connected. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="112" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="112" bodyend="117"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="esp__rmaker__ota_8h_1aea6b6f838286bc84a0ca5a9abd65cb52" prot="public" static="no">
+        <type>void *</type>
+        <definition>typedef void* esp_rmaker_ota_handle_t</definition>
+        <argsstring></argsstring>
+        <name>esp_rmaker_ota_handle_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The OTA Handle to be used by the OTA callback </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="67" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__ota_8h_1a980829aca12997dfd5ba0c91e69ba0d3" prot="public" static="no">
+        <type>esp_err_t(*</type>
+        <definition>typedef esp_err_t(* esp_rmaker_ota_cb_t) (esp_rmaker_ota_handle_t handle, esp_rmaker_ota_data_t *ota_data)</definition>
+        <argsstring>)(esp_rmaker_ota_handle_t handle, esp_rmaker_ota_data_t *ota_data)</argsstring>
+        <name>esp_rmaker_ota_cb_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function prototype for OTA Callback</para><para>This function will be invoked by the ESP RainMaker core whenever an OTA is available. The esp_rmaker_report_ota_status() API should be used to indicate the progress and success/fail status.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An OTA handle assigned by the ESP RainMaker Core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ota_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to be used for the OTA</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the OTA was successful </para></simplesect>
+<simplesect kind="return"><para>ESP_FAIL if the OTA failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="100" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="esp__rmaker__ota_8h_1aa726ead01cad03cd28561b91550c783f" prot="public" static="no">
+        <type>esp_rmaker_ota_diag_status_t(*</type>
+        <definition>typedef esp_rmaker_ota_diag_status_t(* esp_rmaker_post_ota_diag_t) (esp_rmaker_ota_diag_priv_t *ota_diag_priv, void *priv)</definition>
+        <argsstring>)(esp_rmaker_ota_diag_priv_t *ota_diag_priv, void *priv)</argsstring>
+        <name>esp_rmaker_post_ota_diag_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Function Prototype for Post OTA Diagnostics</para><para>If the Application rollback feature is enabled, this callback will be invoked as soon as you call esp_rmaker_ota_enable(), if it is the first boot after an OTA. You may perform some application specific diagnostics and report the status which will decide whether to roll back or not.</para><para>This will be invoked once again after MQTT has connected, in case some additional validations are to be done later.</para><para>If OTA state == OTA_DIAG_STATE_INIT, then return OTA_DIAG_STATUS_FAIL to indicate failure and rollback. return OTA_DIAG_STATUS_SUCCESS or OTA_DIAG_STATUS_PENDING to tell internal OTA logic to continue further.</para><para>If OTA state == OTA_DIAG_STATE_POST_MQTT, then return OTA_DIAG_STATUS_FAIL to indicate failure and rollback. return OTA_DIAG_STATUS_SUCCESS to indicate validation was successful and mark OTA as valid return OTA_DIAG_STATUS_PENDING to indicate that some additional validations will be done later and the OTA will eventually be marked valid/invalid using esp_rmaker_ota_mark_valid() or esp_rmaker_ota_mark_invalid() respectively.</para><para><simplesect kind="return"><para>esp_rmaker_ota_diag_status_t as applicable </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="152" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="esp__rmaker__ota_8h_1aa433b73b09b45feaf7073f0002069b4e" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* ESP_RMAKER_OTA_DEFAULT_SERVER_CERT</definition>
+        <argsstring></argsstring>
+        <name>ESP_RMAKER_OTA_DEFAULT_SERVER_CERT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default ESP RainMaker OTA Server Certificate </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="42" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1abd0e6a5005af84e2ef5472c8b2ecb7a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_enable</definition>
+        <argsstring>(esp_rmaker_ota_config_t *ota_config, esp_rmaker_ota_type_t type)</argsstring>
+        <name>esp_rmaker_ota_enable</name>
+        <param>
+          <type><ref refid="structesp__rmaker__ota__config__t" kindref="compound">esp_rmaker_ota_config_t</ref> *</type>
+          <declname>ota_config</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_ota_type_t</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Enable OTA</para><para>Calling this API enables OTA as per the ESP RainMaker specification. Please check the various ESP RainMaker configuration options to use the different variants of OTA. Refer the documentation for additional details.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ota_config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to an OTA configuration structure </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OTA workflow type</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="193" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1a1d34e15522fe3f8aa40dac997d2f1b13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_report_status</definition>
+        <argsstring>(esp_rmaker_ota_handle_t ota_handle, ota_status_t status, char *additional_info)</argsstring>
+        <name>esp_rmaker_ota_report_status</name>
+        <param>
+          <type>esp_rmaker_ota_handle_t</type>
+          <declname>ota_handle</declname>
+        </param>
+        <param>
+          <type>ota_status_t</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>additional_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Report OTA Status</para><para>This API must be called from the OTA Callback to indicate the status of the OTA. The OTA_STATUS_IN_PROGRESS can be reported multiple times with appropriate additional information. The final success/failure should be reported only once, at the end.</para><para>This can be ignored if you are using the default internal OTA callback.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ota_handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The OTA handle received by the callback </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status to be reported </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">additional_info</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>NULL terminated string indicating additional information for the status</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="210" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1abab64a68e587087dbe7c6836950a5456" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_default_cb</definition>
+        <argsstring>(esp_rmaker_ota_handle_t handle, esp_rmaker_ota_data_t *ota_data)</argsstring>
+        <name>esp_rmaker_ota_default_cb</name>
+        <param>
+          <type>esp_rmaker_ota_handle_t</type>
+          <declname>handle</declname>
+        </param>
+        <param>
+          <type><ref refid="structesp__rmaker__ota__data__t" kindref="compound">esp_rmaker_ota_data_t</ref> *</type>
+          <declname>ota_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Default OTA callback</para><para>This is the default OTA callback which will get used if you do not pass your own callback. You can call this even from your callback, in case you want better control on when the OTA can proceed and yet let the actual OTA process be managed by the RainMaker Core.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">handle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An OTA handle assigned by the ESP RainMaker Core </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ota_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data to be used for the OTA</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the OTA was successful </para></simplesect>
+<simplesect kind="return"><para>ESP_FAIL if the OTA failed. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1a4cdc9f40cb425329010bc544aea579c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_fetch</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_ota_fetch</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetch OTA Info</para><para>For OTA using Topics, this API can be used to explicitly ask the backend if an OTA is available. If it is, then the OTA callback would get invoked.</para><para><simplesect kind="return"><para>ESP_OK if the OTA fetch publish message was successful. </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1a57111f4b7f509ae5943392408ddd3def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_fetch_with_delay</definition>
+        <argsstring>(int time)</argsstring>
+        <name>esp_rmaker_ota_fetch_with_delay</name>
+        <param>
+          <type>int</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetch OTA Info with a delay</para><para>For OTA using Topics, this API can be used to explicitly ask the backend if an OTA is available after a delay (in seconds) passed as an argument.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Delay (in seconds)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ESP_OK if the OTA fetch timer was created. </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1a653f28e50bb9682e34c58d773b692800" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_mark_valid</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_ota_mark_valid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark OTA as valid</para><para>This should be called if the OTA validation has been kept pending by returning OTA_DIAG_STATUS_PENDING in the ota_diag callback and then, the validation was eventually successful. This can also be used to mark the OTA valid even before RainMaker core does its own validations (primarily MQTT connection).</para><para><simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="257" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__ota_8h_1a8fe9a71e862830747ce1e64d90e52d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_err_t</type>
+        <definition>esp_err_t esp_rmaker_ota_mark_invalid</definition>
+        <argsstring>(void)</argsstring>
+        <name>esp_rmaker_ota_mark_invalid</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mark OTA as invalid</para><para>This should be called if the OTA validation has been kept pending by returning OTA_DIAG_STATUS_PENDING in the ota_diag callback and then, the validation eventually failed. This can even be used to rollback at any point of time before RainMaker core&apos;s internal logic and the application&apos;s logic mark the OTA as valid.</para><para><simplesect kind="return"><para>ESP_OK on success </para></simplesect>
+<simplesect kind="return"><para>error on failure </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="269" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>SPDX-FileCopyrightText:<sp/>2020-2023<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>CO<sp/>LTD</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>SPDX-License-Identifier:<sp/>Apache-2.0</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">ESP_EVENT_DECLARE_BASE(RMAKER_OTA_EVENT);</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>Invalid<sp/>event.<sp/>Used<sp/>for<sp/>internal<sp/>handling<sp/>only<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_INVALID<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_STARTING,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_IN_PROGRESS,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_SUCCESSFUL,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_FAILED,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_REJECTED,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_DELAYED,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>RMAKER_OTA_EVENT_REQ_FOR_REBOOT,</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/>esp_rmaker_ota_event_t;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*ESP_RMAKER_OTA_DEFAULT_SERVER_CERT;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_STATUS_IN_PROGRESS<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_STATUS_SUCCESS,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_STATUS_FAILED,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_STATUS_DELAYED,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_STATUS_REJECTED,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}<sp/>ota_status_t;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_USING_PARAMS<sp/>=<sp/>1,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_USING_TOPICS</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}<sp/>esp_rmaker_ota_type_t;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*esp_rmaker_ota_handle_t;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="structesp__rmaker__ota__data__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72" refid="structesp__rmaker__ota__data__t_1ad8429f803ba575a578afc386690ece9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1ad8429f803ba575a578afc386690ece9b" kindref="member">url</ref>;</highlight></codeline>
+<codeline lineno="75" refid="structesp__rmaker__ota__data__t_1a3da4a34ae999cea4d52a688fc7d165a2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__ota__data__t_1a3da4a34ae999cea4d52a688fc7d165a2" kindref="member">filesize</ref>;</highlight></codeline>
+<codeline lineno="77" refid="structesp__rmaker__ota__data__t_1aa97acc4c1077ff221ba0b339fb4eaabc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1aa97acc4c1077ff221ba0b339fb4eaabc" kindref="member">fw_version</ref>;</highlight></codeline>
+<codeline lineno="79" refid="structesp__rmaker__ota__data__t_1a75dbf2da90d551c83272bbf12a51ff23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1a75dbf2da90d551c83272bbf12a51ff23" kindref="member">ota_job_id</ref>;</highlight></codeline>
+<codeline lineno="81" refid="structesp__rmaker__ota__data__t_1a0eeab1c1f297bf547908bef072c320c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1a0eeab1c1f297bf547908bef072c320c4" kindref="member">server_cert</ref>;</highlight></codeline>
+<codeline lineno="83" refid="structesp__rmaker__ota__data__t_1acc5db0c036a32ac153b44ecbf84738ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1acc5db0c036a32ac153b44ecbf84738ef" kindref="member">priv</ref>;</highlight></codeline>
+<codeline lineno="85" refid="structesp__rmaker__ota__data__t_1a5fc4ad16fef65b8b9bae295182159f4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__data__t_1a5fc4ad16fef65b8b9bae295182159f4a" kindref="member">metadata</ref>;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__ota__data__t" kindref="compound">esp_rmaker_ota_data_t</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_err_t<sp/>(*esp_rmaker_ota_cb_t)<sp/>(esp_rmaker_ota_handle_t<sp/>handle,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structesp__rmaker__ota__data__t" kindref="compound">esp_rmaker_ota_data_t</ref><sp/>*ota_data);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_DIAG_STATUS_FAIL,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_DIAG_STATUS_PENDING,</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_DIAG_STATUS_SUCCESS</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">}<sp/>esp_rmaker_ota_diag_status_t;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_DIAG_STATE_INIT,</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>OTA_DIAG_STATE_POST_MQTT</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}<sp/>esp_rmaker_ota_diag_state_t;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119" refid="structesp__rmaker__ota__diag__priv__t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121" refid="structesp__rmaker__ota__diag__priv__t_1aae7ff4c248f88b0a7dcab48335aa7c4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_ota_diag_state_t<sp/><ref refid="structesp__rmaker__ota__diag__priv__t_1aae7ff4c248f88b0a7dcab48335aa7c4a" kindref="member">state</ref>;</highlight></codeline>
+<codeline lineno="126" refid="structesp__rmaker__ota__diag__priv__t_1ac22b65812e93fee957c7fbcef1e8dca0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structesp__rmaker__ota__diag__priv__t_1ac22b65812e93fee957c7fbcef1e8dca0" kindref="member">rmaker_ota</ref>;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__ota__diag__priv__t" kindref="compound">esp_rmaker_ota_diag_priv_t</ref>;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>esp_rmaker_ota_diag_status_t<sp/>(*esp_rmaker_post_ota_diag_t)(<ref refid="structesp__rmaker__ota__diag__priv__t" kindref="compound">esp_rmaker_ota_diag_priv_t</ref><sp/>*ota_diag_priv,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="structesp__rmaker__ota__config__t" refkind="compound"><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="160" refid="structesp__rmaker__ota__config__t_1a691d632e606acbd983449649271b4d9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_ota_cb_t<sp/><ref refid="structesp__rmaker__ota__config__t_1a691d632e606acbd983449649271b4d9c" kindref="member">ota_cb</ref>;</highlight></codeline>
+<codeline lineno="166" refid="structesp__rmaker__ota__config__t_1a55b42b965fd065751c57029ce782798c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>esp_rmaker_post_ota_diag_t<sp/><ref refid="structesp__rmaker__ota__config__t_1a55b42b965fd065751c57029ce782798c" kindref="member">ota_diag</ref>;</highlight></codeline>
+<codeline lineno="173" refid="structesp__rmaker__ota__config__t_1a009a05eaa7900150fdc6f9dc225f5375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__config__t_1a009a05eaa7900150fdc6f9dc225f5375" kindref="member">server_cert</ref>;</highlight></codeline>
+<codeline lineno="177" refid="structesp__rmaker__ota__config__t_1a3ab5eeebb6765b1e33bea616369074ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*<ref refid="structesp__rmaker__ota__config__t_1a3ab5eeebb6765b1e33bea616369074ef" kindref="member">priv</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}<sp/><ref refid="structesp__rmaker__ota__config__t" kindref="compound">esp_rmaker_ota_config_t</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_enable(<ref refid="structesp__rmaker__ota__config__t" kindref="compound">esp_rmaker_ota_config_t</ref><sp/>*ota_config,<sp/>esp_rmaker_ota_type_t<sp/>type);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_report_status(esp_rmaker_ota_handle_t<sp/>ota_handle,<sp/>ota_status_t<sp/>status,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*additional_info);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_default_cb(esp_rmaker_ota_handle_t<sp/>handle,<sp/><ref refid="structesp__rmaker__ota__data__t" kindref="compound">esp_rmaker_ota_data_t</ref><sp/>*ota_data);</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_fetch(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_fetch_with_delay(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>time);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_mark_valid(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal">esp_err_t<sp/>esp_rmaker_ota_mark_invalid(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h"/>
+  </compounddef>
+</doxygen>

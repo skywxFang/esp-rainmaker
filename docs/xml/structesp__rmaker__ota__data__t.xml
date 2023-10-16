@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__ota__data__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_ota_data_t</compoundname>
+    <includes refid="esp__rmaker__ota_8h" local="no">esp_rmaker_ota.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1ad8429f803ba575a578afc386690ece9b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_ota_data_t::url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The OTA URL received from ESP RainMaker Cloud </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="72" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1a3da4a34ae999cea4d52a688fc7d165a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int esp_rmaker_ota_data_t::filesize</definition>
+        <argsstring></argsstring>
+        <name>filesize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Size of the OTA File. Can be 0 if the file size isn&apos;t received from the ESP RainMaker Cloud </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="75" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1aa97acc4c1077ff221ba0b339fb4eaabc" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_ota_data_t::fw_version</definition>
+        <argsstring></argsstring>
+        <name>fw_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The firmware version of the OTA image </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="77" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1a75dbf2da90d551c83272bbf12a51ff23" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_ota_data_t::ota_job_id</definition>
+        <argsstring></argsstring>
+        <name>ota_job_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The OTA Job ID received from cloud </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="79" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1a0eeab1c1f297bf547908bef072c320c4" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* esp_rmaker_ota_data_t::server_cert</definition>
+        <argsstring></argsstring>
+        <name>server_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The server certificate passed in esp_rmaker_enable_ota() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="81" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1acc5db0c036a32ac153b44ecbf84738ef" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_ota_data_t::priv</definition>
+        <argsstring></argsstring>
+        <name>priv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The private data passed in esp_rmaker_enable_ota() </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="83" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__data__t_1a5fc4ad16fef65b8b9bae295182159f4a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_ota_data_t::metadata</definition>
+        <argsstring></argsstring>
+        <name>metadata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OTA Metadata. Applicable only for OTA using Topics. Will be received (if applicable) from the backend, along with the OTA URL </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="85" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>OTA Data </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="70" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="70" bodyend="86"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__ota__data__t_1a3da4a34ae999cea4d52a688fc7d165a2" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>filesize</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1aa97acc4c1077ff221ba0b339fb4eaabc" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>fw_version</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1a5fc4ad16fef65b8b9bae295182159f4a" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>metadata</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1a75dbf2da90d551c83272bbf12a51ff23" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>ota_job_id</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1acc5db0c036a32ac153b44ecbf84738ef" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>priv</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1a0eeab1c1f297bf547908bef072c320c4" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>server_cert</name></member>
+      <member refid="structesp__rmaker__ota__data__t_1ad8429f803ba575a578afc386690ece9b" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_data_t</scope><name>url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

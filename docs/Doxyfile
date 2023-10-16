@@ -20,7 +20,7 @@ PROJECT_NAME = "ESP RainMaker Programming Guide"
 ## These files are placed in '_inc' directory
 ## and used to include in API reference documentation
 
-INPUT = \
+INPUT += \
     ## RainMaker Core
     ../components/esp_rainmaker/include/esp_rmaker_core.h \
     ../components/esp_rainmaker/include/esp_rmaker_user_mapping.h \

@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__mqtt__conn__params__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_mqtt_conn_params_t</compoundname>
+    <includes refid="esp__rmaker__mqtt__glue_8h" local="no">esp_rmaker_mqtt_glue.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1ab89bd1d575d99749f39e4b43455f2611" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_mqtt_conn_params_t::mqtt_host</definition>
+        <argsstring></argsstring>
+        <name>mqtt_host</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>MQTT Host </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="32" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1ab378694271fffb1f23be5f154d2b8955" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_mqtt_conn_params_t::client_id</definition>
+        <argsstring></argsstring>
+        <name>client_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Client ID </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="34" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1ac6393d7a3fbcd4bba59a431ce5ea87ac" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_mqtt_conn_params_t::client_cert</definition>
+        <argsstring></argsstring>
+        <name>client_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Client Certificate in DER format or NULL-terminated PEM format </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="36" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1a2a46ce0ae5779a23c90c163ccc986064" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t esp_rmaker_mqtt_conn_params_t::client_cert_len</definition>
+        <argsstring></argsstring>
+        <name>client_cert_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Client Certificate length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="38" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1a69d995e3313bfcea2e4dd56971cbf78b" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_mqtt_conn_params_t::client_key</definition>
+        <argsstring></argsstring>
+        <name>client_key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Client Key in DER format or NULL-terminated PEM format </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="40" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1a7a329cfa7fc19ca861c805b925200ac7" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t esp_rmaker_mqtt_conn_params_t::client_key_len</definition>
+        <argsstring></argsstring>
+        <name>client_key_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Client Key length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="42" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1a8458f97bf0f0e40ca6b633103c991612" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_mqtt_conn_params_t::server_cert</definition>
+        <argsstring></argsstring>
+        <name>server_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Server Certificate in DER format or NULL-terminated PEM format </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="44" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1a4a70fbdc94727869d6e555bb59316366" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t esp_rmaker_mqtt_conn_params_t::server_cert_len</definition>
+        <argsstring></argsstring>
+        <name>server_cert_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Server Certificate length </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="46" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__mqtt__conn__params__t_1aeb60a52d8ba164b1c9396d919a7947a5" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* esp_rmaker_mqtt_conn_params_t::ds_data</definition>
+        <argsstring></argsstring>
+        <name>ds_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer for digital signature peripheral context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="48" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>MQTT Connection parameters </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" line="30" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/rmaker_common/include/esp_rmaker_mqtt_glue.h" bodystart="30" bodyend="49"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1ac6393d7a3fbcd4bba59a431ce5ea87ac" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>client_cert</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1a2a46ce0ae5779a23c90c163ccc986064" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>client_cert_len</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1ab378694271fffb1f23be5f154d2b8955" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>client_id</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1a69d995e3313bfcea2e4dd56971cbf78b" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>client_key</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1a7a329cfa7fc19ca861c805b925200ac7" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>client_key_len</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1aeb60a52d8ba164b1c9396d919a7947a5" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>ds_data</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1ab89bd1d575d99749f39e4b43455f2611" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>mqtt_host</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1a8458f97bf0f0e40ca6b633103c991612" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>server_cert</name></member>
+      <member refid="structesp__rmaker__mqtt__conn__params__t_1a4a70fbdc94727869d6e555bb59316366" prot="public" virt="non-virtual"><scope>esp_rmaker_mqtt_conn_params_t</scope><name>server_cert_len</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_5ee8f174a29bd2ab76655f5d7983c4be" kind="dir">
+    <compoundname>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include</compoundname>
+    <innerfile refid="esp__rmaker__console_8h">esp_rmaker_console.h</innerfile>
+    <innerfile refid="esp__rmaker__core_8h">esp_rmaker_core.h</innerfile>
+    <innerfile refid="esp__rmaker__mqtt_8h">esp_rmaker_mqtt.h</innerfile>
+    <innerfile refid="esp__rmaker__ota_8h">esp_rmaker_ota.h</innerfile>
+    <innerfile refid="esp__rmaker__scenes_8h">esp_rmaker_scenes.h</innerfile>
+    <innerfile refid="esp__rmaker__schedule_8h">esp_rmaker_schedule.h</innerfile>
+    <innerfile refid="esp__rmaker__standard__devices_8h">esp_rmaker_standard_devices.h</innerfile>
+    <innerfile refid="esp__rmaker__standard__params_8h">esp_rmaker_standard_params.h</innerfile>
+    <innerfile refid="esp__rmaker__standard__services_8h">esp_rmaker_standard_services.h</innerfile>
+    <innerfile refid="esp__rmaker__standard__types_8h">esp_rmaker_standard_types.h</innerfile>
+    <innerfile refid="esp__rmaker__user__mapping_8h">esp_rmaker_user_mapping.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/"/>
+  </compounddef>
+</doxygen>

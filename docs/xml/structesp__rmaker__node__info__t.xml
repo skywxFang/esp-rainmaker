@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__node__info__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_node_info_t</compoundname>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1aa91bb43385c60757b025cb1f456554e8" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_node_info_t::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the Node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="61" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1a5373e803d006b5aff5d66fc34249f031" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_node_info_t::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type of the Node </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="63" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1a4921c01e1e66627e6957ac74002d5926" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_node_info_t::fw_version</definition>
+        <argsstring></argsstring>
+        <name>fw_version</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Firmware Version (Optional). If not set, PROJECT_VER is used as default (recommended) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="65" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1a0a63556298f4a8f686c54c09228dc7cb" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_node_info_t::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Model (Optional). If not set, PROJECT_NAME is used as default (recommended) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="67" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1a4cbc64e4da2893804171e3b8f536119e" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* esp_rmaker_node_info_t::subtype</definition>
+        <argsstring></argsstring>
+        <name>subtype</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Subtype (Optional). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="69" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__node__info__t_1a423ef8c530e760431e6a882c5885e04b" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** esp_rmaker_node_info_t::secure_boot_digest</definition>
+        <argsstring></argsstring>
+        <name>secure_boot_digest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>An array of digests read from efuse. Should be freed after use </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="71" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>ESP RainMaker Node information </para>    </detaileddescription>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" line="59" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_core.h" bodystart="59" bodyend="72"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__node__info__t_1a4921c01e1e66627e6957ac74002d5926" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>fw_version</name></member>
+      <member refid="structesp__rmaker__node__info__t_1a0a63556298f4a8f686c54c09228dc7cb" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>model</name></member>
+      <member refid="structesp__rmaker__node__info__t_1aa91bb43385c60757b025cb1f456554e8" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>name</name></member>
+      <member refid="structesp__rmaker__node__info__t_1a423ef8c530e760431e6a882c5885e04b" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>secure_boot_digest</name></member>
+      <member refid="structesp__rmaker__node__info__t_1a4cbc64e4da2893804171e3b8f536119e" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>subtype</name></member>
+      <member refid="structesp__rmaker__node__info__t_1a5373e803d006b5aff5d66fc34249f031" prot="public" virt="non-virtual"><scope>esp_rmaker_node_info_t</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,447 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="esp__rmaker__standard__services_8h" kind="file" language="C++">
+    <compoundname>esp_rmaker_standard_services.h</compoundname>
+    <includes local="no">stdint.h</includes>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">esp_err.h</includes>
+    <includes refid="esp__rmaker__core_8h" local="no">esp_rmaker_core.h</includes>
+    <incdepgraph>
+      <node id="43">
+        <label>stdbool.h</label>
+      </node>
+      <node id="42">
+        <label>stdint.h</label>
+      </node>
+      <node id="44">
+        <label>esp_err.h</label>
+      </node>
+      <node id="41">
+        <label>/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h</label>
+        <link refid="esp_rmaker_standard_services.h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>esp_event.h</label>
+      </node>
+      <node id="45">
+        <label>esp_rmaker_core.h</label>
+        <link refid="esp__rmaker__core_8h_source"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1ac3ea5c5cf82bb641df8706ac27ebfb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_ota_service_create</definition>
+        <argsstring>(const char *serv_name, void *priv_data)</argsstring>
+        <name>esp_rmaker_ota_service_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard OTA service</para><para>This creates an OTA service with the mandatory parameters. The default parameter names will be used. Refer <ref refid="esp__rmaker__standard__params_8h_source" kindref="compound">esp_rmaker_standard_params.h</ref> for default names.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1aeb39cab17f3557be9a6effa9c5207691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_time_service_create</definition>
+        <argsstring>(const char *serv_name, const char *timezone, const char *timezone_posix, void *priv_data)</argsstring>
+        <name>esp_rmaker_time_service_create</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>timezone</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>timezone_posix</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard OTA service</para><para>This creates an OTA service with the mandatory parameters. The default parameter names will be used. Refer <ref refid="esp__rmaker__standard__params_8h_source" kindref="compound">esp_rmaker_standard_params.h</ref> for default names.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">timezone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value of timezone string (Eg. &quot;Asia/Shanghai&quot;). Can be kept NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">timezone_posix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Default value of posix timezone string (Eg. &quot;CST-8&quot;). Can be kept NULL. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1a9e9bdd2bbaa50c0b4d39de4faa7fc3ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_create_schedule_service</definition>
+        <argsstring>(const char *serv_name, esp_rmaker_device_write_cb_t write_cb, esp_rmaker_device_read_cb_t read_cb, int max_schedules, void *priv_data)</argsstring>
+        <name>esp_rmaker_create_schedule_service</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_write_cb_t</type>
+          <declname>write_cb</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_read_cb_t</type>
+          <declname>read_cb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_schedules</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard Schedule service</para><para>This creates a Schedule service with the mandatory parameters. The default parameter names will be used. Refer <ref refid="esp__rmaker__standard__params_8h_source" kindref="compound">esp_rmaker_standard_params.h</ref> for default names.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">write_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">read_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Read callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">max_schedules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of schedules supported. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1a6ac1bbea33e853fcbe90734104c3a420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_create_scenes_service</definition>
+        <argsstring>(const char *serv_name, esp_rmaker_device_write_cb_t write_cb, esp_rmaker_device_read_cb_t read_cb, int max_scenes, bool deactivation_support, void *priv_data)</argsstring>
+        <name>esp_rmaker_create_scenes_service</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_write_cb_t</type>
+          <declname>write_cb</declname>
+        </param>
+        <param>
+          <type>esp_rmaker_device_read_cb_t</type>
+          <declname>read_cb</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>max_scenes</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>deactivation_support</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard Scenes service</para><para>This creates a Scenes service with the mandatory parameters. The default parameter names will be used. Refer <ref refid="esp__rmaker__standard__params_8h_source" kindref="compound">esp_rmaker_standard_params.h</ref> for default names.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">write_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">read_cb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Read callback. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">max_scenes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Maximum number of scenes supported. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">deactivation_support</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Deactivation callback support. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1a6d32cec87198bb91115d3688ba6b3a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_create_system_service</definition>
+        <argsstring>(const char *serv_name, void *priv_data)</argsstring>
+        <name>esp_rmaker_create_system_service</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard System service</para><para>This creates an empty System service. Appropriate parameters should be added by the caller.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="esp__rmaker__standard__services_8h_1a6342ea410cce6c20d9dc299e75b88ea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>esp_rmaker_device_t *</type>
+        <definition>esp_rmaker_device_t* esp_rmaker_create_local_control_service</definition>
+        <argsstring>(const char *serv_name, const char *pop, int sec_type, void *priv_data)</argsstring>
+        <name>esp_rmaker_create_local_control_service</name>
+        <param>
+          <type>const char *</type>
+          <declname>serv_name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>pop</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>sec_type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>priv_data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a standard Local Control service</para><para>This creates a Local Control service with the mandatory parameters. The default parameter names will be used. Refer <ref refid="esp__rmaker__standard__params_8h_source" kindref="compound">esp_rmaker_standard_params.h</ref> for default names.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serv_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The unique service name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Proof of possession </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">sec_type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Security type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">priv_data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(Optional) Private data associated with the service. This should stay allocated throughout the lifetime of the service.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>service_handle on success. </para></simplesect>
+<simplesect kind="return"><para>NULL in case of any error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h" line="120" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>2020<sp/>Espressif<sp/>Systems<sp/>(Shanghai)<sp/>PTE<sp/>LTD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_err.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;esp_rmaker_core.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_ota_service_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_time_service_create(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*timezone,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*timezone_posix,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_create_schedule_service(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/>esp_rmaker_device_write_cb_t<sp/>write_cb,<sp/>esp_rmaker_device_read_cb_t<sp/>read_cb,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_schedules,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_create_scenes_service(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/>esp_rmaker_device_write_cb_t<sp/>write_cb,<sp/>esp_rmaker_device_read_cb_t<sp/>read_cb,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max_scenes,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>deactivation_support,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_create_system_service(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">esp_rmaker_device_t<sp/>*esp_rmaker_create_local_control_service(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*serv_name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pop,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sec_type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*priv_data);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_standard_services.h"/>
+  </compounddef>
+</doxygen>

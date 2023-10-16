@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C API Reference &mdash; ESP RainMaker Programming Guide  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/theme_overrides.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="RainMaker Core" href="rainmaker_core.html" />
+    <link rel="prev" title="ESP RainMaker Programming Guide" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            ESP RainMaker Programming Guide
+              <img src="../_static/esp-rainmaker-logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">C API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html">RainMaker Core</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html">RainMaker Standard Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_mqtt.html">RainMaker MQTT</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html">RainMaker OTA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_console.html">RainMaker Console</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html">RainMaker Common</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../python-api-reference/index.html">Python API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ESP RainMaker Programming Guide</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">C API Reference</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/c-api-reference/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c-api-reference">
+<h1>C API Reference<a class="headerlink" href="#c-api-reference" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_core.html">RainMaker Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html#core">Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#header-file">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#unions">Unions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#structures">Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#macros">Macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#enumerations">Enumerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html#user-mapping">User Mapping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id1">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id2">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id3">Enumerations</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html#scheduling">Scheduling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id4">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id5">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_core.html#scenes">Scenes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id6">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_core.html#id7">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_standard_types.html">RainMaker Standard Types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html#standard-types">Standard Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#header-file">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#macros">Macros</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html#standard-parameters">Standard Parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id1">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id2">Macros</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html#standard-devices">Standard Devices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id3">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id4">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_standard_types.html#standard-services">Standard Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id5">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_standard_types.html#id6">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_mqtt.html">RainMaker MQTT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_mqtt.html#header-file">Header File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_mqtt.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_ota.html">RainMaker OTA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html#header-file">Header File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html#structures">Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html#type-definitions">Type Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_ota.html#enumerations">Enumerations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_console.html">RainMaker Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_console.html#header-file">Header File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_console.html#functions">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rainmaker_common.html">RainMaker Common</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html#utilities">Utilities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#header-file">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#structures">Structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#macros">Macros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#type-definitions">Type Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html#factory-storage">Factory Storage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id1">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id2">Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html#work-queue">Work Queue</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id3">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id4">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id5">Type Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rainmaker_common.html#common-events">Common Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id6">Header File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#id7">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rainmaker_common.html#enumerations">Enumerations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="ESP RainMaker Programming Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="rainmaker_core.html" class="btn btn-neutral float-right" title="RainMaker Core" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, Espressif Systems (Shanghai) CO., LTD.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="structesp__rmaker__ota__config__t" kind="struct" language="C++" prot="public">
+    <compoundname>esp_rmaker_ota_config_t</compoundname>
+    <includes refid="esp__rmaker__ota_8h" local="no">esp_rmaker_ota.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structesp__rmaker__ota__config__t_1a691d632e606acbd983449649271b4d9c" prot="public" static="no" mutable="no">
+        <type>esp_rmaker_ota_cb_t</type>
+        <definition>esp_rmaker_ota_cb_t esp_rmaker_ota_config_t::ota_cb</definition>
+        <argsstring></argsstring>
+        <name>ota_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OTA Callback. The callback to be invoked when an OTA Job is available. If kept NULL, the internal default callback will be used (Recommended). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="160" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__config__t_1a55b42b965fd065751c57029ce782798c" prot="public" static="no" mutable="no">
+        <type>esp_rmaker_post_ota_diag_t</type>
+        <definition>esp_rmaker_post_ota_diag_t esp_rmaker_ota_config_t::ota_diag</definition>
+        <argsstring></argsstring>
+        <name>ota_diag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>OTA Diagnostics Callback. A post OTA diagnostic handler to be invoked if app rollback feature is enabled. If kept NULL, the new firmware will be assumed to be fine, and no rollback will be performed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="166" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__config__t_1a009a05eaa7900150fdc6f9dc225f5375" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* esp_rmaker_ota_config_t::server_cert</definition>
+        <argsstring></argsstring>
+        <name>server_cert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Server Certificate. The certificate to be passed to the OTA callback for server authentication. This is mandatory, unless you have disabled it in ESP HTTPS OTA config option. If you are using the ESP RainMaker OTA Service, you can just set this to <computeroutput>ESP_RMAKER_OTA_DEFAULT_SERVER_CERT</computeroutput>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="173" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structesp__rmaker__ota__config__t_1a3ab5eeebb6765b1e33bea616369074ef" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* esp_rmaker_ota_config_t::priv</definition>
+        <argsstring></argsstring>
+        <name>priv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Private Data. Optional private data to be passed to the OTA callback. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="177" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>ESP RainMaker OTA Configuration </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>esp_rmaker_ota_config_t</label>
+        <link refid="structesp__rmaker__ota__config__t"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>ota_cb</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ota_diag</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>esp_rmaker_ota_diag_priv_t</label>
+        <link refid="structesp__rmaker__ota__diag__priv__t"/>
+      </node>
+      <node id="13">
+        <label>esp_rmaker_ota_data_t</label>
+        <link refid="structesp__rmaker__ota__data__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" line="155" column="1" bodyfile="/Users/wangfang/github/esp-rainmaker/components/esp_rainmaker/include/esp_rmaker_ota.h" bodystart="155" bodyend="178"/>
+    <listofallmembers>
+      <member refid="structesp__rmaker__ota__config__t_1a691d632e606acbd983449649271b4d9c" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_config_t</scope><name>ota_cb</name></member>
+      <member refid="structesp__rmaker__ota__config__t_1a55b42b965fd065751c57029ce782798c" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_config_t</scope><name>ota_diag</name></member>
+      <member refid="structesp__rmaker__ota__config__t_1a3ab5eeebb6765b1e33bea616369074ef" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_config_t</scope><name>priv</name></member>
+      <member refid="structesp__rmaker__ota__config__t_1a009a05eaa7900150fdc6f9dc225f5375" prot="public" virt="non-virtual"><scope>esp_rmaker_ota_config_t</scope><name>server_cert</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
