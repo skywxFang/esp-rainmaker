@@ -22,7 +22,7 @@ def setup(app):
     rev = get_github_rev()
 
     # links to files or folders on the GitHub
-    baseurl = 'https://github.com/espressif/esp-rainmaker'
+    baseurl = 'https://github.com/skywxFang/esp-rainmaker'
     app.add_role('component_file', autolink('{}/blob/{}/components/%s'.format(baseurl, rev)))
 
     # link to the current documentation file in specific language version
