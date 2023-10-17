@@ -22,7 +22,7 @@ if 'BUILDDIR' in os.environ:
     builddir = os.environ['BUILDDIR']
 
 # Script configurationheader_file_path_prefix = "../../components/"
-header_file_path_prefix = "../../components/"
+header_file_path_prefix = "../components/"
 """string: path prefix for header files.
 """
 doxyfile_path = "Doxyfile"
