@@ -41,7 +41,7 @@ if os.system("doxygen Doxyfile") != 0:
     raise RuntimeError('Doxygen call failed')
 
 # Generate 'api_name.inc' files using the XML files by Doxygen
-call_with_python('../gen-dxd.py')
+call_with_python('./gen-dxd.py')
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -78,9 +78,9 @@ html_theme = 'sphinx_rtd_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['../_static']
+html_static_path = ['./_static']
 
-html_logo = "../_static/esp-rainmaker-logo.png"
+html_logo = "./_static/esp-rainmaker-logo.png"
 
 def setup(app):
     app.add_css_file('theme_overrides.css')
