@@ -2,4 +2,4 @@
 # pip install --user -r requirements.txt
 #
 sphinx==5.3.0
-breathe==4.14.1
+breathe==4.35.0
