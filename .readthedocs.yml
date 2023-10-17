@@ -8,6 +8,9 @@ build:
   os: "ubuntu-22.04" # RTD only supports ubuntu-22.04 and ubuntu-20.04.
   tools: 
     python: "3.7" # keep it the same as used in build doc image, for easy debugging
+  jobs:
+    pre-build:
+      python ./gen-dxd.py
 
 # Build documentation in the docs/ directory with Sphinx
 sphinx:
